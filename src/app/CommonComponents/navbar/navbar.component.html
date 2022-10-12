@@ -1,0 +1,57 @@
+<!-- start navbar -->
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">multy Smart</a>
+    <a class="icons" href="#" style="margin-left: 150px;"
+    [ngClass]="{displayIcons:this.widthOfScreen>992}">
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    </a>
+    <a class="icons" href="#" [ngClass]="{displayIcons:this.widthOfScreen>992}">
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav m-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Products</a>
+          </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="#">videos</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="#">Our Brands</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="#">Our Services</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="#">Our Process</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+          </li>
+          <a class="icons" href="#" [ngClass]="{displayIcons:this.widthOfScreen<992}">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </a>
+
+          <a class="icons" href="#" [ngClass]="{displayIcons:this.widthOfScreen<992}">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+          </a>
+        </ul>
+    </div>
+  </div>
+</nav>
+<!-- end navbar -->
+

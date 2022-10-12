@@ -1,0 +1,83 @@
+.navbar{
+  font-family: 'Crimson Pro';
+  background-color: #FFF;
+  box-sizing: initial;
+  height: 40px;
+}
+
+.navbar .navbar-brand{
+font-style: normal;
+text-transform: uppercase;
+font-weight: 600;
+font-size: 25px;
+color: #22577A;
+}
+
+.navbar .icons {
+  overflow: visible;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  color: #22577A;
+  font-size: 16px;
+  padding-top: 8px;
+  margin-right: 20px;
+}
+
+.navbar  .icons:hover{
+  color: #6C757D;
+  opacity: .5;
+}
+.displayIcons{
+  display: none;
+}
+.navbar .collapse{
+  margin-left: 400px;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  padding-top: 10px;
+  line-height: 18px;
+  color: #22577A;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:focus,
+.navbar .navbar-nav .nav-item .nav-link:hover{
+color: #6C757D;
+opacity: .5;
+}
+
+
+@media screen and (max-width:992px){
+  .navbar .navbar-nav .nav-item .nav-link{
+      margin-bottom: 4px;
+      margin-left: 12px;
+  }
+
+  :focus{
+      outline: none;
+  }
+
+  .navbar{
+      height: auto;
+  }
+  .navbar-light .navbar-toggler{
+      border: none;
+  }
+
+  .navbar .navbar-brand >h2 {
+      font-size: 22px;
+      margin-left: 10px;
+  }
+  .navbar .navbar-nav .nav-link .icon{
+      margin-left: 12px;
+  }
+  .navbar .collapse{
+    margin-left:0px;
+  }
+}
+
+/* end navbar */
