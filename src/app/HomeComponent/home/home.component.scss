@@ -1,0 +1,297 @@
+
+// carsoul is starting
+
+.carousel-inner {
+  position: relative;
+}
+.carousel-inner .overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(19, 58, 27, 0.6);
+  z-index: 1;
+}
+.carousel-inner .carousel-item > img{
+  width: 100%;
+  max-height:670px;
+  background-size: contain;
+}
+.carousel-inner .carousel-item .carousel-caption{
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 220px;
+}
+.carousel-inner .carousel-item .carousel-caption >h1{
+  font-size: 60px;
+  font-weight: 700;
+  font-family: 'El Messiri';
+  line-height:1.2;
+  text-transform: uppercase;
+  text-align: center;
+}
+.carousel-indicators{
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 740px;
+  margin: 0 0 3px 0;
+  border: 1px solid #FFF;
+  width:30px;
+  border-radius: 25px;
+  height: 100px;
+  margin-bottom: 5px;
+}
+
+.carousel-indicators > button{
+  box-sizing: content-box;
+  width: 15px;
+  height: 20px;
+  border-radius:100%;
+  text-indent: -999px;
+  cursor: -webkit-grab;
+  background-color: #fff;
+  background-clip: padding-box;
+  opacity: .5;
+  margin-bottom: -5px;
+  transition: opacity .8s ease;
+}
+.carousel-indicators .active{
+  opacity: 1;
+}
+
+// carsoul is ending
+
+// get a prochure is starting
+.prochure{
+  width: 100%;
+  font-style: normal;
+  font-style: normal;
+  text-align: center;
+}
+
+.leftSection{
+  margin-top: 30px;
+  margin-left: -60px;
+  margin-bottom: 100px;
+}
+.prochure .leftSection > h2{
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color:#133A1B;
+}
+
+.prochure .leftSection > p{
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 31px;
+  color: #011B10;
+  margin-top: 30px;
+  word-wrap: break-word;
+}
+
+.prochure .leftSection .content{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.prochure .leftSection .content .pargraph{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 28px;
+  text-transform: capitalize;
+  color: #011B10;
+  margin-left: 5px;
+}
+
+.prochure .leftSection .content .pargraph > i{
+  background-color: #133A1B;
+  color: #FFF;
+  padding: 15px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+
+.prochure .leftSection > button{
+  background: rgba(19, 58, 27, 0.92);
+  box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  outline: none;
+  border:none;
+  padding: 20px 40px;
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.prochure .leftSection > button:hover{
+  background-color: #B7BF96;
+  color: #133A1B;
+  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: -webkit-grab;
+}
+.prochure .leftSection > button:focus{
+  cursor: progress;
+}
+.prochure .rightSection{
+  margin-top: 50px;
+}
+.prochure .rightSection > img {
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  width: 100%;
+}
+// get a prochure is ending
+
+
+// partners is starting
+.partners{
+  margin-bottom: 100px;
+  text-align: center;
+}
+.partners  h2{
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+
+.partners  p {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+  color: #011B10;
+  margin-bottom: 50px;
+}
+
+.partners .leftPartner{
+  display: flex;
+  background: #E4DEAE;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 320px;
+  width: 48%;
+}
+.partners .leftPartner .left img{
+  margin:10px 10px 0px 0px ;
+  width: 300px;
+  height: 300px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+}
+.partners .leftPartner .right h4{
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 47px;
+  text-transform: uppercase;
+  color: #133A1B;
+  margin-top: 30px;
+}
+
+.partners .leftPartner .right p{
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #133A1B;
+}
+
+.partners .leftPartner .right a{
+  background: #133A1B;
+  border: 2px solid #133A1B;
+  border-radius: 6px;
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  padding: 20px 40px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+.partners .rightPartner{
+  display: flex;
+  background: #B7BF96;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 320px;
+  width: 48%;
+  margin-left: 20px;
+}
+.partners .rightPartner .left img{
+  margin:10px 10px 0px 0px ;
+  width: 300px;
+  height: 300px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+}
+.partners .rightPartner .right h4{
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 47px;
+  text-transform: uppercase;
+  color: #011B10;
+  margin-top: 30px;
+}
+
+.partners .rightPartner .right p{
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #011B10;
+}
+
+.partners .rightPartner .right a{
+  background: #FFF;
+  border-radius: 6px;
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #011B10;
+  padding: 20px 40px;
+  text-decoration: none;
+  cursor: -webkit-grab;
+}
+.partners .leftPartner .right a:hover{
+  background-color: #FFF;
+  color: #011B10;
+}
+.partners .rightPartner .right a:hover{
+  background-color: #133A1B;
+  color: #FFF;
+}
+.partners .rightPartner .right a:focus,
+.partners .leftPartner .right a:focus{
+  cursor: progress;
+}
+
+
+// partners is ending
