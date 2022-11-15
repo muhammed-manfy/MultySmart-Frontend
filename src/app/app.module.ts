@@ -15,6 +15,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { VideosComponent } from './videos/videos.component';
+import { BrandsComponent } from './brands/brands.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     FooterComponent,
     HomeComponent,
     ProductsComponent,
+    VideosComponent,
+    BrandsComponent,
   ],
   imports: [
     BrowserModule,
