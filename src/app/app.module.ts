@@ -10,6 +10,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './CommonComponents/navbar/navbar.component';
 import { FooterComponent } from './CommonComponents/footer/footer.component';
 import { HomeComponent } from './HomeComponent/home/home.component';
+import { ProductsComponent } from './products/products.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -17,6 +22,7 @@ import { HomeComponent } from './HomeComponent/home/home.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +30,11 @@ import { HomeComponent } from './HomeComponent/home/home.component';
     NgbModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
