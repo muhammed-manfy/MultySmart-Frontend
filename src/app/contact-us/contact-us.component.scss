@@ -1,0 +1,152 @@
+// header page is starting
+.header{
+  height: 400px;
+  background: #011B10;
+  margin-bottom: 50px;
+}
+.header .title-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .title-page img{
+  max-width: 250px;
+  max-height: 250px;
+  margin: 0px;
+  padding:0px;
+}
+.header .title-page h1 {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 94px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+// header page is ending
+
+// contact us is starting
+.contact-us{
+  margin-bottom: 100px;
+}
+.contact-us .contact-section{
+  display: flex;
+  justify-content: space-around;
+}
+.contact-us .contact-section .contact-media{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact-us .contact-section .contact-media i{
+  border-radius: 100%;
+  color: #FFFFFF;
+  background: #133A1B;
+  font-size: 22px;
+  padding: 15px;
+}
+.contact-us .contact-section .contact-media p{
+  font-family: 'El Messiri';
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #011B10;
+  margin-top: 20px;
+}
+.contact-us .submit-section{
+  width: 75%;
+  height: auto;
+  display: flex;
+  padding: 10px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+  margin: auto;
+  margin-top: 50px;
+}
+.contact-us .submit-section .submit-form{
+  width: 100%;
+  height: auto;
+}
+.contact-us .submit-section .submit-form form{
+  width: 75%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  margin: 70px auto;
+}
+
+.contact-us .submit-section .submit-form form input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  margin-bottom: 30px;
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #011B10;
+}
+::placeholder{
+  color: #133A1B;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'El Messiri';
+}
+.contact-us .submit-section .submit-form form button{
+  border: none;
+  outline: none;
+  background: #133A1B;
+  border-radius: 17px;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #F8F9FA;
+  padding: 20px 50px;
+  cursor: -webkit-grab;
+}
+.contact-us .submit-section .submit-form form button:hover{
+  background-color: #B7BF96;
+  color: #011B10;
+}
+.contact-us .submit-section .submit-form form button:focus{
+  cursor: progress;
+}
+.contact-us .submit-section .submit-form .social-media{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-us .submit-section .submit-form .social-media a{
+  border:  1px solid #133A1B;
+  color: #133A1B;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 100%;
+  margin:10px;
+  font-size: 25px;
+  text-decoration: none;
+  cursor: -webkit-grab;
+}
+.contact-us .submit-section .submit-form .social-media a:hover{
+  background-color: #133A1B;
+  color: #FFFFFF;
+}
+.contact-us .submit-section .submit-form .social-media a:focus{
+  cursor: progress;
+}
+.contact-us .submit-section .image-form img{
+  width: 500px;
+  height: 500px;
+}
+
+// contact us is ending

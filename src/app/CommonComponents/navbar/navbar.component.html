@@ -6,9 +6,6 @@
     [ngClass]="{displayIcons:this.widthOfScreen>992}">
       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
     </a>
-    <a class="icons" href="#" [ngClass]="{displayIcons:this.widthOfScreen>992}">
-      <i class="fa fa-user-circle" aria-hidden="true"></i>
-    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,19 +25,19 @@
           </li>
 
           <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" routerLink="/services">Services</a>
           </li>
 
           <li class="nav-item">
-              <a class="nav-link" href="#">Process</a>
+              <a class="nav-link" routerLink="/process">process</a>
           </li>
 
           <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" routerLink="/contact-us">Contact Us</a>
           </li>
 
           <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" routerLink="/about-us">About Us</a>
           </li>
           <a class="icons" href="#" [ngClass]="{displayIcons:this.widthOfScreen<992}">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>

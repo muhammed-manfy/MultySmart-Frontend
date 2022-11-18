@@ -17,6 +17,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { VideosComponent } from './videos/videos.component';
 import { BrandsComponent } from './brands/brands.component';
+import { ServicesComponent } from './services/services.component';
+import { ProcessComponent } from './process/process.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { BrandsComponent } from './brands/brands.component';
     ProductsComponent,
     VideosComponent,
     BrandsComponent,
+    ServicesComponent,
+    ProcessComponent,
+    AboutUsComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,

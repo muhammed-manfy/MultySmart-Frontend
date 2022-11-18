@@ -1,0 +1,132 @@
+// header page is starting
+
+.header{
+  height: 400px;
+  background: #011B10;
+  margin-bottom: 100px;
+}
+
+.header .title-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .title-page img{
+  max-width: 250px;
+  max-height: 250px;
+  margin: 0px;
+  padding:0px;
+}
+.header .title-page h1 {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 94px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+// header page is ending
+
+// process is starting
+.process{
+  margin-bottom: 100px;
+  font-style: normal;
+  text-align: center;
+}
+.process .head {
+  padding-bottom: 100px;
+}
+.process .head h2{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 54px;
+  text-transform: uppercase;
+  color: #133A1B;
+  width: 40%;
+}
+.process .head  span:nth-child(1){
+  font-family: 'Crimson Pro';
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 36px;
+  letter-spacing: 0.29em;
+  text-transform: uppercase;
+  color: #133A1B;
+  margin-left: -30px;
+}
+.process .procces-details {
+  background: #E4DEAE;
+  border-radius: 12px;
+  padding-top: 100px;
+  width: 30%;
+}
+.process .procces-details h2{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 54px;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+.process .procces-details .step h3{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.29em;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+
+.process .procces-details .step span{
+  font-family: 'Crimson Pro';
+  font-weight: 700;
+  font-size: 96px;
+  text-transform: uppercase;
+  color: #F4B741;
+  background-color: #FFFFFF;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding-top: 40px;
+  text-shadow: .5px .5px 2px #000;
+}
+.process .procces-details .step h4{
+  font-family: 'Crimson Pro';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #133A1B;
+  padding-top: 20px;
+  text-shadow:.5px .5px 3px #133A1B;
+}
+
+.process .procces-details .step p{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  text-transform: capitalize;
+  color: #133A1B;
+  padding-top: 10px;
+  width: 80%;
+  margin:auto;
+  padding-bottom: 20px;
+}
+.process .trnslate-icons {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+.process .trnslate-icons i{
+  font-size: 30px;
+  padding-top: 5px;
+  color: #133A1B;
+}

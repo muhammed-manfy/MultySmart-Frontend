@@ -1,0 +1,391 @@
+// header page is starting
+.header{
+  height: 400px;
+  background: #011B10;
+  margin-bottom: 50px;
+}
+.header .title-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .title-page img{
+  max-width: 250px;
+  max-height: 250px;
+  margin: 0px;
+  padding:0px;
+}
+.header .title-page h1 {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 94px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+// header page is ending
+
+
+
+// wired-services is starting
+
+.wired-services{
+  margin-bottom: 100px;
+}
+.wired-services .services-title{
+  font-style: normal;
+  text-align: center;
+  padding-top: 50px;
+}
+.wired-services .services-title h2{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+
+.wired-services .services-title p{
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #011B10;
+  width: 70%;
+  margin: auto;
+}
+.wired-services .services-brand{
+  display:inline-block;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 40%;
+  height: 180px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}
+.wired-services .services-brand h4{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #133A1B;
+  margin:0;
+}
+
+.wired-services .services-brand ul > li{
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: capitalize;
+  color: #011B10;
+}
+// wired-services is ending
+
+// smart curation is starting
+.smart-curation{
+  background: #B7BF96;
+  border-radius: 18px;
+  height: auto;
+  margin-bottom: 100px;
+  padding: 40px 10px;
+  position: relative;
+}
+.smart-curation .image-section::before{
+  position:absolute;
+  content: '';
+  width: 250px;
+  height: 300px;
+  background: #E4DEAE;
+  left: 130px;
+  bottom: 70px;
+}
+.smart-curation .image-section img{
+  max-width: 300px;
+  height: 300px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 0px 29px 31px 0px;
+}
+.smart-curation .title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.smart-curation .title-section h4{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.smart-curation .title-section p{
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  width: 70%;
+}
+// smart curation is ending
+
+// meeting room is starting
+.meeting-room{
+  border-radius: 18px;
+  height: auto;
+  margin-bottom: 100px;
+  padding: 40px 10px;
+  position: relative;
+}
+.meeting-room .image-section::before{
+  position:absolute;
+  content: '';
+  width: 250px;
+  height: 300px;
+  background: #011B10;
+  right: 150px;
+  bottom: 80px;
+}
+.meeting-room .image-section img{
+  max-width: 300px;
+  height: 300px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 30px 0px 0px 30px;
+}
+.meeting-room .title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.meeting-room .title-section h4{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+.meeting-room .title-section p{
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #011B10;
+  width: 70%;
+}
+// meeting room is ending
+
+// home-cinema is starting
+.home-cinema{
+  background: #E4DEAE;
+  border-radius: 18px;
+  height: auto;
+  margin-bottom: 100px;
+  padding: 40px 10px;
+  position: relative;
+}
+.home-cinema .image-section::before{
+  position:absolute;
+  content: '';
+  width: 250px;
+  height: 300px;
+  background: #B7BF96;
+  left: 130px;
+  bottom: 70px;
+}
+.home-cinema .image-section img{
+  max-width: 300px;
+  height: 300px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 0px 29px 31px 0px;
+}
+.home-cinema .title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.home-cinema .title-section h4{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+.home-cinema .title-section p{
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #011B10;
+  width: 70%;
+}
+// home-cinema is ending
+
+// sliding-door is starting
+.sliding-door{
+  border-radius: 18px;
+  height: auto;
+  margin-bottom: 100px;
+  padding: 40px 10px;
+  position: relative;
+}
+.sliding-door .image-section::before{
+  position:absolute;
+  content: '';
+  width: 250px;
+  height: 300px;
+  background: #133A1B;
+  right: 150px;
+  bottom: 80px;
+}
+.sliding-door .image-section img{
+  max-width: 300px;
+  height: 300px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 30px 0px 0px 30px;
+}
+.sliding-door .title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.sliding-door .title-section h4{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+.sliding-door .title-section p{
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #011B10;
+  width: 70%;
+}
+// sliding-door is ending
+
+
+// controls and security started
+.security-control{
+  margin-bottom: 100px;
+  font-size: normal;
+  text-align: center;
+}
+.security-control .head{
+  padding-bottom: 100px;
+}
+.security-control .head h2{
+  font-weight: 700;
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #133A1B;
+  font-family: 'El Messiri';
+}
+.security-control .service{
+  border: 1px solid #B7BF96;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.security-control .service span{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #133A1B;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  background-color: #FFFFFF;
+  padding-top: 40px;
+}
+
+.security-control .service ul > li{
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: capitalize;
+  color: #011B10;
+  margin-bottom: 20px;
+}
+// controls and security started
+
+// other services started
+.other-services{
+  margin-bottom: 100px;
+  font-size: normal;
+  text-align: center;
+}
+.other-services .head{
+  padding-bottom: 100px;
+}
+.other-services .head h2{
+  font-weight: 700;
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #133A1B;
+  font-family: 'El Messiri';
+}
+.other-services .head p{
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 31px;
+  color: #011B10;
+}
+.other-services .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.other-services .carousel-inner .carousel-item img{
+  width: 260px;
+  height: 260px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+.other-services .carousel-inner .carousel-item h4{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #000000;
+  padding-top: 20px;
+}
+.other-services .carousel-inner .carousel-item p{
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  width: 70%;
+  margin: auto;
+}
+// other services ended
