@@ -21,6 +21,7 @@ import { ServicesComponent } from './services/services.component';
 import { ProcessComponent } from './process/process.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { BrandNameComponent } from './brand-name/brand-name.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ProcessComponent,
     AboutUsComponent,
     ContactUsComponent,
+    BrandNameComponent,
   ],
   imports: [
     BrowserModule,

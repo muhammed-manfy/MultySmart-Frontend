@@ -30,3 +30,168 @@
   color: #FFFFFF;
 }
 // header page is ending
+
+// .statistics is starting
+.statistics
+{
+  margin-bottom: 100px;
+}
+.statistics .statistical{
+  width: 250px;
+  height: 150px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px 6px rgba(0, 0, 0, 0.25);
+  margin: auto;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+.statistics .statistical span{
+  color: #F4B741;
+  font-size: 30px;
+  font-family: 'El Messiri';
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.statistics .statistical h4{
+  font-family: 'El Messiri';
+  font-weight: 500;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+// .statistics is ending
+
+// .choose us is ending
+.choose-us{
+  display: flex;
+  margin-bottom: 100px;
+}
+.choose-us .why-choose-us{
+  width: 600px;
+  padding-bottom: 30px;
+  background-image: linear-gradient(#FFFFFF, #E4DEAE);
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 21px 21px 21px;
+}
+.choose-us .why-choose-us h2{
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #133A1B;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.choose-us .why-choose-us .details{
+  display: flex;
+  margin-left:50px ;
+  margin-top:20px ;
+}
+.choose-us .why-choose-us .details .fas{
+  line-height: 2;
+}
+.choose-us .why-choose-us .details span{
+  border-radius: 100%;
+  background-color: #FFFFFF;
+  text-align: center;
+  color: #133A1B;
+  margin-right: 10px;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  padding-top: 5px;
+  border: 1px solid #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+.choose-us .why-choose-us .details > h4{
+  font-family: 'El Messiri';
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 25px;
+  letter-spacing: .5px;
+  text-transform: capitalize;
+}
+.choose-us .image-side{
+  margin: auto;
+}
+.choose-us .image-side img{
+  width: 400px;
+  height: 400px;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 21px 0px 0px 21px;
+}
+// .choose us is ending
+
+
+// what we do is starting
+
+.what-do{
+  margin-bottom: 100px;
+  text-align: center;
+  font-style: normal;
+}
+.what-do h2{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+.what-do .video p{
+  width:87%;
+  margin: auto;
+  background-color:#B7BF96;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #011B10;
+  padding: 10px;
+}
+//  what we do is ending
+
+// our story is starting
+.our-story{
+  margin-bottom: 100px;
+  font-style: normal;
+  text-align: center;
+}
+.our-story h2{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #133A1B;
+  padding-bottom: 50px;
+}
+.our-story p{
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #011B10;
+  width: 75%;
+  margin: auto;
+}
+// our story is ending
+
+.location{
+  margin-bottom: 100px;
+}
+.location h2{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #133A1B;
+  text-align: center;
+  padding-bottom: 50px;
+}

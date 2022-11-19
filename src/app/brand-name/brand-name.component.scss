@@ -1,0 +1,83 @@
+// header page is starting
+.header{
+  height: 400px;
+  background: #011B10;
+  margin-bottom: 100px;
+}
+
+.header .title-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .title-page img{
+  max-width: 250px;
+  max-height: 250px;
+  margin: 0px;
+  padding:0px;
+}
+
+.header .title-page h1 {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 94px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+// header page is ending
+
+// brand name is starting
+
+.brand-name{
+  margin-bottom: 100px;
+}
+.brand-name .products{
+  text-align: center;
+  font-style: normal;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.brand-name .products img{
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 300px;
+  height: 300px;
+}
+.brand-name .products h4{
+  font-family: 'El Messiri';
+  font-weight: 700;
+  font-size: 25px;
+  text-transform: capitalize;
+  color: #133A1B;
+  padding: 15px 0;
+  margin: 0;
+}
+.brand-name .products span{
+  font-family: 'Crimson Pro';
+  font-weight: 200;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #000000;
+}
+.brand-name .products a{
+  font-family: 'Judson';
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #011B10;
+  text-decoration: none;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  padding: 10px 20px;
+}
+
+
+// brand name is ending
