@@ -1,0 +1,51 @@
+<!-- navbar is starting -->
+<app-navbar></app-navbar>
+<!--navbar is ending-->
+
+<!-- header is starting -->
+<section class="header">
+  <div class="container">
+    <div class="row">
+      <div class="title-page">
+        <img src="../../assets/images/Logo/White.png" alt="multySmartIcon" />
+        <h1>checkout</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- header is ending -->
+
+<!-- checkout is strating -->
+<section class="checkout">
+  <div class="container">
+    <div class="row">
+      <div class="col-5 product-item">
+        <img src="../../assets/images/Products/LinksysRouter.png" alt="MultySmart" />
+        <div class="product-item-details">
+          <h4>product name</h4>
+          <h5>32 USD</h5>
+          <div class="item-number">
+            <i class="fa fa-plus-square" (click)="increment(totalOfProduct)"></i>
+            <span>{{totalOfProduct}}</span>
+            <i class="fa fa-minus-square" (click)="decrement(totalOfProduct)"></i>
+          </div>
+          <a href="#">remove</a>
+        </div>
+      </div>
+
+      <div class="col-4 checkout-product">
+        <div class="head-checkout">
+          <h4>subtotal</h4>
+          <h5>32 usd</h5>
+        </div>
+        <button id="checkout-button">Checkout</button>
+        <button id="shopping-button">Countinue Shopping</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- check out is ending -->
+
+<!-- footer is starting -->
+<app-footer></app-footer>
+<!--footer is ending-->

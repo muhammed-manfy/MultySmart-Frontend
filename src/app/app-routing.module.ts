@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BrandNameComponent } from './brand-name/brand-name.component';
 import { BrandsComponent } from './brands/brands.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './HomeComponent/home/home.component';
 import { ProcessComponent } from './process/process.component';
 import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
+import { ShippingComponent } from './shipping/shipping.component';
 import { VideosComponent } from './videos/videos.component';
 
 const routes: Routes = [
@@ -19,7 +21,10 @@ const routes: Routes = [
   {path:'process',component:ProcessComponent},
   {path:'about-us',component:AboutUsComponent},
   {path:'contact-us',component:ContactUsComponent},
-  {path:'brand-name',component:BrandNameComponent}
+  {path:'brand-name',component:BrandNameComponent},
+  {path:'checkout',component:CheckoutComponent},
+  {path:'shipping',component:ShippingComponent},
+  {path:'product',component:ProductsComponent}
 ];
 
 @NgModule({

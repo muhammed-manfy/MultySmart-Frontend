@@ -22,6 +22,9 @@ import { ProcessComponent } from './process/process.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { BrandNameComponent } from './brand-name/brand-name.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { ProductComponent } from './product/product.component';
+import { ShippingComponent } from './shipping/shipping.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import { BrandNameComponent } from './brand-name/brand-name.component';
     AboutUsComponent,
     ContactUsComponent,
     BrandNameComponent,
+    CheckoutComponent,
+    ProductComponent,
+    ShippingComponent,
   ],
   imports: [
     BrowserModule,

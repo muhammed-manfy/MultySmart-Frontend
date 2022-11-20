@@ -1,0 +1,161 @@
+// header page is starting
+.header{
+  height: 400px;
+  background: #011B10;
+  margin-bottom: 100px;
+}
+
+.header .title-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .title-page img{
+  max-width: 250px;
+  max-height: 250px;
+  margin: 0px;
+  padding:0px;
+}
+
+.header .title-page h1 {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 94px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+// header page is ending
+
+// checkout is starting
+.checkout{
+  margin-bottom: 100px;
+}
+.checkout .product-item{
+  background: #E4DEAE;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  margin: auto;
+}
+.checkout .product-item img{
+  width: 60%;
+}
+
+.checkout .product-item .product-item-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.checkout .product-item .product-item-details h4{
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: capitalize;
+  color: #133A1B;
+}
+.checkout .product-item .product-item-details h5{
+  font-family: 'Crimson Pro';
+  font-weight: 500;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #011B10;
+}
+.checkout .product-item .product-item-details .item-number{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px 10px;
+}
+.checkout .product-item .product-item-details .item-number i{
+  color: #133A1B;
+  padding: 0 15px;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
+}
+.checkout .product-item .product-item-details .item-number span{
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+
+.checkout .product-item .product-item-details a{
+  font-family: 'Crimson Pro';
+  font-weight: 200;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #011B10;
+  padding-top: 25px;
+  text-decoration: none;
+}
+//checkout is ending
+.checkout .checkout-product{
+  background: #B7BF96;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+}
+.checkout .checkout-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.checkout .checkout-product .head-checkout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+}
+.checkout .checkout-product .head-checkout h4{
+  font-family: 'Crimson Pro';
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #011B10;
+}
+.checkout .checkout-product .head-checkout h5{
+  font-family: 'Crimson Pro';
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #011B10;
+}
+
+.checkout .checkout-product button{
+  border: none;
+  outline: none;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: -webkit-grab;
+}
+.checkout .checkout-product #checkout-button{
+  background: #133A1B;
+  color: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.checkout .checkout-product #shopping-button{
+  background: #FFFFFF;
+  border: 2px solid #133A1B;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.checkout .checkout-product #checkout-button:focus,
+.checkout .checkout-product #shopping-button:focus{
+  cursor: progress;
+}
