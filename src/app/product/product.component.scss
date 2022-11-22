@@ -32,3 +32,308 @@
   color: #FFFFFF;
 }
 // header page is ending
+
+// product-name is starting
+.product-name{
+  margin-bottom: 100px;
+}
+.product-name .images-container{
+  display: grid;
+  grid-template-columns:310px 310px;
+  gap: 10px;
+  box-shadow: 0px 0px 10px #DDD;
+  padding:10px;
+  width: auto;
+}
+.product-name .images-container .product-image{
+  width: auto;
+}
+.product-name .images-container .product-image img{
+  width: 300px;
+  height: 300px;
+}
+.product-name .product-details{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+.product-name .product-details .description p{
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: lowercase;
+  color: #011B10;
+}
+.product-name .product-details .rating{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.product-name .product-details .rating .stars-rating i{
+  color: #F4B741;
+}
+.product-name .product-details .rating h5{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #133A1B;
+}
+.product-name .product-details .prices{
+  margin-bottom: 30px;
+  display: flex;
+
+}
+.product-name .product-details .prices span:nth-child(1){
+  font-family: 'Crimson Pro';
+  font-size: 30px;
+}
+.product-name .product-details .prices span:nth-child(1) > strong{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+.product-name .product-details .prices span:nth-child(2) {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #DDD;
+}
+.product-name .product-details .prices span:nth-child(3){
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 20px;
+  color: #F4B741;
+}
+.product-name .product-details .prices span:nth-child(3) > strong{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #B7BF96;
+}
+.product-name .product-details .prices i{
+  color: #F4B741;
+  font-size: 20px;
+}
+.product-name .product-details .prices i > span{
+  font-family: 'Crimson Pro';
+  font-weight: 500;
+  font-size: 20px;
+  color: #011B10;
+}
+.product-name .product-details .prices span{
+  padding-right: 20px;
+}
+.product-name .product-details .total-products {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.product-name .product-details .total-products span{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  color: #133A1B;
+  padding:10px 20px
+}
+.product-name .product-details .total-products i{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  color: #133A1B;
+  padding:0 10px;
+}
+.product-name .product-details .add-to-cart button{
+  border: none;
+  outline: none;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #133A1B;
+  padding: 10px 20px;
+}
+
+.product-name .product-details .product-speceifcation h4{
+  margin-bottom: 0;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+.product-name .product-details .product-speceifcation i{
+  font-family: 'Crimson Pro';
+  font-weight: 600;
+  font-size: 22px;
+  color: #133A1B;
+  border-radius: 100px;
+  border: 2px solid #133A1B;
+  width: 25px;
+  height: 25px;
+  padding-top: 0;
+  padding-left: 4px;
+}
+
+.product-name .product-details .product-speceifcation p{
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: lowercase;
+  color: #011B10;
+}
+// product name is ending
+
+
+
+// brands-related is starting
+.brands-related{
+  margin-bottom: 100px;
+}
+.brands-related h2{
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #133A1B;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.brands-related .images img{
+  width: 400px;
+  height: 400px;
+}
+.reviews{
+  margin-bottom: 100px;
+}
+.reviews h2{
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #133A1B;
+  padding-bottom: 50px;
+}
+.reviews .rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.reviews .rating .total-rating h4{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  text-transform: capitalize;
+  color: #133A1B;
+}
+.reviews .rating .total-rating .rating-stars i{
+  font-size: 25px;
+  color: #F4B741;
+}
+.reviews .rating .stars{
+  color: #F4B741;
+  font-size: 18px;
+}
+.reviews .rating h5{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #011B10;
+}
+.reviews .rating button{
+  border: none;
+  outline: none;
+  width: 40%;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #133A1B;
+  background-color: #FFFFFF;
+  border: 1px solid #133A1B;
+  padding: 10px 20px;
+  margin-top: 50px;
+}
+
+.reviews .posts{
+  width: 100%;
+}
+.reviews .posts .post{
+  width: 70%;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 20px 40px;
+  text-align: center;
+  background: #E4DEAE;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.reviews .posts .post h3{
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  text-transform: capitalize;
+  color: #133A1B;
+}
+.reviews .posts .post i{
+  color: #F4B741;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.reviews .posts .post h5{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #133A1B;
+}
+.reviews .posts .post p{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform:lowercase;
+  color: #133A1B;
+}
+
+.reviews .posts button{
+  border: none;
+  outline: none;
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #133A1B;
+  background-color: #FFFFFF;
+  border: 1px solid #133A1B;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 4px #011B10;
+  width: 20%;
+  margin: auto;
+}
+

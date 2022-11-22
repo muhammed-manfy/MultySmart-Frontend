@@ -57,6 +57,10 @@
   color: #011B10;
   margin-bottom: 50px;
 }
+.videos video:focus{
+  outline: none;
+  border: none;
+}
 .videos .title,
 .videos .title-2,
 .videos .title-3
