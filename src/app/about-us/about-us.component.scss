@@ -1,39 +1,30 @@
-// header page is starting
-.header{
-  height: 400px;
-  background: #011B10;
-  margin-bottom: 50px;
-}
-.header .title-page{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+// header is calling
+@import '../../assets/styles/header.scss';
 
-.header .title-page img{
-  max-width: 250px;
-  max-height: 250px;
-  margin: 0px;
-  padding:0px;
-}
-.header .title-page h1 {
+
+@mixin h2 {
   font-family: 'El Messiri';
   font-style: normal;
   font-weight: 700;
-  font-size: 60px;
-  line-height: 94px;
-  display: flex;
-  align-items: center;
+  font-size: 45px;
+  line-height: 0px;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #133A1B;
 }
-// header page is ending
 
+@mixin  p {
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #011B10;
+}
 // .statistics is starting
 .statistics
 {
+  margin-top: 50px;
   margin-bottom: 100px;
 }
 .statistics .statistical{
@@ -77,14 +68,7 @@
   border-radius: 0px 21px 21px 21px;
 }
 .choose-us .why-choose-us h2{
-  font-family: 'El Messiri';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 45px;
-  line-height: 0px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #133A1B;
+  @include h2;
   padding-top: 50px;
   padding-bottom: 20px;
 }
@@ -138,21 +122,13 @@
   font-style: normal;
 }
 .what-do h2{
-  font-family: 'El Messiri';
-  font-weight: 700;
-  font-size: 45px;
-  text-transform: uppercase;
-  color: #133A1B;
+  @include h2;
 }
 .what-do .video p{
   width:87%;
   margin: auto;
   background-color:#B7BF96;
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  color: #011B10;
+  @include p;
   padding: 10px;
 }
 //  what we do is ending
@@ -164,20 +140,11 @@
   text-align: center;
 }
 .our-story h2{
-  font-family: 'El Messiri';
-  font-weight: 700;
-  font-size: 45px;
-  text-transform: uppercase;
-  color: #133A1B;
+  @include h2;
   padding-bottom: 50px;
 }
 .our-story p{
-  font-family: 'Crimson Pro';
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 28px;
-  text-align: center;
-  color: #011B10;
+  @include p();
   width: 75%;
   margin: auto;
 }
@@ -187,11 +154,7 @@
   margin-bottom: 100px;
 }
 .location h2{
-  font-family: 'El Messiri';
-  font-weight: 700;
-  font-size: 45px;
-  text-transform: uppercase;
-  color: #133A1B;
+  @include h2;
   text-align: center;
   padding-bottom: 50px;
 }

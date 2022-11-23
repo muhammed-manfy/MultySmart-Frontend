@@ -1,5 +1,55 @@
+@mixin h2 {
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color:#133A1B;
+}
+@mixin p{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 27px;
+  text-align: center;
+  color: #011B10;
+  margin-bottom: 50px;
+}
+@mixin h4 {
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 47px;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+@mixin p-text {
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+@mixin a {
+  border-radius: 6px;
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+@mixin  partner-image {
+  margin:10px 10px 0px 0px ;
+  width: 300px;
+  height: 300px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+}
 // carsoul is starting
-
 .carousel-inner {
   position: relative;
 }
@@ -32,22 +82,23 @@
 .carousel-indicators{
   z-index: 2;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   position: absolute;
   left: 740px;
   margin: 0 0 3px 0;
   border: 1px solid #FFF;
-  width:30px;
   border-radius: 25px;
-  height: 100px;
-  margin-bottom: 5px;
+  width:120px;
+  height: 40px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 .carousel-indicators > button{
   box-sizing: content-box;
-  width: 15px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius:100%;
   text-indent: -999px;
   cursor: -webkit-grab;
@@ -77,20 +128,11 @@
   margin-bottom: 100px;
 }
 .prochure .leftSection > h2{
-  font-family: 'El Messiri';
-  font-weight: 600;
-  font-size: 45px;
-  line-height: 70px;
-  text-transform: uppercase;
-  color:#133A1B;
+  @include h2();
 }
 
 .prochure .leftSection > p{
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 31px;
-  color: #011B10;
+  @include p();
   margin-top: 30px;
   word-wrap: break-word;
   width: 50%;
@@ -161,29 +203,17 @@
 
 
 // partners is starting
+
 .partners{
   margin-bottom: 100px;
   text-align: center;
 }
 .partners  h2{
-  font-family: 'El Messiri';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 45px;
-  line-height: 70px;
-  text-transform: uppercase;
-  color: #133A1B;
+  @include h2;
 }
 
 .partners  p {
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 27px;
-  text-align: center;
-  color: #011B10;
-  margin-bottom: 50px;
+  @include p;
 }
 
 .partners .leftPartner{
@@ -195,45 +225,24 @@
   width: 48%;
 }
 .partners .leftPartner .left img{
-  margin:10px 10px 0px 0px ;
-  width: 300px;
-  height: 300px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 10px;
+  @include partner-image();
 }
 .partners .leftPartner .right h4{
-  font-family: 'El Messiri';
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 47px;
-  text-transform: uppercase;
-  color: #133A1B;
+  @include h4();
   margin-top: 30px;
 }
 
 .partners .leftPartner .right p{
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
+  @include p-text();
   color: #133A1B;
 }
 
 .partners .leftPartner .right a{
   background: #133A1B;
   border: 2px solid #133A1B;
-  border-radius: 6px;
-  font-family: 'Crimson Pro';
-  font-weight: 300;
-  font-size: 20px;
-  text-align: center;
-  text-transform: capitalize;
+  @include a();
   color: #FFFFFF;
   padding: 20px 40px;
-  text-decoration: none;
-  outline: none;
-  border: none;
 }
 
 .partners .rightPartner{
@@ -246,39 +255,21 @@
   margin-left: 20px;
 }
 .partners .rightPartner .left img{
-  margin:10px 10px 0px 0px ;
-  width: 300px;
-  height: 300px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 10px;
+  @include partner-image();
 }
 .partners .rightPartner .right h4{
-  font-family: 'El Messiri';
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 47px;
-  text-transform: uppercase;
-  color: #011B10;
+  @include h4();
   margin-top: 30px;
 }
 
 .partners .rightPartner .right p{
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
+  @include p-text();
   color: #011B10;
 }
 
 .partners .rightPartner .right a{
+  @include a();
   background: #FFF;
-  border-radius: 6px;
-  font-family: 'Crimson Pro';
-  font-weight: 300;
-  font-size: 20px;
-  text-align: center;
-  text-transform: capitalize;
   color: #011B10;
   padding: 20px 40px;
   text-decoration: none;
@@ -307,20 +298,11 @@
   font-style: normal;
 }
 .services h2{
-  font-family: 'El Messiri';
-  font-weight: 600;
-  font-size: 45px;
-  line-height: 70px;
-  text-transform: uppercase;
-  color: #133A1B;
+ @include h2;
 }
 
 .services p {
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 31px;
-  color: #011B10;
+  @include p;
   margin: auto;
   margin-bottom: 70px;
 }
@@ -354,7 +336,6 @@
   display: flex;
 }
 .services .services-content .service{
-  // margin-top: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -378,19 +359,10 @@
 }
 
 .services .services-content .service h4 {
-  font-family: 'El Messiri';
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 31px;
-  text-transform: uppercase;
-  color: #133A1B;
+  @include h4();
 }
 .services .services-content .service p {
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
-  color: #133A1B;
+  @include p-text();
 }
 // services is ending
 
@@ -401,20 +373,12 @@
   font-style: normal;
 }
 .offers h2{
-  font-family: 'El Messiri';
-  font-weight: 600;
-  font-size: 45px;
-  line-height: 70px;
-  text-transform: uppercase;
-  color: #133A1B;
+  @include h2;
 }
 
 .offers p {
-  font-family: 'Crimson Pro';
-  font-weight: 400;
+  @include p;
   font-size: 22px;
-  line-height: 31px;
-  color: #011B10;
   margin-bottom: 70px;
   width: 50%;
   transform: translate(50%,0);
@@ -493,19 +457,13 @@
 }
 
 .projects h2{
-  font-family: 'El Messiri';
-  font-weight: 600;
-  font-size: 45px;
-  line-height: 70px;
-  text-transform: uppercase;
+  @include h2;
+  color: #FFFFFF;
   padding-top: 30px;
 }
 
 .projects p {
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 31px;
+  @include p-text();
   margin-bottom: 70px;
   width: 50%;
   transform: translate(50%,0);
@@ -530,24 +488,16 @@
   box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.3);
 }
 .projects .project h4{
-  font-family: 'El Messiri';
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 39px;
-  text-transform: capitalize;
+  @include h4();
+  color: #FFFFFF;
 }
 .projects .project p{
-  font-family: 'Crimson Pro';
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 28px;
+  @include p-text();
   text-transform:inherit;
 }
 // our projects is ending
 
-
 // statistics is starting
-
 .statistics{
   width: 100%;
   text-align: center;

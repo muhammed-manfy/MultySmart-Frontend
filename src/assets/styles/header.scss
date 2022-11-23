@@ -1,0 +1,33 @@
+// header page is starting
+
+.header{
+  height: 400px;
+  background: #011B10;
+}
+
+.header .title-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .title-page img{
+  max-width: 250px;
+  max-height: 250px;
+  margin: 0px;
+  padding:0px;
+}
+.header .title-page h1 {
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 94px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+// header page is ending

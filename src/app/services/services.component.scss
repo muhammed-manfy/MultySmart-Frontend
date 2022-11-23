@@ -1,38 +1,52 @@
-// header page is starting
-.header{
-  height: 400px;
-  background: #011B10;
+
+// header is calling
+@import '../../assets/styles/header.scss';
+
+@mixin h2 {
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color:#133A1B;
+}
+@mixin p{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  text-align: center;
+  color: #011B10;
   margin-bottom: 50px;
 }
-.header .title-page{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.header .title-page img{
-  max-width: 250px;
-  max-height: 250px;
-  margin: 0px;
-  padding:0px;
-}
-.header .title-page h1 {
+@mixin h4 {
   font-family: 'El Messiri';
-  font-style: normal;
   font-weight: 700;
-  font-size: 60px;
-  line-height: 94px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  font-size: 25px;
+  line-height: 39px;
   text-transform: uppercase;
-  color: #FFFFFF;
 }
-// header page is ending
+@mixin p-text {
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  width: 70%;
+}
 
-
-
+@mixin before-image {
+  position:absolute;
+  content: '';
+  width: 250px;
+  height: 300px;
+}
+@mixin image {
+  max-width: 300px;
+  height: 300px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 0px 29px 31px 0px;
+}
 // wired-services is starting
 
 .wired-services{
@@ -44,19 +58,11 @@
   padding-top: 50px;
 }
 .wired-services .services-title h2{
-  font-family: 'El Messiri';
-  font-weight: 700;
-  font-size: 45px;
-  text-transform: uppercase;
-  color: #133A1B;
+  @include h2;
 }
 
 .wired-services .services-title p{
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 1.2;
-  color: #011B10;
+  @include p;
   width: 70%;
   margin: auto;
 }
@@ -71,12 +77,7 @@
   margin: 10px;
 }
 .wired-services .services-brand h4{
-  font-family: 'El Messiri';
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 39px;
-  text-transform: uppercase;
-  color: #133A1B;
+  @include h4;
   margin:0;
 }
 
@@ -100,19 +101,13 @@
   position: relative;
 }
 .smart-curation .image-section::before{
-  position:absolute;
-  content: '';
-  width: 250px;
-  height: 300px;
-  background: #E4DEAE;
+  @include before-image;
+  background-color: #E4DEAE;
   left: 130px;
   bottom: 70px;
 }
 .smart-curation .image-section img{
-  max-width: 300px;
-  height: 300px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 0px 29px 31px 0px;
+  @include image;
 }
 .smart-curation .title-section {
   display: flex;
@@ -122,20 +117,12 @@
   padding-top: 20px;
 }
 .smart-curation .title-section h4{
-  font-family: 'El Messiri';
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 39px;
-  text-transform: uppercase;
+  @include h4;
   color: #000000;
 }
 .smart-curation .title-section p{
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  @include p-text;
   color: #000000;
-  width: 70%;
 }
 // smart curation is ending
 
@@ -148,19 +135,13 @@
   position: relative;
 }
 .meeting-room .image-section::before{
-  position:absolute;
-  content: '';
-  width: 250px;
-  height: 300px;
+  @include before-image();
   background: #011B10;
   right: 150px;
   bottom: 80px;
 }
 .meeting-room .image-section img{
-  max-width: 300px;
-  height: 300px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 30px 0px 0px 30px;
+  @include image;
 }
 .meeting-room .title-section {
   display: flex;
@@ -170,20 +151,12 @@
   padding-top: 20px;
 }
 .meeting-room .title-section h4{
-  font-family: 'El Messiri';
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 39px;
-  text-transform: uppercase;
+  @include h4;
   color: #133A1B;
 }
 .meeting-room .title-section p{
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  @include p-text;
   color: #011B10;
-  width: 70%;
 }
 // meeting room is ending
 
@@ -197,19 +170,13 @@
   position: relative;
 }
 .home-cinema .image-section::before{
-  position:absolute;
-  content: '';
-  width: 250px;
-  height: 300px;
+  @include before-image();
   background: #B7BF96;
   left: 130px;
   bottom: 70px;
 }
 .home-cinema .image-section img{
-  max-width: 300px;
-  height: 300px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 0px 29px 31px 0px;
+  @include image();
 }
 .home-cinema .title-section {
   display: flex;
@@ -219,20 +186,12 @@
   padding-top: 20px;
 }
 .home-cinema .title-section h4{
-  font-family: 'El Messiri';
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 39px;
-  text-transform: uppercase;
+  @include h4;
   color: #133A1B;
 }
 .home-cinema .title-section p{
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  @include p-text;
   color: #011B10;
-  width: 70%;
 }
 // home-cinema is ending
 
@@ -245,19 +204,13 @@
   position: relative;
 }
 .sliding-door .image-section::before{
-  position:absolute;
-  content: '';
-  width: 250px;
-  height: 300px;
+  @include before-image();
   background: #133A1B;
   right: 150px;
   bottom: 80px;
 }
 .sliding-door .image-section img{
-  max-width: 300px;
-  height: 300px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 30px 0px 0px 30px;
+  @include image();
 }
 .sliding-door .title-section {
   display: flex;
@@ -267,20 +220,12 @@
   padding-top: 20px;
 }
 .sliding-door .title-section h4{
-  font-family: 'El Messiri';
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 39px;
-  text-transform: uppercase;
+  @include h4;
   color: #133A1B;
 }
 .sliding-door .title-section p{
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  @include p-text;
   color: #011B10;
-  width: 70%;
 }
 // sliding-door is ending
 
@@ -295,11 +240,7 @@
   padding-bottom: 100px;
 }
 .security-control .head h2{
-  font-weight: 700;
-  font-size: 45px;
-  text-transform: uppercase;
-  color: #133A1B;
-  font-family: 'El Messiri';
+  @include h2;
 }
 .security-control .service{
   border: 1px solid #B7BF96;
@@ -347,18 +288,10 @@
   padding-bottom: 100px;
 }
 .other-services .head h2{
-  font-weight: 700;
-  font-size: 45px;
-  text-transform: uppercase;
-  color: #133A1B;
-  font-family: 'El Messiri';
+  @include h2;
 }
 .other-services .head p{
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 31px;
-  color: #011B10;
+  @include p;
 }
 .other-services .carousel-inner {
   width: 100%;
@@ -372,18 +305,13 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 .other-services .carousel-inner .carousel-item h4{
-  font-family: 'El Messiri';
-  font-weight: 700;
-  font-size: 25px;
-  text-transform: uppercase;
+  @include h4;
   color: #000000;
   padding-top: 20px;
 }
 .other-services .carousel-inner .carousel-item p{
-  font-family: 'Crimson Pro';
-  font-weight: 300;
+  @include p-text();
   font-size: 16px;
-  line-height: 20px;
   color: #000000;
   width: 70%;
   margin: auto;
