@@ -1,0 +1,55 @@
+<div class="add-product">
+  <div class="container">
+    <div class="row">
+      <form>
+        <div class="mb-3">
+          <label for="Product-name" class="form-label">Product Name</label>
+          <input type="text" class="form-control" id="Product-name" placeholder="Enter Project Name Here ...">
+        </div>
+        <div class="mb-3">
+          <label for="Description" class="form-label">Description Product</label>
+          <textarea class="form-control" id="Description" rows="3" placeholder="Enter your Description"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="Features" class="form-label">Features Product</label>
+            <div class="d-flex">
+              <input type="text" #item  class="form-control w-75 me-3" id="Features" placeholder="Enter Feature Here ...">
+              <button type="button" class="btn btn-outline-primary" (click)="addItem(item.value)">Add item</button>
+          </div>
+          <div class=" items pt-2"  *ngFor="let item of this.featuresItem ; let i = index">
+            <span *ngIf="this.verifyOfValue == 0 ">{{item}}</span>
+            <i class="fa fa-close" (click)="removeItem(i)"></i>
+          </div>
+          <div class="w-75 alert alert-danger mt-3" *ngIf="this.verifyOfValue > 0">
+              <span style="font-weight: 400; font-family: Crimson Pro;">plesae insert data</span>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="select-categories">Categories</label>
+          <select class="form-select mt-2" id="select-categories">
+            <option selected>CCTV</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="select-brand">Brands</label>
+          <select class="form-select mt-2" id="select-brand">
+            <option selected>CCTV</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="input-group mb-3">
+          <input type="file" class="form-control" id="inputGroupFile02">
+          <label class="input-group-text" for="inputGroupFile02">Upload</label>
+        </div>
+        <button type="button" class="btn btn-outline-primary">Add Product</button>
+      </form>
+    </div>
+  </div>
+</div>
+

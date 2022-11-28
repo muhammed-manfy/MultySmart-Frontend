@@ -25,7 +25,18 @@ import { BrandNameComponent } from './brand-name/brand-name.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ProductComponent } from './product/product.component';
 import { ShippingComponent } from './shipping/shipping.component';
-
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatListModule} from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { UsersComponent } from './admin/users/users.component';
+import { ProjectsComponent } from './admin/projects/projects.component';
+import { OffersComponent } from './admin/offers/offers.component';
+import { AddProjectComponent } from './admin/add-project/add-project.component';
+import { AddBrandsComponent } from './admin/add-brands/add-brands.component';
+import { AddVideosComponent } from './admin/add-videos/add-videos.component';
+import { AddProductComponent } from './admin/add-product/add-product.component';
+import { AddOffersComponent } from './admin/add-offers/add-offers.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +54,15 @@ import { ShippingComponent } from './shipping/shipping.component';
     CheckoutComponent,
     ProductComponent,
     ShippingComponent,
+    DashboardComponent,
+    UsersComponent,
+    ProjectsComponent,
+    OffersComponent,
+    AddProjectComponent,
+    AddBrandsComponent,
+    AddVideosComponent,
+    AddProductComponent,
+    AddOffersComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +74,10 @@ import { ShippingComponent } from './shipping/shipping.component';
     MatToolbarModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatMenuModule,
+    MatListModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

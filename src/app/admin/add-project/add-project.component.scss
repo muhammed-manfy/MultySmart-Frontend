@@ -1,0 +1,31 @@
+.add-project{
+  width: 60%;
+  background-color: #FFF;
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+  box-shadow: 0px 0px 4px rgb(88, 84, 84);
+  border-radius: 20px;
+}
+
+input::placeholder,
+textarea::placeholder{
+  font-size: 13px;
+  font-weight: 200;
+}
+label{
+  font-family: "Crimson Pro";
+  font-weight: 500;
+  font-size: 16px;
+  color: #10002b;
+}
+button{
+  background-color: #5e548e;
+  color: #FFF;
+  outline: none;
+  border:none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family:"Crimson Pro";
+  border-radius: 5px;
+}

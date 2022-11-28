@@ -1,0 +1,134 @@
+// products is starting
+// .products{
+//   // padding-bottom: 100px;
+// }
+.products .toolbar{
+  background: #5e548e;
+  display: flex;
+  justify-content: space-between;
+}
+.products .toolbar{
+  h2{
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  }
+}
+
+::ng-deep .menu{
+  background-color: white;
+}
+::ng-deep .notifications-item{
+  color: #5e548e;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Crimson Pro";
+}
+::ng-deep .menu-item{
+  color: #5e548e;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: 'Crimson Pro';
+}
+::ng-deep .menu-item:hover{
+  color: #DDD;
+}
+::ng-deep .menu-item .mat-icon,
+::ng-deep .notifications-item .mat-icon{
+  color: #5e548e;
+}
+::ng-deep .divider{
+  background-color: #5e548e;
+}
+
+.sidnav-container {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  overflow: hidden;
+  height:800px;
+}
+.products .sidnav-container{
+  background-color: #eef4ed;
+}
+
+.products .sidnav-container .sidenav{
+  width: 20%;
+  background: #10002b;
+  border-radius: 0px 15px 15px 0px;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+.products .sidnav-container .sidenav{
+  .top-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .top-section img{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 20px auto;
+  }
+  .top-section h4{
+    font-family: 'El Messiri';
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  }
+  .bottom-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .bottom-section .links{
+    display:  flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .bottom-section .links:hover{
+    background-color: #eef4ed;
+    color: #10002b;
+  }
+  .bottom-section h5{
+    font-family: "Crimson Pro";
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    padding-bottom: 7px;
+    cursor: pointer;
+    padding-left: 10px;
+  }
+
+  .bottom-section i{
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 ;
+  }
+  .bottom-section ul li{
+    font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: capitalize;
+  margin: 10px 0;
+  text-align: center;
+  }
+}
+
+

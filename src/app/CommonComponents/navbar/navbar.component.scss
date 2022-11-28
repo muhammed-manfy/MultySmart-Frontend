@@ -40,6 +40,16 @@
 .navbar .collapse{
   margin-left: 400px;
 }
+@media screen and (min-width:992px) and (max-width:1200px) {
+  .navbar .collapse{
+    margin-left: 200px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .navbar .collapse{
+    margin-left: 400px;
+  }
+}
 
 .navbar .navbar-nav .nav-item .nav-link {
   font-style: normal;

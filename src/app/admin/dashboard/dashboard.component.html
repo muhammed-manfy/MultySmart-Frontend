@@ -1,0 +1,133 @@
+<!-- products is starting -->
+<section class="products">
+  <div class="container-fluid">
+    <div class="row">
+      <mat-toolbar class="toolbar">
+        <div class="d-flex align-items-center">
+          <h2 class="pt-1">Dashboard</h2>
+          <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon"
+          (click)="sidnav.toggle()"><mat-icon>menu</mat-icon>
+          </button>
+        </div>
+        <div class="menu-admin">
+          <button mat-icon-button [matMenuTriggerFor]="notifications"  aria-label="Example icon-button with a notification">
+            <mat-icon>notifications</mat-icon>
+          </button>
+
+          <mat-menu #notifications="matMenu" class="menu">
+            <button mat-menu-item class="notifications-item">
+              <mat-icon>account_circle</mat-icon>
+              <span>muhammed is add comment</span>
+            </button>
+            <mat-divider class="divider"></mat-divider>
+            <button mat-menu-item class="notifications-item">
+              <mat-icon>account_circle</mat-icon>
+              <span>muhammed is add delete</span>
+            </button>
+          </mat-menu>
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" class="menu">
+            <button mat-menu-item class="menu-item">
+              <mat-icon>account_circle</mat-icon>
+              <span>Profile</span>
+            </button>
+            <button mat-menu-item class="menu-item">
+              <mat-icon>message</mat-icon>
+              <span>Messages</span>
+            </button>
+
+            <button mat-menu-item class="menu-item">
+              <mat-icon>comments</mat-icon>
+              <span mat-button>Comments</span>
+            </button>
+            <mat-divider class="divider"></mat-divider>
+            <button mat-menu-item class="menu-item">
+              <mat-icon>logout</mat-icon>
+              <span mat-button>LogOut</span>
+            </button>
+          </mat-menu>
+        </div>
+      </mat-toolbar>
+    </div>
+  </div>
+
+<!-- sidenav is starting -->
+<mat-sidenav-container class="sidnav-container">
+  <mat-sidenav #sidnav mode="side" opened class="sidenav">
+      <div class="top-section">
+        <img src="../../../assets/images/Projets/pro1.jpg" alt="multySmartAdmin"/>
+        <h4>Admin Name</h4>
+      </div>
+      <div class="bottom-section">
+        <div class="item-list">
+          <div class="links">
+            <i class="fa fa-user-friends"></i>
+            <h5>Users</h5>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="item-list">
+          <div class="links projects">
+            <i class="fa fa-area-chart"></i>
+            <h5>Projects</h5>
+          </div>
+          <ul class="list-unstyled projects-list text-start">
+            <li> add project </li>
+            <li> projects </li>
+          </ul>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="item-list offers">
+          <div class="links">
+            <i class="fas fa-hand-holding-usd"></i>
+            <h5>offers</h5>
+          </div>
+          <ul class="list-unstyled offers-list">
+            <li> add offer </li>
+            <li> ouffers </li>
+          </ul>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="item-list product">
+          <div class="links">
+            <i class="fas fa-dice-d6"></i>
+            <h5>product</h5>
+          </div>
+          <ul class="list-unstyled product-list">
+            <li> add product </li>
+            <li> products </li>
+          </ul>
+        </div>
+        <mat-divider></mat-divider>
+
+        <div class="item-list brands">
+          <div class="links">
+            <i class="fas fa-handshake"></i>
+            <h5>brands</h5>
+          </div>
+          <ul class="list-unstyled brands-list">
+            <li> add brand </li>
+            <li> brands </li>
+          </ul>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="item-list videos">
+          <div class="links">
+            <i class="fa fa-play-circle"></i>
+            <h5>videos</h5>
+          </div>
+          <ul class="list-unstyled videos-list">
+            <li> add video </li>
+            <li> videos </li>
+          </ul>
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-contnet">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</section>

@@ -1,0 +1,29 @@
+<div class="add-offer">
+  <div class="container">
+    <div class="row">
+      <form>
+        <div class="mb-3">
+          <label for="offer-title" class="form-label">Offer Title</label>
+          <input type="text" class="form-control" id="offer-title" placeholder="Enter Offer Title Here ...">
+        </div>
+        <div class="mb-3">
+          <label for="Price" class="form-label">Price</label>
+          <input type="text" class="form-control" id="Price" placeholder="Enter Price Here ...">
+        </div>
+        <div class="mb-3">
+          <label for="Features" class="form-label"> Features </label>
+          <div class="d-flex">
+            <input type="text" #item  class="form-control w-75 me-3" id="Features" placeholder="Enter Feature Here ...">
+            <button type="button" class="btn btn-outline-primary" (click)="addItem(item.value)">Add item</button>
+          </div>
+        </div>
+        <div class="mb-3">
+          <ol class="list-group" *ngFor="let item of this.featuresItem">
+            <li class="list-group-item">{{item}}</li>
+          </ol>
+        </div>
+        <button type="button" class="btn btn-outline-primary">Add offer</button>
+      </form>
+    </div>
+  </div>
+</div>
