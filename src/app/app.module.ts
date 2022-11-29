@@ -29,8 +29,8 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatListModule} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
-import { UsersComponent } from './admin/users/users.component';
-import { ProjectsComponent } from './admin/projects/projects.component';
+import { AdminUsersComponent } from './admin/users/users.component';
+import { AdminProjectsComponent } from './admin/projects/projects.component';
 import { OffersComponent } from './admin/offers/offers.component';
 import { AddProjectComponent } from './admin/add-project/add-project.component';
 import { AddBrandsComponent } from './admin/add-brands/add-brands.component';
@@ -55,8 +55,8 @@ import { AddOffersComponent } from './admin/add-offers/add-offers.component';
     ProductComponent,
     ShippingComponent,
     DashboardComponent,
-    UsersComponent,
-    ProjectsComponent,
+    AdminUsersComponent,
+    AdminProjectsComponent,
     OffersComponent,
     AddProjectComponent,
     AddBrandsComponent,

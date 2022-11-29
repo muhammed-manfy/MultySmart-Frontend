@@ -6,12 +6,13 @@ import { AddOffersComponent } from './admin/add-offers/add-offers.component';
 import { AddProductComponent } from './admin/add-product/add-product.component';
 import { AddProjectComponent } from './admin/add-project/add-project.component';
 import { AddVideosComponent } from './admin/add-videos/add-videos.component';
+import { AdminBrandsComponent } from './admin/brands/brands.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { OffersComponent } from './admin/offers/offers.component';
-import { ManageProductsComponent } from './admin/products/products.component';
-import { ProjectsComponent } from './admin/projects/projects.component';
-import { UsersComponent } from './admin/users/users.component';
-import { ManageVideosComponent } from './admin/videos/videos.component';
+import { AdminProductsComponent} from './admin/products/products.component';
+import { AdminProjectsComponent} from './admin/projects/projects.component';
+import { AdminUsersComponent} from './admin/users/users.component';
+import { AdminVideosComponent} from './admin/videos/videos.component';
 import { BrandNameComponent } from './brand-name/brand-name.component';
 import { BrandsComponent } from './brands/brands.component';
 import { CheckoutComponent } from './checkout/checkout.component';
@@ -39,12 +40,12 @@ const routes: Routes = [
   {path:'product',component:ProductComponent},
   {path:'dashboard',component:DashboardComponent,
     children:[
-      {path:"users",component:UsersComponent},
-      {path:"projects",component:ProjectsComponent},
+      {path:"users",component:AdminUsersComponent},
+      {path:"projects",component:AdminProjectsComponent},
       {path:"offers",component:OffersComponent},
-      {path:"products",component:ManageProductsComponent},
-      {path:"brands",component:ManageProductsComponent},
-      {path:"videos",component:ManageVideosComponent},
+      {path:"products",component:AdminProductsComponent},
+      {path:"brands",component:AdminBrandsComponent},
+      {path:"videos",component:AdminVideosComponent},
       {path:'add-project',component:AddProjectComponent},
       {path:'add-offer',component:AddOffersComponent},
       {path:'add-video',component:AddVideosComponent},

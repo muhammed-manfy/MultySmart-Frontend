@@ -7,17 +7,19 @@
   box-shadow: 0px 0px 4px rgb(88, 84, 84);
   border-radius: 20px;
 }
-
+$font-family:"Crimson Pro";
 input::placeholder,
 textarea::placeholder{
   font-size: 13px;
   font-weight: 200;
+  color: #ccc;
+  font-family: $font-family;
 }
 label{
-  font-family: "Crimson Pro";
+  font-family: $font-family;
   font-weight: 500;
   font-size: 16px;
-  color: #10002b;
+  color: #5e548e;
 }
 button{
   background-color: #5e548e;
@@ -26,6 +28,19 @@ button{
   border:none;
   padding: 10px 20px;
   font-size: 16px;
-  font-family:"Crimson Pro";
+  font-family:$font-family;
   border-radius: 5px;
+}
+button:focus{
+  background-color: #5e548e;
+  color: #FFF;
+  cursor: progress;
+}
+
+input,textarea{
+  border: none;
+  outline: none;
+  border-bottom: .5px solid #DDD;
+  font-family: $font-family;
+  font-size: 16px;
 }

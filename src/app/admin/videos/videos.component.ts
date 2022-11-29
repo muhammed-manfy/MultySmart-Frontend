@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-manage-videos',
+  selector: 'app-admin-videos',
   templateUrl: './videos.component.html',
   styleUrls: ['./videos.component.scss']
 })
-export class ManageVideosComponent implements OnInit {
+export class AdminVideosComponent implements OnInit {
 
   constructor() { }
 

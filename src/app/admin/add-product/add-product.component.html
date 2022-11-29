@@ -10,6 +10,16 @@
           <label for="Description" class="form-label">Description Product</label>
           <textarea class="form-control" id="Description" rows="3" placeholder="Enter your Description"></textarea>
         </div>
+        <div class="mb-3 d-flex justify-content-start">
+          <div class="w-25 me-5">
+            <label for="price-product" class="form-label">Price  Product</label>
+            <input type="text" class="form-control" id="Product-name" placeholder="Enter Price $">
+          </div>
+          <div class="w-25">
+            <label for="save-price" class="form-label">save price</label>
+            <input type="text" class="form-control" id="save-price" placeholder="Amount Of save $">
+          </div>
+        </div>
         <div class="mb-3">
             <label for="Features" class="form-label">Features Product</label>
             <div class="d-flex">
@@ -21,7 +31,8 @@
             <i class="fa fa-close" (click)="removeItem(i)"></i>
           </div>
           <div class="w-75 alert alert-danger mt-3" *ngIf="this.verifyOfValue > 0">
-              <span style="font-weight: 400; font-family: Crimson Pro;">plesae insert data</span>
+              <span style="font-weight: 400; font-family: Crimson Pro; text-transform: uppercase;">
+                plesae insert data</span>
           </div>
         </div>
         <div class="mb-3">

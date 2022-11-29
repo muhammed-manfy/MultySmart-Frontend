@@ -1,0 +1,34 @@
+.projects{
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  font-family: "Crimson Pro";
+  text-transform: uppercase;
+}
+.projects img{
+  width: 70px;
+  height: 70px;
+  border: 2px solid #000;
+  display: inline;
+  border-radius: 50%;
+}
+.projects thead{
+  text-transform: uppercase;
+}
+.projects tbody{
+  text-align: center;
+  text-transform: uppercase;
+}
+.projects td:nth-child(2){
+  padding-top: 30px;
+}
+.projects td:nth-child(3){
+  padding-top: 30px;
+}
+.projects td:nth-child(4){
+  padding-top: 30px;
+}
+.projects td:nth-child(5){
+  padding-top: 30px;
+}
+

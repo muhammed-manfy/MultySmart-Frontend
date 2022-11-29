@@ -3,21 +3,39 @@
   background-color: #FFF;
   padding: 20px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 40px;
   box-shadow: 0px 0px 4px rgb(88, 84, 84);
   border-radius: 20px;
 }
-
+$font-family :"Crimson Pro";
 input::placeholder,
 textarea::placeholder{
   font-size: 13px;
   font-weight: 200;
+  color: #ccc;
+  font-family: $font-family;
 }
+select{
+  font-family: $font-family;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 300;
+}
+option{
+  font-size: 14px;
+  font-weight: 200;
+  color: #ccc;
+  padding: 20px;
+  font-family: $font-family;
+}
+
 label{
-  font-family: "Crimson Pro";
+  font-family: $font-family;
   font-weight: 500;
   font-size: 16px;
-  color: #10002b;
+  color: #5e548e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 button{
   background-color: #5e548e;
@@ -25,13 +43,15 @@ button{
   outline: none;
   border:none;
   padding: 10px 20px;
-  font-size: 16px;
-  font-family:"Crimson Pro";
+  font-size: 14px;
+  font-family:$font-family;
   border-radius: 5px;
+  text-transform: uppercase;
 }
 button:focus{
   background-color: #5e548e;
   color: #FFF;
+  cursor: progress;
 }
 .items{
   background-color: #DDD;
@@ -45,9 +65,9 @@ button:focus{
 }
 .items span{
   color: #5e548e;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: "Crimson Pro";
+  font-size: 14px;
+  font-weight: 200;
+  font-family: $font-family;
   text-transform: uppercase;
   padding: 5px;
 }
@@ -55,4 +75,11 @@ button:focus{
   color: red;
   padding: 10px;
   cursor: pointer;
+}
+input,textarea{
+  border: none;
+  outline: none;
+  border-bottom: .5px solid #DDD;
+  font-family: $font-family;
+  font-size: 16px;
 }
