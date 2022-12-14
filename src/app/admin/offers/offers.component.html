@@ -1,101 +1,29 @@
 <div class="offers">
   <div class="container-fluid">
-    <!-- Table Card -->
-    <div class="card pmd-card text-center">
-      <table id="example-checkbox" class="table pmd-table table-hover table-striped display responsive nowrap"
-        cellspacing="0" width="100%">
-        <thead>
-          <tr>
-            <th>Offer Title</th>
-            <th>Offer Price</th>
-            <th>Offer Features</th>
-            <th>Edit</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Offer Title</td>
-            <td>90$/Year</td>
-            <td>
-              <ol class="list-unstyled">
-                <li>Featured first</li>
-                <li>Featured Second</li>
-                <li>Featured Third</li>
-                <li>Featured Fourth</li>
-                <li>Featured Fifth</li>
-                <li>Featured Sixth</li>
-              </ol>
-            </td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>Offer Title</td>
-            <td>90$/Year</td>
-            <td>
-              <ol class="list-unstyled">
-                <li>Featured first</li>
-                <li>Featured Second</li>
-                <li>Featured Third</li>
-                <li>Featured Fourth</li>
-                <li>Featured Fifth</li>
-                <li>Featured Sixth</li>
-              </ol>
-            </td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>Offer Title</td>
-            <td>90$/Year</td>
-            <td>
-              <ol class="list-unstyled">
-                <li>Featured first</li>
-                <li>Featured Second</li>
-                <li>Featured Third</li>
-                <li>Featured Fourth</li>
-                <li>Featured Fifth</li>
-                <li>Featured Sixth</li>
-              </ol>
-            </td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>Offer Title</td>
-            <td>90$/Year</td>
-            <td>
-              <ol class="list-unstyled">
-                <li>Featured first</li>
-                <li>Featured Second</li>
-                <li>Featured Third</li>
-                <li>Featured Fourth</li>
-                <li>Featured Fifth</li>
-                <li>Featured Sixth</li>
-              </ol>
-            </td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>Offer Title</td>
-            <td>90$/Year</td>
-            <td>
-              <ol class="list-unstyled">
-                <li>Featured first</li>
-                <li>Featured Second</li>
-                <li>Featured Third</li>
-                <li>Featured Fourth</li>
-                <li>Featured Fifth</li>
-                <li>Featured Sixth</li>
-              </ol>
-            </td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="table table-borderless">
+      <thead class="text-center">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Offer Title</th>
+          <th scope="col">Offer Price</th>
+          <th scope="col">Offer Features</th>
+          <th scope="col">Edit Offer</th>
+          <th scope="col">Delete Offer</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr *ngFor="let offer of this.offerList; let i = index">
+          <td scope="row">{{i+1}}</td>
+          <td>{{offer.title}}</td>
+          <td>{{offer.priceAndPeriod}}</td>
+          <td>
+            <ol *ngFor="let feature of offer.features" class="list-unstyled">
+              <li>{{feature}}</li>
+            </ol>
+          </td>
+          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
+          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
+      </tbody>
+    </table>
   </div>
 </div>

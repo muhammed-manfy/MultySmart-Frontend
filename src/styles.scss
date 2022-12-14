@@ -14,3 +14,13 @@
 @import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
 html, body { height: 100%; }
 body { margin: 0; font-family:'El Messiri' ,'Crimson Pro', serif; }
+
+
+.validationSnackBar{
+  background-color: red;
+  color: #FFF;
+}
+.successSnackBar{
+  background-color: green;
+  color: #FFF;
+}

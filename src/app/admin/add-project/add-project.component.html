@@ -1,20 +1,22 @@
 <div class="add-project">
   <div class="container">
     <div class="row">
-      <form>
+      <form [formGroup]="this.addProjectForm" (ngSubmit)="formSubmit()">
         <div class="mb-3">
-          <label for="project-name" class="form-label">Project Name</label>
-          <input type="text" class="form-control" id="project-name" placeholder="Enter Project Name Here ...">
+          <label for="project-title" class="form-label">Project Title</label>
+          <input type="text" class="form-control" id="project-title" formControlName="title"
+            placeholder="Enter Project Name Here ...">
         </div>
         <div class="mb-3">
           <label for="Description" class="form-label">Description project</label>
-          <textarea class="form-control" id="Description" rows="3" placeholder="Enter your Description"></textarea>
+          <textarea class="form-control" id="Description" rows="3" formControlName="description"
+            placeholder="Enter your Description"></textarea>
         </div>
         <div class="input-group mb-3">
-          <input type="file" class="form-control" value="image url" id="inputGroupFile02">
+          <input type="file" class="form-control" (change)="uploadImage($event)" formControlName="image" value="image url" id="inputGroupFile02">
           <label class="input-group-text" for="inputGroupFile02">Upload</label>
         </div>
-        <button type="button" class="btn btn-outline-primary">Add Project</button>
+        <button type="submit" class="btn btn-outline-primary">Add Project</button>
       </form>
     </div>
   </div>

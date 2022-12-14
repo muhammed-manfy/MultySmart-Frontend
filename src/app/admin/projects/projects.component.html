@@ -1,63 +1,26 @@
 <div class="projects">
   <div class="container-fluid">
-    <!-- Table Card -->
-    <div class="card pmd-card text-center">
-      <table id="example-checkbox" class="table pmd-table table-hover table-striped display responsive nowrap"
-        cellspacing="0" width="100%">
-        <thead>
-          <tr>
-            <th>Image Project</th>
-            <th>Project Name</th>
-            <th>Project Description</th>
-            <th>Edit Project</th>
-            <th>Delete Project</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><img src="../../../assets/images/Projets/pro1.jpg"></td>
-            <td>Nixon</td>
-            <td>System Architect</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td><img src="../../../assets/images/Projets/pro1.jpg"></td>
-            <td>Nixon</td>
-            <td>System Architect</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td><img src="../../../assets/images/Projets/pro1.jpg"></td>
-            <td>Nixon</td>
-            <td>System Architect</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td><img src="../../../assets/images/Projets/pro1.jpg"></td>
-            <td>Nixon</td>
-            <td>System Architect</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td><img src="../../../assets/images/Projets/pro1.jpg"></td>
-            <td>Nixon</td>
-            <td>System Architect</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td><img src="../../../assets/images/Projets/pro1.jpg"></td>
-            <td>Nixon</td>
-            <td>System Architect</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="table table-borderless">
+      <thead class="text-center">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Image Project</th>
+          <th scope="col">Project Name</th>
+          <th scope="col">Project Description</th>
+          <th scope="col">Edit Project</th>
+          <th scope="col">Delete Project</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <!-- <tr *ngFor="let project of projects_List; let i =index">
+          <td scope="row">{{i+1}}</td>
+          <td><img [src]='project.image'></td>
+          <td>{{project.title}}</td>
+          <td>{{project.description}}</td>
+          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
+          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
+        </tr> -->
+      </tbody>
+    </table>
   </div>
 </div>

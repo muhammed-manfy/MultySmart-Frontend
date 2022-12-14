@@ -48,3 +48,26 @@ input,textarea{
   font-family: $font-family;
   font-size: 16px;
 }
+.items{
+  background-color: #DDD;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+}
+.items span{
+  color: #5e548e;
+  font-size: 14px;
+  font-weight: 200;
+  font-family: $font-family;
+  text-transform: uppercase;
+  padding: 5px;
+}
+.items i{
+  color: red;
+  padding: 10px;
+  cursor: pointer;
+}

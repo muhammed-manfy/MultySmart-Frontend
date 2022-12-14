@@ -1,106 +1,21 @@
 <div class="brands">
   <div class="container-fluid">
-    <!-- Table Card -->
-    <div class="card pmd-card text-center">
-      <table id="example-checkbox" class="table pmd-table table-hover table-striped display responsive nowrap"
-        cellspacing="0" width="100%">
-        <thead>
-          <tr>
-            <th>Brand Name</th>
-            <th>Category</th>
-            <th>Edit</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-
-          <tr>
-            <td>KNX</td>
-            <td>HVAC</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="table table-borderless">
+      <thead class="text-center">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Brand Name</th>
+          <th scope="col">Edit Brand</th>
+          <th scope="col">Delete Brand</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr *ngFor="let brand of this.brandsList;let i = index">
+          <td scope="row">{{ i + 1}}</td>
+          <td>{{brand.brand}}</td>
+          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
+          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
+      </tbody>
+    </table>
   </div>
 </div>

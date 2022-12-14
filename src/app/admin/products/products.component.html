@@ -1,94 +1,32 @@
 <div class="products">
   <div class="container-fluid">
-    <!-- Table Card -->
-    <div class="card pmd-card text-center">
-      <table id="example-checkbox" class="table pmd-table table-hover table-striped display responsive nowrap"
-        cellspacing="0" width="100%">
-        <thead>
-          <tr>
-            <th>product image</th>
-            <th>product NAME</th>
-            <th>Price product</th>
-            <th>Save Price</th>
-            <th>Category</th>
-            <th>Brand</th>
-            <th>Edit</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><img src="../../../assets/images/Products/knxe4.png"/></td>
-            <td>Tiger</td>
-            <td>150$</td>
-            <td>20$</td>
-            <td>HVAC</td>
-            <td>KNX</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td><img src="../../../assets/images/Products/knxe4.png"/></td>
-            <td>Tiger</td>
-            <td>150$</td>
-            <td>20$</td>
-            <td>HVAC</td>
-            <td>KNX</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td><img src="../../../assets/images/Products/knxe4.png"/></td>
-            <td>Tiger</td>
-            <td>150$</td>
-            <td>20$</td>
-            <td>HVAC</td>
-            <td>KNX</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td><img src="../../../assets/images/Products/knxe4.png"/></td>
-            <td>Tiger</td>
-            <td>150$</td>
-            <td>20$</td>
-            <td>HVAC</td>
-            <td>KNX</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td><img src="../../../assets/images/Products/knxe4.png"/></td>
-            <td>Tiger</td>
-            <td>150$</td>
-            <td>20$</td>
-            <td>HVAC</td>
-            <td>KNX</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td><img src="../../../assets/images/Products/knxe4.png"/></td>
-            <td>Tiger</td>
-            <td>150$</td>
-            <td>20$</td>
-            <td>HVAC</td>
-            <td>KNX</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td><img src="../../../assets/images/Products/knxe4.png"/></td>
-            <td>Tiger</td>
-            <td>150$</td>
-            <td>20$</td>
-            <td>HVAC</td>
-            <td>KNX</td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-            <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="table table-borderless">
+      <thead class="text-center">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">product image</th>
+          <th scope="col">product NAME</th>
+          <th scope="col">Price product</th>
+          <th scope="col">Save Price</th>
+          <th scope="col">Category</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr *ngFor="let project of this.productsList; let i = index">
+          <td scope="row">{{i+1}}</td>
+          <td><img [src]='project.images[0]'/></td>
+          <td>{{project.productName}}</td>
+          <td>{{project.price}}</td>
+          <td>{{project.savePrice}}</td>
+          <td>{{project.category}}</td>
+          <td>{{project.brand}}</td>
+          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
+          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
+import { MatButtonModule} from '@angular/material/button';
+import { MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './CommonComponents/navbar/navbar.component';
 import { FooterComponent } from './CommonComponents/footer/footer.component';
 import { HomeComponent } from './HomeComponent/home/home.component';
 import { ProductsComponent } from './products/products.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { VideosComponent } from './videos/videos.component';
 import { BrandsComponent } from './brands/brands.component';
 import { ServicesComponent } from './services/services.component';
@@ -26,17 +26,27 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { ProductComponent } from './product/product.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatListModule} from '@angular/material/list';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatMenuModule} from '@angular/material/menu';
+import { MatListModule} from '@angular/material/list';
+import { MatExpansionModule} from '@angular/material/expansion';
 import { AdminUsersComponent } from './admin/users/users.component';
-import { AdminProjectsComponent } from './admin/projects/projects.component';
+import { AdminProjectsComponent} from './admin/projects/projects.component';
 import { OffersComponent } from './admin/offers/offers.component';
 import { AddProjectComponent } from './admin/add-project/add-project.component';
 import { AddBrandsComponent } from './admin/add-brands/add-brands.component';
 import { AddVideosComponent } from './admin/add-videos/add-videos.component';
 import { AddProductComponent } from './admin/add-product/add-product.component';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { AddOffersComponent } from './admin/add-offers/add-offers.component';
+import { ShowProjevtNotificationComponent } from './ValidatorNotification/ValidatorProject/show-projevt-notification/show-projevt-notification.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShowOfferNotificationsComponent } from './ValidatorNotification/ValidatorOffer/show-offer-notifications/show-offer-notifications.component';
+import { ShowProductNotificatoinsComponent } from './ValidatorNotification/ValidatorProduct/show-product-notificatoins/show-product-notificatoins.component';
+import { ShowVideoNotificatoinsComponent } from './ValidatorNotification/ValidatorVideo/show-video-notificatoins/show-video-notificatoins.component';
+import { AdminProductsComponent } from './admin/products/products.component';
+import { AdminVideosComponent } from './admin/videos/videos.component';
+import { AdminBrandsComponent } from './admin/brands/brands.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,13 +66,20 @@ import { AddOffersComponent } from './admin/add-offers/add-offers.component';
     ShippingComponent,
     DashboardComponent,
     AdminUsersComponent,
-    AdminProjectsComponent,
     OffersComponent,
     AddProjectComponent,
     AddBrandsComponent,
     AddVideosComponent,
     AddProductComponent,
     AddOffersComponent,
+    ShowProjevtNotificationComponent,
+    ShowOfferNotificationsComponent,
+    ShowProductNotificatoinsComponent,
+    ShowVideoNotificatoinsComponent,
+    AdminProjectsComponent,
+    AdminProductsComponent,
+    AdminVideosComponent,
+    AdminBrandsComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +94,11 @@ import { AddOffersComponent } from './admin/add-offers/add-offers.component';
     MatSidenavModule,
     MatMenuModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

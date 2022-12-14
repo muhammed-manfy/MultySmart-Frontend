@@ -1,0 +1,13 @@
+p{
+  color: #FFF;
+  border:1px solid #FFF;
+  font-size: 14px;
+  font-family:"El Messiri";
+  border-radius: 5px;
+  text-transform: lowercase;
+  padding: 5px;
+}
+
+::ng-deep .mat-snack-bar-container{
+  background-color: rgba(231, 8, 8, .8);
+}

@@ -2,15 +2,29 @@
   width: 80%;
   margin: auto;
   margin-top: 20px;
-  font-family: "Crimson Pro";
+  font-family: "El Messiri";
   margin-bottom: 100px;
+  box-shadow: 0 0 2px 2px #DDD;
+  padding-bottom: 20px;
 }
 .offers thead{
   text-transform: uppercase;
+  border-bottom:1px solid;
+  color: #5e548e;
+}
+.offers th{
+  font-weight: 700;
 }
 .offers tbody{
   text-align: center;
   text-transform: uppercase;
+}
+.offers tbody td{
+  border-bottom:1px solid;
+  color: #5e548e;
+}
+.offers tr:hover{
+  background-color:#F9F9F9;
 }
 .offers td:nth-child(1){
   padding-top: 50px;
@@ -18,13 +32,15 @@
 .offers td:nth-child(2){
   padding-top: 50px;
 }
-.offers td:nth-child(4){
+.offers td:nth-child(3){
   padding-top: 50px;
 }
 .offers td:nth-child(5){
   padding-top: 50px;
 }
-
+.offers td:nth-child(6){
+  padding-top: 50px;
+}
 .offers tbody{
   text-transform: uppercase;
 }

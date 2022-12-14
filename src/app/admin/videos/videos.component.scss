@@ -1,16 +1,27 @@
-.videos{
-  width: 60%;
+.vidoes{
+  width: 90%;
   margin: auto;
-  margin-top: 100px;
-  font-family: "Crimson Pro";
+  margin-top: 30px;
+  font-family: "El Messiri";
+  box-shadow: 0 0 2px 2px #DDD;
+  padding: 20px;
 }
-.videos thead{
+.vidoes tbody tr{
+  border-bottom: 1px solid;
+}
+.vidoes thead{
+  color: #5e548e;
   text-transform: uppercase;
 }
-.videos tbody{
-  text-align: center;
-  text-transform: uppercase;
+.vidoes th{
+  font-weight: 700;
 }
-.videos td {
-  padding: 15px 0;
+.vidoes tbody{
+  color: #5e545e;
+}
+.vidoes td i{
+  color: #5e548e;
+}
+.vidoes tr:hover{
+  background-color: #F9F9F9;
 }

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { arrow } from '@popperjs/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { OfferService } from 'src/app/API Services/Offer/offer.service';
+import { offersInfo } from 'src/app/Models/Offer.model';
+import { ShowOfferNotificationsComponent } from 'src/app/ValidatorNotification/ValidatorOffer/show-offer-notifications/show-offer-notifications.component';
 
 @Component({
   selector: 'app-add-offers',
@@ -8,14 +12,89 @@ import { arrow } from '@popperjs/core';
 })
 export class AddOffersComponent implements OnInit {
 
-  public featuresItem:Array<String>=[];
-  constructor() { }
+  public addOfferForm: FormGroup;
+  public featuresItem = Array<String>();
+  verifyOfItems: Number = 0;
+  featureslength: Boolean = true;
+  messageResponse: any;
+  offerInfo: offersInfo | undefined;
+  constructor(private formBuilder: FormBuilder, private snakBar: MatSnackBar, private offerService: OfferService) {
+    this.addOfferForm = this.formBuilder.group({
+      title: ['', [Validators.required]],
+      priceAndPeriod: ['', [Validators.required]],
+      features: ['', [Validators.required]]
+    })
+  }
+
+  get title() {
+    return this.addOfferForm.get('title')?.valid;
+  }
+  get priceAndPeriod() {
+    return this.addOfferForm.get('priceAndPeriod')?.valid;
+  }
+  get features() {
+    return this.addOfferForm.get('features')?.valid;
+  }
 
   ngOnInit(): void {
 
   }
-  addItem(value:any){
-    console.log(value);
-    this.featuresItem.push(value);
+
+  valdiationNotification() {
+    this.snakBar.openFromComponent(ShowOfferNotificationsComponent, {
+      data: {
+        title: this.title,
+        price: this.priceAndPeriod,
+        features: this.features,
+        featureslength: this.featureslength
+      },
+      horizontalPosition: "end",
+      verticalPosition: "bottom",
+      duration: 4 * 1000
+    })
+  }
+
+  addItem(value: any) {
+    if (value === '') {
+      this.verifyOfItems = +1;
+    }
+    else {
+      this.featuresItem.push(value);
+      this.verifyOfItems = 0;
+    }
+  }
+  removeItem(index: any) {
+    this.featuresItem.splice(index, 1);
+  }
+
+  async submitForm() {
+    if (this.featuresItem.length == 0 && this.features) {
+      this.featureslength = false;
+    }
+    if (!this.addOfferForm.valid)
+      this.valdiationNotification()
+    else {
+      this.offerInfo = {
+        title: this.addOfferForm.value.title,
+        priceAndPeriod: this.addOfferForm.value.priceAndPeriod,
+        features: this.featuresItem
+      };
+      await (await this.offerService.createOffer(this.offerInfo)).subscribe(response => {
+        this.messageResponse = response;
+        this.snakBar.open(this.messageResponse.message, "Ok", {
+          horizontalPosition: "end",
+          verticalPosition: "bottom",
+          duration: 4 * 1000,
+          panelClass: ['successSnackBar']
+        })
+      }, (err) => {
+        this.snakBar.open(err, "Ok", {
+          horizontalPosition: "end",
+          verticalPosition: "bottom",
+          duration: 4 * 1000,
+          panelClass: ['validationSnackBar']
+        });
+      });
+    }
   }
 }

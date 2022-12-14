@@ -1,10 +1,27 @@
 .users{
   width: 90%;
   margin: auto;
-  margin-top: 20px;
-  font-family: "Crimson Pro";
+  margin-top: 30px;
+  font-family: "El Messiri";
+  box-shadow: 0 0 2px 2px #DDD;
+  padding: 20px;
+}
+.users tbody tr{
+  border-bottom: 1px solid;
 }
 .users thead{
+  color: #5e548e;
   text-transform: uppercase;
 }
-
+.users th{
+  font-weight: 700;
+}
+.users tbody{
+  color: #5e545e;
+}
+.users td i{
+  color: #5e548e;
+}
+.users tr:hover{
+  background-color: #F9F9F9;
+}
