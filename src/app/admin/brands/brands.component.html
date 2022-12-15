@@ -13,8 +13,8 @@
         <tr *ngFor="let brand of this.brandsList;let i = index">
           <td scope="row">{{ i + 1}}</td>
           <td>{{brand.brand}}</td>
-          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
+          <td (click)="updateBrand(brand)" style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
+          <td (click)="deleteBrand(brand._id)"  style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
       </tbody>
     </table>
   </div>

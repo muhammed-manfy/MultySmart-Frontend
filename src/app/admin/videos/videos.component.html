@@ -13,8 +13,8 @@
         <tr *ngFor="let video of this.videosList; let i = index">
           <td scope="row">{{i+1}}</td>
           <td>{{video.title}}</td>
-          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
+          <td (click)="editVideo(video)"   style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
+          <td (click)="deleteVideo(video._id)"style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
         </tr>
       </tbody>
     </table>

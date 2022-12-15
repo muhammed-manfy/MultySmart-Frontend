@@ -22,4 +22,13 @@ export class ProductService extends BasicApiService {
   async  getProducts(){
     return await this.http.get<productInfo>(this.BaseUrl+'/products').pipe(catchError(this.handleError));
   }
+
+  async  deleteProducts(id:any){
+    return await this.http.delete(this.BaseUrl+'/products/delete/'+id).pipe(catchError(this.handleError));
+  }
+
+  async updateProducts(id:any,productData:any):Promise<Observable<productInfo>>{
+    return await this.http.put<productInfo>(this.BaseUrl+'/products/update/'+id,productData)
+    .pipe(catchError(this.handleError));
+  }
 }

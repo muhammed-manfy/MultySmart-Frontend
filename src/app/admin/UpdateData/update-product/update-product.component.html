@@ -1,0 +1,69 @@
+<div class="add-product">
+  <div class="container">
+    <div class="row">
+      <form (ngSubmit)="formSubmit($event)">
+        <div class="mb-3">
+          <label for="Product-name" class="form-label">Product Name</label>
+          <input type="text" class="form-control" id="Product-name" name="productName"
+            [value]="this.routingInfo.productName">
+        </div>
+        <div class="mb-3">
+          <label for="Description" class="form-label">Description Product</label>
+          <textarea class="form-control" id="Description" rows="3" name="description"
+            [value]="this.routingInfo.description"></textarea>
+        </div>
+        <div class="mb-3 d-flex justify-content-start">
+          <div class="w-25 me-5">
+            <label for="price-product" class="form-label">Price Product</label>
+            <input type="text" class="form-control" id="Product-price" name="price" [value]="this.routingInfo.price">
+          </div>
+          <div class="w-25">
+            <label for="save-price" class="form-label">save price</label>
+            <input type="text" class="form-control" name="savePrice" id="save-price"
+              [value]="this.routingInfo.savePrice">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="Features" class="form-label">Features Product</label>
+          <div class="d-flex">
+            <input type="text" #item class="form-control w-75 me-3" id="Features"
+              placeholder="Enter Feature Here ...">
+            <button type="button" class="btn btn-outline-primary" (click)="addItem(item.value)">Add item</button>
+          </div>
+          <div class=" items pt-2" *ngFor="let item of this.featuresItem ; let i = index">
+            <span *ngIf="this.verifyOfItems == 0 ">{{item}}</span>
+            <i class="fa fa-close" (click)="removeItem(i)"></i>
+          </div>
+          <div class="w-75 alert alert-danger mt-3" *ngIf="this.verifyOfItems > 0">
+            <span style="font-weight: 400; font-family: Crimson Pro; text-transform: uppercase;">
+              plesae insert data</span>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="select-categories">Category</label>
+          <select class="form-select mt-2" name="categroy" id="select-categories">
+            <option selected>{{routingInfo.category}}</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="select-brand">Brand</label>
+          <select class="form-select mt-2" name="brand" id="select-brand">
+            <option selected>{{routingInfo.brand}}</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="input-group mb-3">
+          <input type="file" class="form-control" multiple (change)="uploadImages($event)" id="inputGroupFile02">
+          <label class="input-group-text" for="inputGroupFile02" style="cursor: pointer;">Upload Image</label>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Appaly Changes</button>
+      </form>
+    </div>
+  </div>
+</div>

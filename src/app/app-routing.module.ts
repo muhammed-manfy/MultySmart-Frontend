@@ -11,6 +11,11 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { OffersComponent } from './admin/offers/offers.component';
 import { AdminProductsComponent} from './admin/products/products.component';
 import { AdminProjectsComponent} from './admin/projects/projects.component';
+import { UpdateBrandComponent } from './admin/UpdateData/update-brand/update-brand.component';
+import { UpdateOfferComponent } from './admin/UpdateData/update-offer/update-offer.component';
+import { UpdateProductComponent } from './admin/UpdateData/update-product/update-product.component';
+import { UpdateProjectComponent } from './admin/UpdateData/update-project/update-project.component';
+import { UpdateVideoComponent } from './admin/UpdateData/update-video/update-video.component';
 import { AdminUsersComponent} from './admin/users/users.component';
 import { AdminVideosComponent} from './admin/videos/videos.component';
 import { BrandNameComponent } from './brand-name/brand-name.component';
@@ -50,7 +55,12 @@ const routes: Routes = [
       {path:'add-offer',component:AddOffersComponent},
       {path:'add-video',component:AddVideosComponent},
       {path:'add-brand',component:AddBrandsComponent},
-      {path:'add-product',component:AddProductComponent}
+      {path:'add-product',component:AddProductComponent},
+      {path:'edit-brand' ,component:UpdateBrandComponent},
+      {path:'edit-offer' ,component:UpdateOfferComponent},
+      {path:'edit-project' ,component:UpdateProjectComponent},
+      {path:'edit-product' ,component:UpdateProductComponent},
+      {path:'edit-video' ,component:UpdateVideoComponent},
     ]}
 ];
 

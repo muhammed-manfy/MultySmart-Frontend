@@ -1,0 +1,21 @@
+<div class="add-project">
+  <div class="container">
+    <div class="row">
+      <form  (ngSubmit)="formSubmit($event)">
+        <div class="mb-3">
+          <label for="project-title" class="form-label">Project Title</label>
+          <input type="text" class="form-control" name="title" [value]="this.routingInfo.title" id="project-title">
+        </div>
+        <div class="mb-3">
+          <label for="Description" class="form-label">Description project</label>
+          <textarea class="form-control" id="Description" name="description" [value]="this.routingInfo.description" rows="3"></textarea>
+        </div>
+        <div class="input-group mb-3">
+          <input type="file" class="form-control" name="image" id="inputGroupFile02">
+          <label class="input-group-text" for="inputGroupFile02">Upload Picture</label>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Appaly Changes</button>
+      </form>
+    </div>
+  </div>
+</div>

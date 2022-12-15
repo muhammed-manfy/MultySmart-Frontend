@@ -14,12 +14,20 @@ export class BrandService extends BasicApiService {
     super();
    }
 
-  async createBrand(brand:any):Promise<Observable<brandInfo>>{
-    return await this.http.post<brandInfo>(this.BaseUrl+'/brands/create',brand).
+  async createBrand(brandData:any):Promise<Observable<brandInfo>>{
+    return await this.http.post<brandInfo>(this.BaseUrl+'/brands/create',brandData).
     pipe(catchError(this.handleError));
   }
 
   async getBrands(){
     return await this.http.get<brandInfo>(this.BaseUrl+'/brands').pipe(catchError(this.handleError));
+  }
+  async deleteBrand(id:any){
+    return await this.http.delete(this.BaseUrl+'/brands/delete/'+id).pipe(catchError(this.handleError));
+  }
+
+  async updateBrand(id:String,brandData:any):Promise<Observable<brandInfo>>{
+    return await this.http.put<brandInfo>(this.BaseUrl+'/brands/update/'+id,brandData)
+    .pipe(catchError(this.handleError));
   }
 }

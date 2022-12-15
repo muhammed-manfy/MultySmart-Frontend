@@ -1,4 +1,5 @@
 export interface productInfo {
+  _id:String;
 
   productName: String;
 

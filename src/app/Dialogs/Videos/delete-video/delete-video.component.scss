@@ -1,0 +1,28 @@
+::ng-deep .mat-dialog-container{
+  background-color: #FFF;
+  border-radius: 10px;
+}
+$font-family:"Crimson Pro";
+h4{
+  background-color:#FFF;
+  color: #5e548e;
+  font-size: 18px;
+  font-weight: 400;
+  font-family:$font-family;
+  text-align: center;
+}
+button{
+  background-color: #5e548e;
+  color: #FFF;
+  outline: none;
+  border:none;
+  // padding: 10px 20px;
+  font-size: 16px;
+  font-family:$font-family;
+  border-radius: 5px;
+}
+button:focus{
+  background-color: #5e548e;
+  color: #FFF;
+  cursor: progress;
+}

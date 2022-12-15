@@ -13,7 +13,7 @@ import { ShowOfferNotificationsComponent } from 'src/app/ValidatorNotification/V
 export class AddOffersComponent implements OnInit {
 
   public addOfferForm: FormGroup;
-  public featuresItem = Array<String>();
+  public featuresItem = Array<any>();
   verifyOfItems: Number = 0;
   featureslength: Boolean = true;
   messageResponse: any;
@@ -74,27 +74,32 @@ export class AddOffersComponent implements OnInit {
     if (!this.addOfferForm.valid)
       this.valdiationNotification()
     else {
-      this.offerInfo = {
-        title: this.addOfferForm.value.title,
-        priceAndPeriod: this.addOfferForm.value.priceAndPeriod,
-        features: this.featuresItem
-      };
-      await (await this.offerService.createOffer(this.offerInfo)).subscribe(response => {
+      let title =this.addOfferForm.value.title;
+      let priceAndPeriod =this.addOfferForm.value.priceAndPeriod;
+      let feature;
+      const formData  = new FormData();
+        formData.append("title",title);
+        formData.append("priceAndPeriod",priceAndPeriod);
+          for (let  index = 0; index<this.featuresItem.length ; index++){
+            feature = this.featuresItem[index];
+            formData.append("features",feature);
+          }
+        await (await this.offerService.createOffer(formData)).subscribe(response => {
         this.messageResponse = response;
         this.snakBar.open(this.messageResponse.message, "Ok", {
-          horizontalPosition: "end",
-          verticalPosition: "bottom",
-          duration: 4 * 1000,
-          panelClass: ['successSnackBar']
-        })
-      }, (err) => {
-        this.snakBar.open(err, "Ok", {
-          horizontalPosition: "end",
-          verticalPosition: "bottom",
-          duration: 4 * 1000,
-          panelClass: ['validationSnackBar']
+            horizontalPosition: "end",
+            verticalPosition: "bottom",
+            duration: 4 * 1000,
+            panelClass: ['successSnackBar']
+          })
+        }, (err) => {
+          this.snakBar.open(err, "Ok", {
+            horizontalPosition: "end",
+            verticalPosition: "bottom",
+            duration: 4 * 1000,
+            panelClass: ['validationSnackBar']
+          });
         });
-      });
     }
   }
 }

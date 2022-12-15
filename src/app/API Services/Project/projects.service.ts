@@ -16,8 +16,16 @@ export class ProjectsService extends BasicApiService {
     return (await this.http.post<projectInfo>(this.BaseUrl + '/projects/create', project)).
       pipe(catchError(this.handleError));
   }
-  getProjects() {
-    return this.http.get<projectInfo>(this.BaseUrl + '/projects')
+  async getProjects() {
+    return await this.http.get<projectInfo>(this.BaseUrl + '/projects')
       .pipe(catchError(this.handleError))
+  }
+  async deleteProject(id:any){
+  return await this.http.delete(this.BaseUrl+'/projects/delete/'+id)
+  .pipe(catchError(this.handleError));
+  }
+  async updateProject(id:any,projectData:any):Promise<Observable<projectInfo>>{
+    return await this.http.put<projectInfo>(this.BaseUrl+'/projects/update/'+id,projectData)
+    .pipe(catchError(this.handleError));
   }
 }

@@ -1,4 +1,5 @@
 export interface offersInfo{
+  _id:String;
 
   title:String;
 

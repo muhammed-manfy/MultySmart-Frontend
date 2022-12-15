@@ -1,0 +1,24 @@
+<div class="add-videos">
+  <div class="container">
+    <div class="row">
+      <form (ngSubmit)="submitForm($event)">
+        <div class="mb-3">
+          <label for="video-title" class="form-label">Video Title</label>
+          <input type="text" class="form-control" id="video-title" name="title"
+            [value]="this.routingInfo.title">
+        </div>
+        <div class="mb-3">
+          <label for="Description-video" class="form-label">Description Video</label>
+          <textarea class="form-control" id="Description-video" rows="3" [value]="this.routingInfo.description"
+            name="description"></textarea>
+        </div>
+        <div class="input-group mb-3">
+          <input type="file" class="form-control" id="inputGroupFile02" name="video">
+          <label class="input-group-text" for="inputGroupFile02"
+            style="cursor: pointer; text-transform: uppercase;">Upload Video</label>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Applay Changes</button>
+      </form>
+    </div>
+  </div>
+</div>

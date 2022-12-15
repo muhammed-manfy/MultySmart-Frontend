@@ -15,16 +15,16 @@
         </tr>
       </thead>
       <tbody class="text-center">
-        <tr *ngFor="let project of this.productsList; let i = index">
+        <tr *ngFor="let product of this.productsList; let i = index">
           <td scope="row">{{i+1}}</td>
-          <td><img [src]='project.images[0]'/></td>
-          <td>{{project.productName}}</td>
-          <td>{{project.price}}</td>
-          <td>{{project.savePrice}}</td>
-          <td>{{project.category}}</td>
-          <td>{{project.brand}}</td>
-          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
+          <td><img [src]='product.images[0]'/></td>
+          <td>{{product.productName}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.savePrice}}</td>
+          <td>{{product.category}}</td>
+          <td>{{product.brand}}</td>
+          <td  (click)="editProduct(product)" style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
+          <td (click)="deleteProduct(product._id)" style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
         </tr>
       </tbody>
     </table>

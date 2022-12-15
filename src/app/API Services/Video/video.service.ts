@@ -21,4 +21,12 @@ export class VideoService extends BasicApiService {
     return await this.http.get<videoInfo>(this.BaseUrl+'/videos').
     pipe(catchError(this.handleError));
   }
+  async deleteVideo(id:any){
+    return await this.http.delete(this.BaseUrl+'/videos/delete/'+id).
+    pipe(catchError(this.handleError));
+  }
+  async updateVideo(id:any,videoData:any):Promise<Observable<videoInfo>>{
+    return await this.http.put<videoInfo>(this.BaseUrl+'/videos/update/'+id ,videoData).
+    pipe(catchError(this.handleError));
+  }
 }

@@ -13,8 +13,8 @@ export class OfferService extends BasicApiService {
     super();
    }
 
-  async createOffer(offer:any):Promise<Observable<offersInfo>>{
-    return await this.http.post<offersInfo>(this.BaseUrl+'/offers/create',offer).
+  async createOffer(offerData:any):Promise<Observable<offersInfo>>{
+    return await this.http.post<offersInfo>(this.BaseUrl+'/offers/create',offerData).
         pipe(catchError(this.handleError));
   }
   async getOffers(){
@@ -22,4 +22,12 @@ export class OfferService extends BasicApiService {
       .pipe(catchError(this.handleError));
   }
 
+  async deleteOffer(id:any){
+    return await this.http.delete(this.BaseUrl+'/offers/delete/'+id)
+      .pipe(catchError(this.handleError));
+  }
+  async updateOffer(id:any,offerData:any):Promise<Observable<offersInfo>>{
+    return await this.http.put<offersInfo>(this.BaseUrl+'/offers/update/'+id,offerData)
+    .pipe(catchError(this.handleError));
+  }
 }

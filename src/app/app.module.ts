@@ -46,7 +46,17 @@ import { ShowVideoNotificatoinsComponent } from './ValidatorNotification/Validat
 import { AdminProductsComponent } from './admin/products/products.component';
 import { AdminVideosComponent } from './admin/videos/videos.component';
 import { AdminBrandsComponent } from './admin/brands/brands.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { DeleteProjectComponent } from './Dialogs/Projects/delete-project/delete-project.component';
+import { DeleteVideoComponent } from './Dialogs/Videos/delete-video/delete-video.component';
+import { DeleteProductComponent } from './Dialogs/Products/delete-product/delete-product.component';
+import { DeleteOfferComponent } from './Dialogs/Offers/delete-offer/delete-offer.component';
+import { DeletebrandComponent } from './Dialogs/Brands/deletebrand/deletebrand.component';
+import { UpdateProjectComponent } from './admin/UpdateData/update-project/update-project.component';
+import { UpdateProductComponent } from './admin/UpdateData/update-product/update-product.component';
+import { UpdateVideoComponent } from './admin/UpdateData/update-video/update-video.component';
+import { UpdateBrandComponent } from './admin/UpdateData/update-brand/update-brand.component';
+import { UpdateOfferComponent } from './admin/UpdateData/update-offer/update-offer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +89,17 @@ import { AdminBrandsComponent } from './admin/brands/brands.component';
     AdminProjectsComponent,
     AdminProductsComponent,
     AdminVideosComponent,
-    AdminBrandsComponent
+    AdminBrandsComponent,
+    DeleteProjectComponent,
+    DeleteVideoComponent,
+    DeleteProductComponent,
+    DeleteOfferComponent,
+    DeletebrandComponent,
+    UpdateProjectComponent,
+    UpdateProductComponent,
+    UpdateVideoComponent,
+    UpdateBrandComponent,
+    UpdateOfferComponent
   ],
   imports: [
     BrowserModule,
@@ -98,7 +118,8 @@ import { AdminBrandsComponent } from './admin/brands/brands.component';
     FormsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

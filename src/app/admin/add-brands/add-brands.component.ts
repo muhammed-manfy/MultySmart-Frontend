@@ -37,10 +37,10 @@ export class AddBrandsComponent implements OnInit {
     if (!this.addBrand.valid)
       this.ValidationNotification();
     else {
-      this.brand = {
-        brand: this.addBrand.value.brandName
-      };
-      (await this.brandService.createBrand(this.brand)).subscribe(response => {
+      let brand = this.addBrand.value.brand;
+      const formData = new FormData();
+      formData.append("brand",brand);
+      (await this.brandService.createBrand(formData)).subscribe(response => {
         this.messageResponse = response;
         this.snackBar.open(this.messageResponse.message, "Ok", {
           horizontalPosition: end,

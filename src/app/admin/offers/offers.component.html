@@ -12,7 +12,7 @@
         </tr>
       </thead>
       <tbody class="text-center">
-        <tr *ngFor="let offer of this.offerList; let i = index">
+        <tr *ngFor="let offer of offerList; let i = index">
           <td scope="row">{{i+1}}</td>
           <td>{{offer.title}}</td>
           <td>{{offer.priceAndPeriod}}</td>
@@ -21,8 +21,8 @@
               <li>{{feature}}</li>
             </ol>
           </td>
-          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
-          <td style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
+          <td   (click)="editOffer(offer)" style="cursor: pointer; font-size: 18px;"><i class="fa fa-edit"></i></td>
+          <td (click)="deleteOffer(offer._id)" style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
       </tbody>
     </table>
   </div>
