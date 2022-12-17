@@ -1,0 +1,60 @@
+.admin-messages{
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+}
+.admin-messages .message{
+  border: 1px solid #CCC;
+  box-shadow: 0 0 2px 2px #ccc;
+
+  $font-family: "El Messiri";
+
+  .message-details{
+    display: flex;
+    flex-direction: column;
+    color: #5e548e;
+
+    h4{
+      font-family: $font-family;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 47px;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    span{
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+    }
+    p{
+      font-family: $font-family;
+      font-weight: 300;
+      font-size: 16px;
+      line-height:1.4;
+      padding: 5px 10px;
+    }
+  }
+  .divider{
+    background-color: #5e545e;
+  }
+  i{
+    font-size: 18px;
+    font-weight: 400;
+    color: #5e548e;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  span{
+    font-family: $font-family;
+    font-weight:200;
+    font-size: 14px;
+    color: #5e548e;
+  }
+}
+.admin-messages .pagination{
+  background-color: #DDD;
+  color: #5e548e;
+}

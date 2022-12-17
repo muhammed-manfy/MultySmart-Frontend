@@ -17,8 +17,8 @@ export class OfferService extends BasicApiService {
     return await this.http.post<offersInfo>(this.BaseUrl+'/offers/create',offerData).
         pipe(catchError(this.handleError));
   }
-  async getOffers(){
-    return await this.http.get<offersInfo>(this.BaseUrl+'/offers')
+  getOffers(){
+    return  this.http.get<offersInfo>(this.BaseUrl+'/offers')
       .pipe(catchError(this.handleError));
   }
 

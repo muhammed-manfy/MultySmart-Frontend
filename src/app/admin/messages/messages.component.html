@@ -1,0 +1,17 @@
+<div class="admin-messages">
+  <div class="row p-3">
+    <div *ngFor="let message of messagesList" class="col-5 p-3 m-auto message">
+      <div class="message-details">
+        <h4><i class="fa fa-user-circle"></i> {{message.fullName}}</h4>
+        <span><i class="fa fa-phone"></i> {{message.phone}}</span>
+        <p>{{message.message}}.</p>
+      </div>
+      <mat-divider class="divider"></mat-divider>
+      <i class="fa fa-trash-can pt-3" (click)="deleteMessage(message._id)"></i>
+      <span class="pt-3">{{message.created_at}}</span>
+    </div>
+  </div>
+  <div class=" p-5 justify-content-center">
+    <mat-paginator class="pagination" (page)="handlePAgination($event)" [length]="totalMessages" [pageIndex]="currentpage" [pageSize]="pageSize" aria-label="Select page"></mat-paginator>
+  </div>
+</div>

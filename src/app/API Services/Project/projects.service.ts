@@ -16,8 +16,8 @@ export class ProjectsService extends BasicApiService {
     return (await this.http.post<projectInfo>(this.BaseUrl + '/projects/create', project)).
       pipe(catchError(this.handleError));
   }
-  async getProjects() {
-    return await this.http.get<projectInfo>(this.BaseUrl + '/projects')
+  getProjects() {
+    return this.http.get<projectInfo>(this.BaseUrl + '/projects')
       .pipe(catchError(this.handleError))
   }
   async deleteProject(id:any){

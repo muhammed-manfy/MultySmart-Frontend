@@ -17,5 +17,6 @@
           <td (click)="deleteBrand(brand._id)"  style="cursor: pointer; font-size: 18px;"><i class="fa fa-trash-can"></i></td>
       </tbody>
     </table>
+    <mat-paginator class="pagination" (page)="handlePagination($event)" [length]="totalBrands" [pageIndex]="currentPage" [pageSize]="pageSize" aria-label="Select page"></mat-paginator>
   </div>
 </div>

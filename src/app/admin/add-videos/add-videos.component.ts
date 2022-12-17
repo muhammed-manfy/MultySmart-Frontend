@@ -54,10 +54,8 @@ export class AddVideosComponent implements OnInit {
 
     if (!this.addVideoForm.valid)
       this.validationNotification();
-
     else {
-
-      let title =this.addVideoForm.value.title;
+      let title =this.addVideoForm.value.videoTitle;
       let description =this.addVideoForm.value.description;
       const formData  = new FormData();
       formData.append("title",title);

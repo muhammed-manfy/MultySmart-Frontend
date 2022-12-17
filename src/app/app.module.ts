@@ -4,6 +4,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -46,7 +47,7 @@ import { ShowVideoNotificatoinsComponent } from './ValidatorNotification/Validat
 import { AdminProductsComponent } from './admin/products/products.component';
 import { AdminVideosComponent } from './admin/videos/videos.component';
 import { AdminBrandsComponent } from './admin/brands/brands.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule} from '@angular/material/dialog';
 import { DeleteProjectComponent } from './Dialogs/Projects/delete-project/delete-project.component';
 import { DeleteVideoComponent } from './Dialogs/Videos/delete-video/delete-video.component';
 import { DeleteProductComponent } from './Dialogs/Products/delete-product/delete-product.component';
@@ -57,6 +58,8 @@ import { UpdateProductComponent } from './admin/UpdateData/update-product/update
 import { UpdateVideoComponent } from './admin/UpdateData/update-video/update-video.component';
 import { UpdateBrandComponent } from './admin/UpdateData/update-brand/update-brand.component';
 import { UpdateOfferComponent } from './admin/UpdateData/update-offer/update-offer.component';
+import { MessagesComponent } from './admin/messages/messages.component';
+import { DeleteMessagesComponent } from './Dialogs/Messages/delete-messages/delete-messages.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,7 +102,9 @@ import { UpdateOfferComponent } from './admin/UpdateData/update-offer/update-off
     UpdateProductComponent,
     UpdateVideoComponent,
     UpdateBrandComponent,
-    UpdateOfferComponent
+    UpdateOfferComponent,
+    MessagesComponent,
+    DeleteMessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -119,7 +124,8 @@ import { UpdateOfferComponent } from './admin/UpdateData/update-offer/update-off
     ReactiveFormsModule,
     MatSnackBarModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

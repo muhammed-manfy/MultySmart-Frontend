@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { PageEvent } from '@angular/material/paginator';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { BrandService } from 'src/app/API Services/Brand/brand.service';
 import { DeletebrandComponent } from 'src/app/Dialogs/Brands/deletebrand/deletebrand.component';
 import { brandInfo } from 'src/app/Models/Brand.model';
@@ -17,14 +19,30 @@ export class AdminBrandsComponent implements OnInit {
      public dialog:MatDialog ,
     private router:Router) { }
 
-  async ngOnInit(): Promise<void> {
-    (await this.brnadService.getBrands()).subscribe((brands: brandInfo) => {
+    totalBrands:any;
+    pageSize  = 10;
+    currentPage = 0;
+    pageEvent!:PageEvent;
+
+    ngOnInit(): void{
+    this.getBrandsPagination(this.pageSize,this.currentPage);
+  }
+  handlePagination(event:PageEvent){
+    this.pageEvent = event;
+    this.totalBrands = event.length;
+    this.getBrandsPagination(event.pageSize,(event.pageIndex));
+  }
+  async getBrandsPagination(pageSize:any,currentPage:any):Promise<any>{
+    (await this.brnadService.getBrandsPagination(pageSize,currentPage)).subscribe((brands: brandInfo) => {
       this.brandsReceived = brands;
-      this.brandsList = this.brandsReceived.map((e:any)=>{
+      console.log(brands)
+      this.brandsList = this.brandsReceived.brands.map((e:any)=>{
         return e;
       });
+      this.totalBrands = this.brandsReceived.totalBrands;
     });
   }
+
 
   updateBrand(brand:any){
   this.router.navigate(['dashboard/edit-brand'],{state:brand});

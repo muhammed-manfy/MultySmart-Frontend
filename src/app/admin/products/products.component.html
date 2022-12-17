@@ -28,5 +28,6 @@
         </tr>
       </tbody>
     </table>
+    <mat-paginator class="pagination" (page)="handlePagination($event)" [length]="totalProducts" [pageIndex]="currentPage" [pageSize]="pageSize" aria-label="Select page"></mat-paginator>
   </div>
 </div>

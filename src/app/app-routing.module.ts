@@ -8,6 +8,7 @@ import { AddProjectComponent } from './admin/add-project/add-project.component';
 import { AddVideosComponent } from './admin/add-videos/add-videos.component';
 import { AdminBrandsComponent } from './admin/brands/brands.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { MessagesComponent } from './admin/messages/messages.component';
 import { OffersComponent } from './admin/offers/offers.component';
 import { AdminProductsComponent} from './admin/products/products.component';
 import { AdminProjectsComponent} from './admin/projects/projects.component';
@@ -61,6 +62,7 @@ const routes: Routes = [
       {path:'edit-project' ,component:UpdateProjectComponent},
       {path:'edit-product' ,component:UpdateProductComponent},
       {path:'edit-video' ,component:UpdateVideoComponent},
+      {path:'messages',component:MessagesComponent}
     ]}
 ];
 

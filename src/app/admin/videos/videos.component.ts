@@ -23,6 +23,7 @@ export class AdminVideosComponent implements OnInit {
       this.videosList = this.videosRecived.map((video:any)=>{
         return video;
       });
+      console.log(videos);
     });
   }
   deleteVideo(id:any){

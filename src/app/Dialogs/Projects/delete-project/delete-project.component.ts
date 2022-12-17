@@ -24,6 +24,7 @@ export class DeleteProjectComponent implements OnInit {
         duration: 4 * 1000,
         panelClass: ['successSnackBar']
       });
+      window.location.reload();
     }, (err) => {
       this.snackBar.open("Some Error is happend On Server", "Ok", {
         horizontalPosition: "end",

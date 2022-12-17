@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { BrandService } from 'src/app/API Services/Brand/brand.service';
 import { ProductService } from 'src/app/API Services/Product/product.service';
+import { brandInfo } from 'src/app/Models/Brand.model';
 import { ShowProductNotificatoinsComponent } from 'src/app/ValidatorNotification/ValidatorProduct/show-product-notificatoins/show-product-notificatoins.component';
 
 @Component({
@@ -10,20 +12,27 @@ import { ShowProductNotificatoinsComponent } from 'src/app/ValidatorNotification
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
-  public addProductForm: FormGroup;
-  public featuresItem = Array<any>();
+  addProductForm: FormGroup;
+  featuresItem = Array<any>();
   verifyOfItems: Number = 0;
   featuresValid: Boolean = true;
   messageResponse: any;
   imagesUploaded=Array<File>();
-  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar , private productService:ProductService) {
+  categories:any;
+  brands:any;
+  categoriesList = Array<any>();
+  brandsList = Array<brandInfo>();
+
+  constructor(private formBuilder: FormBuilder,
+      private snackBar: MatSnackBar ,
+      private productService:ProductService,
+      private brandsServcie:BrandService) {
+
     this.addProductForm = this.formBuilder.group({
       productName: ['', [Validators.required]],
       description: ['', [Validators.required]],
       price: ['', [Validators.required]],
       features: ['', [Validators.required]],
-      category: ['', [Validators.required]],
-      brand: ['', [Validators.required]],
       image: ['', [Validators.required]]
     })
   }
@@ -40,19 +49,33 @@ export class AddProductComponent implements OnInit {
   get features() {
     return this.addProductForm.get('features')?.valid;
   }
-  get category() {
-    return this.addProductForm.get('category')?.valid;
-  }
-  get brand() {
-    return this.addProductForm.get('brand')?.valid;
-  }
   get image() {
     return this.addProductForm.get('image')?.valid;
   }
 
   ngOnInit(): void {
+    this.getCategories();
+    this.getBrands();
   }
 
+
+  getCategories(){
+    this.productService.getCategories().subscribe(allCategories=>{
+      this.categories = allCategories;
+      this.categoriesList = this.categories.map((element:any)=>{
+        return element;
+      });
+    });
+
+  }
+  getBrands(){
+    this.brandsServcie.getBrands().subscribe(allBrands=>{
+      this.brands = allBrands;
+      this.brandsList = this.brands.map((brand:any)=>{
+        return brand;
+      });
+    });
+  }
   addItem(value: any) {
     if (value === '') {
       this.verifyOfItems = +1;
@@ -81,8 +104,6 @@ export class AddProductComponent implements OnInit {
         description: this.description,
         price: this.price,
         features: this.features,
-        category:this.category,
-        brand:this.brand,
         imageUrl: this.image,
         featuresValid:this.featuresValid
       },
@@ -92,18 +113,16 @@ export class AddProductComponent implements OnInit {
     })
   }
 
-
   async formSubmit(event:any) {
     if (!this.addProductForm.valid || this.featuresValid == false)
       this.validationNotificaion();
     else {
-
         let productName = this.addProductForm.value.productName;
         let price =this.addProductForm.value.price;
         let savePrice = (event.target.savePrice.value)
         let description = this.addProductForm.value.description;
-        let brand = this.addProductForm.value.brand;
-        let category = this.addProductForm.value.category;
+        let brand = event.target.brand.value;
+        let category = event.target.category.value;
         let image; let feature;
         const productData = new FormData();
         productData.append("productName",productName);

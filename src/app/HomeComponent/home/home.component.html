@@ -207,7 +207,6 @@
               Remark easily garret nor nay. Civil those mrs enjoy shy fat merry.</p>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -221,44 +220,12 @@
     <p>Had repulsive dashwoods suspicion sincerity but advantage now him.
       Remark easily garret nor nay. Civil those mrs enjoy shy fat merry.</p>
     <div class="row">
-      <div class="col-4">
+      <div *ngFor="let offer of offersList" class="col-4">
         <div class="card">
-          <h5>Small busniess</h5>
-          <span>$99/YEAR</span>
-          <ul class="list-unstyled">
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-          </ul>
-          <a href="#">Find More Out</a>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <h5>Small busniess</h5>
-          <span>$99/YEAR</span>
-          <ul class="list-unstyled">
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-          </ul>
-          <a href="#">Find More Out</a>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <h5>Small busniess</h5>
-          <span>$99/YEAR</span>
-          <ul class="list-unstyled">
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
+          <h5>{{offer.title}}</h5>
+          <span>{{offer.priceAndPeriod}}</span>
+          <ul *ngFor="let feature of offer.features" class="list-unstyled">
+            <li>{{feature}}</li>
           </ul>
           <a href="#">Find More Out</a>
         </div>
@@ -277,41 +244,10 @@
     <p>Had repulsive dashwoods suspicion sincerity but advantage now him.
       Remark easily garret nor nay. Civil those mrs enjoy shy fat merry.</p>
     <div class="row">
-      <div class="col-4 project">
-        <img src="../../../assets/images/Projets/pro1.jpg" alt="multySmartProject" />
-        <h4>#project Name</h4>
-        <p>Had repulsive dashwoods suspicion sincerity but advantage now him.
-          Remark easily garret nor nay. Civil those mrs enjoy shy fat merry.</p>
-      </div>
-      <div class="col-4 project">
-        <img src="../../../assets/images/Projets/proj4.png" alt="" />
-        <h4>#project Name</h4>
-        <p>Had repulsive dashwoods suspicion sincerity but advantage now him.
-          Remark easily garret nor nay. Civil those mrs enjoy shy fat merry.</p>
-      </div>
-      <div class="col-4 project">
-        <img src="../../../assets/images/Projets/proj3.png" alt="" />
-        <h4>#project Name</h4>
-        <p>Had repulsive dashwoods suspicion sincerity but advantage now him.
-          Remark easily garret nor nay. Civil those mrs enjoy shy fat merry.</p>
-      </div>
-      <div class="col-4 project">
-        <img src="../../../assets/images/Projets/proj4.png" alt="multySmartProject" />
-        <h4>#project Name</h4>
-        <p>Had repulsive dashwoods suspicion sincerity but advantage now him.
-          Remark easily garret nor nay. Civil those mrs enjoy shy fat merry.</p>
-      </div>
-      <div class="col-4 project">
-        <img src="../../../assets/images/Projets/prok5.png" alt="" />
-        <h4>#project Name</h4>
-        <p>Had repulsive dashwoods suspicion sincerity but advantage now him.
-          Remark easily garret nor nay. Civil those mrs enjoy shy fat merry.</p>
-      </div>
-      <div class="col-4 project">
-        <img src="../../../assets/images/Projets/proj6.png" alt="" />
-        <h4>#project Name</h4>
-        <p>Had repulsive dashwoods suspicion sincerity but advantage now him.
-          Remark easily garret nor nay. Civil those mrs enjoy shy fat merry.</p>
+      <div *ngFor="let project of projectsList" class="col-4 project">
+        <img [src]="project.image" alt="multySmartProject"/>
+        <h4>#{{project.title}}</h4>
+        <p>{{project.description}}</p>
       </div>
     </div>
   </div>

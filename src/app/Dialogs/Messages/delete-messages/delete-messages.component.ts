@@ -1,27 +1,25 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { BrandService } from 'src/app/API Services/Brand/brand.service';
-import { OfferService } from 'src/app/API Services/Offer/offer.service';
+import { MessageService } from 'src/app/API Services/Message/message.service';
 
 @Component({
-  selector: 'app-deletebrand',
-  templateUrl: './deletebrand.component.html',
-  styleUrls: ['./deletebrand.component.scss']
+  selector: 'app-delete-messages',
+  templateUrl: './delete-messages.component.html',
+  styleUrls: ['./delete-messages.component.scss']
 })
-export class DeletebrandComponent implements OnInit {
-  idBrand = this.data.id;
+export class DeleteMessagesComponent implements OnInit {
+  idMessage = this.data.id;
   messageResponse: any;
   constructor(@Inject(MAT_DIALOG_DATA)public data:any , public snackBar:MatSnackBar,
-  private brandService:BrandService) { }
+  private messageService:MessageService) { }
 
   ngOnInit(): void {
   }
 
   async deleteRecord() {
-    (await this.brandService.deleteBrand(this.idBrand)).subscribe(response => {
+    (await this.messageService.deleteMessage(this.idMessage)).subscribe(response => {
       this.messageResponse = response;
-      console.log(response);
         this.snackBar.open(this.messageResponse.message, "Ok", {
         horizontalPosition: "end",
         verticalPosition: "bottom",
@@ -38,5 +36,4 @@ export class DeletebrandComponent implements OnInit {
       });
     });
   }
-
 }

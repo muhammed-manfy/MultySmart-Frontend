@@ -76,15 +76,13 @@ export class AddOffersComponent implements OnInit {
     else {
       let title =this.addOfferForm.value.title;
       let priceAndPeriod =this.addOfferForm.value.priceAndPeriod;
-      let feature;
-      const formData  = new FormData();
-        formData.append("title",title);
-        formData.append("priceAndPeriod",priceAndPeriod);
-          for (let  index = 0; index<this.featuresItem.length ; index++){
-            feature = this.featuresItem[index];
-            formData.append("features",feature);
-          }
-        await (await this.offerService.createOffer(formData)).subscribe(response => {
+      let features = this.featuresItem;
+      const offer  ={
+        title:title,
+        priceAndPeriod:priceAndPeriod,
+        features:features
+      } ;
+        (await this.offerService.createOffer(offer)).subscribe(response => {
         this.messageResponse = response;
         this.snakBar.open(this.messageResponse.message, "Ok", {
             horizontalPosition: "end",

@@ -31,4 +31,11 @@ export class ProductService extends BasicApiService {
     return await this.http.put<productInfo>(this.BaseUrl+'/products/update/'+id,productData)
     .pipe(catchError(this.handleError));
   }
+  async getProductsPagination(pageSize:Number,currentPage:Number){
+    return await this.http.post<productInfo>(this.BaseUrl+'/products/pagination',{pageSize:pageSize,
+      currentPage:currentPage}).pipe(catchError(this.handleError));
+  }
+  getCategories(){
+    return this.http.get(this.BaseUrl+'/categories').pipe(catchError(this.handleError));
+  }
 }

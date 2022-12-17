@@ -36,9 +36,9 @@
       </div>
       <div class="submit-section">
           <div class="submit-form">
-            <form>
+            <form (ngSubmit)="formSubmit($event)">
               <input type="text" name="fullName" placeholder="Full Name"/><br/>
-              <input type="text" name="email" placeholder="Email"/><br/>
+              <input type="text" name="phone" placeholder="Phone"/><br/>
               <input type="text" name="message" placeholder="Message"/><br/>
               <button type="submit">sumbit</button>
             </form>
@@ -49,7 +49,7 @@
               <a href="#" class="fab fa-linkedin"></a>
               <a href="#" class="fab fa-instagram"></a>
             </div>
-            
+
           </div>
           <div class="image-form">
             <img src="../../assets/images/Introduction/intro.jpg" alt="multySmartContract">

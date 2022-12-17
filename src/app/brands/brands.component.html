@@ -65,107 +65,15 @@
 <section class="brands">
   <div class="container">
     <div class="d-flex align-items-center">
-      <h2>A</h2>
-      <span>(175)</span>
+      <h2>Brands </h2>
+      <span> ({{totalBrands}})</span>
     </div>
     <hr/>
-    <div class="brands-names">
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
+    <div class="row">
+      <div *ngFor="let brand of brandsList" class="col-4 brands-names">
+        <a style="margin: auto;">{{brand.brand}}</a>
+      </div>
     </div>
-    <div class="brands-names">
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-    </div>
-    <div class="brands-names">
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-    </div>
-    <div class="brands-names">
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-    </div>
-
-    <div class="d-flex align-items-center">
-      <h2>B</h2>
-      <span>(175)</span>
-    </div>
-    <hr/>
-    <div class="brands-names">
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-    </div>
-    <div class="brands-names">
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-    </div>
-    <div class="brands-names">
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-    </div>
-    <div class="brands-names">
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-    </div>
-
-    <div class="d-flex align-items-center">
-      <h2>C</h2>
-      <span>(175)</span>
-    </div>
-    <hr/>
-    <div class="brands-names">
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-    </div>
-    <div class="brands-names">
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-    </div>
-    <div class="brands-names">
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-    </div>
-    <div class="brands-names">
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-      <a href="#">brand Name</a>
-    </div>
-
   </div>
 </section>
 <!-- brands is ending -->
