@@ -191,6 +191,7 @@
   height: 400px;
 }
 .reviews{
+  position: relative;
   margin-bottom: 100px;
 }
 .reviews h2{
@@ -210,28 +211,31 @@
   width: 100%;
 }
 .reviews .rating .total-rating h4{
-  font-family: 'Crimson Pro';
+  font-family: 'El Messiri';
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
   text-transform: capitalize;
   color: #133A1B;
 }
-.reviews .rating .total-rating .rating-stars i{
-  font-size: 25px;
+.reviews .rating .total-rating ::ng-deep ngb-rating span {
+  font-size: 28px;
   color: #F4B741;
 }
-.reviews .rating .stars{
-  color: #F4B741;
-  font-size: 18px;
-}
+
 .reviews .rating h5{
-  font-family: 'Crimson Pro';
+  font-family: 'El Messiri';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 20px;
   text-transform: capitalize;
-  color: #011B10;
+  color: #B7BF96;
+  padding: 7px 0px;
+}
+.reviews .rating  .stars ::ng-deep ngb-rating span{
+  color: #F4B741;
+  font-size: 30px;
+  padding: 5px 0px;
 }
 .reviews .rating button{
   border: none;
@@ -305,6 +309,98 @@
   padding: 10px 20px;
   box-shadow: 0px 0px 4px #011B10;
   width: 20%;
-  margin: auto;
 }
 
+.modal{
+  font-family: 'El Messiri';
+  position: absolute;
+}
+.modal .modal-header,
+.modal .modal-body,
+.modal .modal-footer{
+  outline: none;
+  border: none;
+}
+.modal .modal-dialog .modal-content{
+  background-color: #E4DEAE;
+}
+.modal .modal-header{
+  display: flex;
+}
+.modal .modal-body > label{
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.modal .modal-body input{
+    font-family: inherit;
+    line-height: inherit;
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: .8;
+}
+
+.modal .modal-body textarea{
+  font-family: inherit;
+  line-height: inherit;
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: .8;
+  height: 100px;
+}
+
+.modal .modal-title{
+  font-family: 'El Messiri';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  text-transform: capitalize;
+  color: #133A1B;
+  margin: 0px;
+}
+
+.modal .modal-footer{
+  display: flex;
+  flex-direction: column;
+}
+.modal .modal-footer > button{
+  width: 80%;
+}
+.modal .modal-footer .cancel-button{
+  border: 1px solid #133A1B;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #011B10;
+  background: #B7BF96;
+  border-radius: 15px;
+}
+
+.modal .modal-footer .post-button{
+  border: 1px solid #133A1B;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #FFF;
+  background: #133A1B;
+  border-radius: 15px;
+}
+
+::ng-deep ngb-rating  span{
+  font-size: 28px;
+  color: #133A1B;
+}
+
+::ng-deep ngb-rating:focus{
+  outline: none;
+  color: #F4B741;
+}

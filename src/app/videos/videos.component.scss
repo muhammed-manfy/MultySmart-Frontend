@@ -25,21 +25,19 @@
   font-size: 28px;
   line-height: 27px;
   color: #011B10;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 .videos video:focus{
   outline: none;
   border: none;
+  box-shadow: 0 0 2px 2px #133A1B;
+  width: 550px;
+  height: auto;
 }
-.videos .title,
-.videos .title-2,
-.videos .title-3
-{
+.videos .title{
   background-color: #E4DEAE;
 }
-.videos .title h4,
-.videos .title-2 h4,
-.videos .title-3 h4{
+.videos .title h4{
   font-family: 'El Messiri';
   font-weight: 600;
   font-size: 25px;
@@ -48,9 +46,7 @@
   color: #133A1B;
   padding-top: 80px;
 }
-.videos .title p,
-.videos .title-2 p,
-.videos .title-3 p{
+.videos .title p{
   font-family: 'Crimson Pro';
   font-weight: 400;
   font-size: 20px;
@@ -58,11 +54,10 @@
   color: #133A1B;
   padding-top: 50px;
 }
-.videos .video,
-.videos .video-2,
-.videos .video-3 {
-  padding-right: 100px;
+.videos .video {
+  padding-right:100px;
 }
+
 .videos .video::before{
   content: '';
   position: absolute;
@@ -70,29 +65,10 @@
   height: 200px;
   border-left: 40px solid #B7BF96;
   border-top: 40px solid #B7BF96;
-  left: 100px;
-  bottom: -182px;
+  margin-left: -41px;
+  margin-top: -41px;
 }
-.videos .video-2::before{
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-left: 40px solid #B7BF96;
-  border-top: 40px solid #B7BF96;
-  left: 100px;
-  bottom: -635px;
-}
-.videos .video-3::before{
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-left: 40px solid #B7BF96;
-  border-top: 40px solid #B7BF96;
-  left: 100px;
-  bottom: -1090px;
-}
+
 .videos .video::after{
   content: '';
   position: absolute;
@@ -100,29 +76,19 @@
   height: 200px;
   border-bottom: 40px solid #E4DEAE;
   border-right: 40px solid #E4DEAE;
-  bottom: -885px;
-  left: 580px;
+  margin-left: -160px;
+  margin-top: 200px;
 }
-.videos .video-2::after{
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-bottom: 40px solid #E4DEAE;
-  border-right: 40px solid #E4DEAE;
-  bottom: -432px;
-  left: 580px;
-}
-.videos .video-3::after{
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-bottom: 40px solid #E4DEAE;
-  border-right: 40px solid #E4DEAE;
-  bottom: -1340px;
-  left: 580px;
-}
+// .videos .video-3::after{
+//   content: '';
+//   position: absolute;
+//   width: 200px;
+//   height: 200px;
+//   border-bottom: 40px solid #E4DEAE;
+//   border-right: 40px solid #E4DEAE;
+//   bottom: -1340px;
+//   left: 580px;
+// }
 // videos is ending
 
 .follow-us{

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { VideoService } from '../API Services/Video/video.service';
+import { videoInfo } from '../Models/Video.model';
 
 @Component({
   selector: 'app-videos',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./videos.component.scss']
 })
 export class VideosComponent implements OnInit {
+  vidoesReceived:any;
+  videosList = Array<videoInfo>();
+  constructor(private videoService:VideoService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  async ngOnInit():Promise <void> {
+    (await this.videoService.getLastVideos()).subscribe((videos:videoInfo)=>{
+      this.vidoesReceived = videos;
+      this.videosList = this.vidoesReceived.map((video:any)=>{
+        return video;
+      });
+      console.log(videos);
+    });
   }
 
 }

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { extend } from 'jquery';
-import { catchError, Observable } from 'rxjs';
+import { catchError, Observable, Subject } from 'rxjs';
 import { productInfo } from 'src/app/Models/Product.model';
 import { BasicApiService } from '../Basic/basic-api.service';
 
@@ -19,7 +19,7 @@ export class ProductService extends BasicApiService {
     .pipe(catchError(this.handleError));
   }
 
-  async  getProducts(){
+  async getProducts(){
     return await this.http.get<productInfo>(this.BaseUrl+'/products').pipe(catchError(this.handleError));
   }
 
@@ -35,7 +35,14 @@ export class ProductService extends BasicApiService {
     return await this.http.post<productInfo>(this.BaseUrl+'/products/pagination',{pageSize:pageSize,
       currentPage:currentPage}).pipe(catchError(this.handleError));
   }
-  getCategories(){
+  getCategories():Observable<any>{
     return this.http.get(this.BaseUrl+'/categories').pipe(catchError(this.handleError));
+  }
+  async productsDisplay(category:any,brand:any,pageSize:Number,currentPage:Number):Promise<Observable<productInfo>>{
+    return await this.http.post<productInfo>(this.BaseUrl+'/products/productsDisplay',{pageSize:pageSize,currentPage :currentPage,
+    brandRequset:brand,categoryRequset:category}).pipe(catchError(this.handleError));
+  }
+  async getProductInfo(id:string){
+    return await this.http.get(this.BaseUrl+'/products/getProductInfo/' + id).pipe(catchError(this.handleError));
   }
 }

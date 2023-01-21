@@ -20,17 +20,18 @@
     <div class="row">
       <mat-toolbar class="toolbar">
         <div class="filter">
-          <h5>filtter by offers</h5>
-          <i class="fas fa-angle-down"></i>
-        </div>
-
-        <div class="filter">
-          <h5>filtter by brands</h5>
-          <i class="fas fa-angle-down"></i>
+          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            filtter by brands
+          </a>
+          <ul class="dropdown-menu">
+            <li *ngFor="let brand of brandsList">
+              <a class="dropdown-item" (click)="selectBrand(brand.brand)">{{brand.brand}}</a>
+            </li>
+          </ul>
         </div>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button type="submit">Search</button>
+          <input class="form-control me-2" type="search" name="searchField" [(ngModel)]="this.searchFiled" placeholder="Search" aria-label="Search">
+          <button type="button">Search</button>
         </form>
       </mat-toolbar>
     </div>
@@ -40,181 +41,26 @@
   <mat-sidenav-container class="products-container">
     <mat-sidenav mode="side" opened class="product-categories">
       <h4>gategories</h4>
-      <div class="category">
+      <div class="category" (click)="selectCategory('')">
         <i class="fas fa-angle-right" aria-hidden="true"></i>
         <h5>all products</h5>
       </div>
-      <div class="category">
+      <div *ngFor="let category of categoriesList" (click)="selectCategory(category.category)" class="category">
         <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>Cctv</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>hvac</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>life smart</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>home cinema</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>access control</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>gate barrier</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>sliding room</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>network solution</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>intercom</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>professional theater</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>lighting control</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>smart class</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>knx home automation</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>z-wave home automation</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>knx ekinex</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>moorgen</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>HDL</h5>
-      </div>
-      <div class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>wifi</h5>
+        <h5>{{category.category}}</h5>
       </div>
 
     </mat-sidenav>
     <mat-sidenav-content class="products-contnet">
       <div class="row">
-        <div class=" col-4 product">
-          <img src="../../assets/images/Products/cctv.png" alt="multySmartProduct">
-          <h4>camera style</h4>
+        <div *ngFor="let product of productsList | paginate:{itemsPerPage:pageSize,currentPage:currentPage,
+        totalItems:totalProducts}|filter:this.searchFiled" (click)="navigationProduct(product)" class="col-4 product">
+          <img [src]="product.images[0]" alt="multySmartProduct">
+          <h4>{{product.productName}}</h4>
           <div class="prices">
-            <sup>$</sup><span id="price">32</span>
-            <sup>$</sup><span id="save-price"><s>50</s></span>
-            <i class="fa fa-heart"></i><span>10</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-
-        <div class=" col-4 product">
-          <img src="../../assets/images/Products/cctv.png" alt="multySmartProduct">
-          <h4>camera style</h4>
-          <div class="prices">
-            <sup>$</sup><span id="price">32</span>
-            <sup>$</sup><span id="save-price"><s>50</s></span>
-            <i class="fa fa-heart"></i><span>10</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-
-        <div class=" col-4 product">
-          <img src="../../assets/images/Products/cctv.png" alt="multySmartProduct">
-          <h4>camera style</h4>
-          <div class="prices">
-            <sup>$</sup><span id="price">32</span>
-            <sup>$</sup><span id="save-price"><s>50</s></span>
-            <i class="fa fa-heart"></i><span>10</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="row">
-        <div class=" col-4 product">
-          <img src="../../assets/images/Products/cctv.png" alt="multySmartProduct">
-          <h4>camera style</h4>
-          <div class="prices">
-            <sup>$</sup><span id="price">32</span>
-            <sup>$</sup><span id="save-price"><s>50</s></span>
-            <i class="fa fa-heart"></i><span>10</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-
-        <div class=" col-4 product">
-          <img src="../../assets/images/Products/cctv.png" alt="multySmartProduct">
-          <h4>camera style</h4>
-          <div class="prices">
-            <sup>$</sup><span id="price">32</span>
-            <sup>$</sup><span id="save-price"><s>50</s></span>
-            <i class="fa fa-heart"></i><span>10</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-
-        <div class=" col-4 product">
-          <img src="../../assets/images/Products/cctv.png" alt="multySmartProduct">
-          <h4>camera style</h4>
-          <div class="prices">
-            <sup>$</sup><span id="price">32</span>
-            <sup>$</sup><span id="save-price"><s>50</s></span>
-            <i class="fa fa-heart"></i><span>10</span>
+            <sup>$</sup><span id="price">{{product.price}}</span>
+            <sup>$</sup><span id="save-price"><s>{{product.savePrice}}</s></span>
+            <!-- <i class="fa fa-heart"></i><span>10</span> -->
           </div>
           <div class="rating">
             <i class="fa fa-star"></i>
@@ -225,65 +71,11 @@
           </div>
         </div>
       </div>
-
-      <div class="row">
-        <div class=" col-4 product">
-          <img src="../../assets/images/Products/cctv.png" alt="multySmartProduct">
-          <h4>camera style</h4>
-          <div class="prices">
-            <sup>$</sup><span id="price">32</span>
-            <sup>$</sup><span id="save-price"><s>50</s></span>
-            <i class="fa fa-heart"></i><span>10</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-
-        <div class=" col-4 product">
-          <img src="../../assets/images/Products/cctv.png" alt="multySmartProduct">
-          <h4>camera style</h4>
-          <div class="prices">
-            <sup>$</sup><span id="price">32</span>
-            <sup>$</sup><span id="save-price"><s>50</s></span>
-            <i class="fa fa-heart"></i><span>10</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-
-        <div class=" col-4 product">
-          <img src="../../assets/images/Products/cctv.png" alt="multySmartProduct">
-          <h4>camera style</h4>
-          <div class="prices">
-            <sup>$</sup><span id="price">32</span>
-            <sup>$</sup><span id="save-price"><s>50</s></span>
-            <i class="fa fa-heart"></i><span>10</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-      </div>
-
     </mat-sidenav-content>
   </mat-sidenav-container>
-
-
-
+  <div class="d-flex justify-content-center">
+    <pagination-controls [responsive]="true" nextLabel="" previousLabel="" (pageChange)="paginationHandle($event)"></pagination-controls>
+  </div>
 </section>
 <!-- products is ending-->
 

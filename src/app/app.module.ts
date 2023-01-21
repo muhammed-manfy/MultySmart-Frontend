@@ -60,6 +60,9 @@ import { UpdateBrandComponent } from './admin/UpdateData/update-brand/update-bra
 import { UpdateOfferComponent } from './admin/UpdateData/update-offer/update-offer.component';
 import { MessagesComponent } from './admin/messages/messages.component';
 import { DeleteMessagesComponent } from './Dialogs/Messages/delete-messages/delete-messages.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -125,7 +128,10 @@ import { DeleteMessagesComponent } from './Dialogs/Messages/delete-messages/dele
     MatSnackBarModule,
     HttpClientModule,
     MatDialogModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
+    NgbRatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

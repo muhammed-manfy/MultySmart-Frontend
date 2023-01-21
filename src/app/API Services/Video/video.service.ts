@@ -29,4 +29,9 @@ export class VideoService extends BasicApiService {
     return await this.http.put<videoInfo>(this.BaseUrl+'/videos/update/'+id ,videoData).
     pipe(catchError(this.handleError));
   }
+
+  async getLastVideos(){
+    return await this.http.get<videoInfo>(this.BaseUrl+'/videos/lastVideos')
+    .pipe(catchError(this.handleError));
+  }
 }

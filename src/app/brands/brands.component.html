@@ -20,40 +20,14 @@
     <div class="row">
       <div class="col-4 search">
         <form>
-          <input type="search" name="serach" placeholder="Search Here...." />
+          <input type="search" name="serachField" [(ngModel)]="searchField" placeholder="Search Here...." />
         </form>
       </div>
       <div class="col-8 characters">
-        <span>A</span>
-        <span>b</span>
-        <span>c</span>
-        <span>d</span>
-        <span>e</span>
-        <span>f</span>
-        <span>g</span>
-        <span>h</span>
-        <span>i</span>
-        <span>j</span>
-        <span>k</span>
-        <span>l</span>
-        <span>m</span>
-        <span>o</span>
-        <span>n</span>
-        <span>m</span>
-        <span>p</span>
-        <span>q</span>
-        <span>r</span>
-        <span>s</span>
-        <span>t</span>
-        <span>u</span>
-        <span>v</span>
-        <span>x</span>
-        <span>w</span>
-        <span>y</span>
-        <span>z</span>
+        <span *ngFor="let charcater of charactersList" (click)="filterBrands(charcater)">{{charcater}}</span>
       </div>
       <div class="text-center pt-5 all">
-        <span>All</span>
+        <span (click)="resetBrnads('')">All</span>
       </div>
     </div>
   </div>
@@ -70,7 +44,7 @@
     </div>
     <hr/>
     <div class="row">
-      <div *ngFor="let brand of brandsList" class="col-4 brands-names">
+      <div *ngFor="let brand of brandsList | filter : this.searchField" class="col-4 brands-names">
         <a style="margin: auto;">{{brand.brand}}</a>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { extend } from 'jquery';
 import { catchError, Observable } from 'rxjs';
 import { brandInfo} from 'src/app/Models/Brand.model';
 import { BasicApiService } from '../Basic/basic-api.service';
@@ -18,7 +17,7 @@ export class BrandService extends BasicApiService {
     return await this.http.post<brandInfo>(this.BaseUrl+'/brands/create',brandData).
     pipe(catchError(this.handleError));
   }
-  
+
   getBrands(){
     return this.http.get<brandInfo>(this.BaseUrl+'/brands').pipe(catchError(this.handleError));
   }
@@ -33,5 +32,10 @@ export class BrandService extends BasicApiService {
 
   async getBrandsPagination(pageSize:Number,currentPage:Number){
     return await this.http.post<brandInfo>(this.BaseUrl+'/brands/pagination',{pageSize:pageSize,currentPage:currentPage}).pipe(catchError(this.handleError));
+  }
+
+  async displayBrnads(character:any):Promise<Observable<brandInfo>>{
+    return await this.http.post<brandInfo>(this.BaseUrl+'/brands/displayBrands',{character:character}).
+    pipe(catchError(this.handleError));
   }
 }

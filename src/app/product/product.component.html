@@ -21,10 +21,10 @@
   <div class="container">
     <div class="row">
       <div class="col-6 images-container">
-        <div class="product-image">
-          <img src="../../assets/images/Products/knxe2.png" alt="MultySmartProduct" />
+        <div *ngFor="let image of dataProduct.images" class="product-image">
+          <img [src]="image" alt="MultySmartProduct" />
         </div>
-        <div class="product-image">
+        <!-- <div class="product-image">
           <img src="../../assets/images/Products/knxe4.png" alt="MultySmartProduct" />
         </div>
         <div class="product-image">
@@ -32,12 +32,11 @@
         </div>
         <div class="product-image">
           <img src="../../assets/images/Products/photo_5868503010013985228_y.jpg" alt="MultySmartProduct" />
-        </div>
+        </div> -->
       </div>
       <div class="col-6 product-details">
         <div class="description">
-          <p>Perhaps far exposed age effects.Now distrusts you her delivered applauded affection out sincerPerhaps far
-            exposed age effects.Now distrusts you her delivered applauded affection out sincerityity</p>
+          <p>{{this.dataProduct.productName}}</p>
         </div>
         <div class="rating">
           <div class="stars-rating">
@@ -50,7 +49,7 @@
           <h5>(22,677 Rating | 122 Reviews)</h5>
         </div>
         <div class="prices">
-          <span>$<strong>32</strong></span>
+          <span>$<strong>{{dataProduct.price}}</strong></span>
           <span><sup>$</sup><s>50</s></span>
           <span><strong>save </strong> $18</span>
           <i class="fa fa-heart"> <span> 300</span></i>
@@ -69,9 +68,7 @@
             <i class="fa fa-plus"></i>
           </div>
           <hr />
-          <p id="product-description-toggle">Perhaps far exposed age effects.Now distrusts you her delivered
-            applauded affection out sincerPerhaps far
-            exposed age effects.Now distrusts you her delivered applauded affection out sincerityity</p>
+          <p id="product-description-toggle">{{dataProduct.description}}</p>
         </div>
         <div class="product-speceifcation mt-2">
           <div class="d-flex justify-content-between align-items-end product-features-toggle">
@@ -79,9 +76,7 @@
             <i class="fa fa-plus"></i>
           </div>
           <hr />
-          <p id="product-features-toggle">Perhaps far exposed age effects.Now distrusts you her delivered
-            applauded affection out sincerPerhaps far
-            exposed age effects.Now distrusts you her delivered applauded affection out sincerityity</p>
+          <p id="product-features-toggle">{{dataProduct.features}}</p>
         </div>
       </div>
     </div>
@@ -116,65 +111,77 @@
       <div class="rating mt-5">
         <div class="total-rating">
           <div class="rating-stars mb-2">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
+            <ngb-rating [rate]="5"  [readonly]="true" [max]="5"></ngb-rating>
           </div>
           <h4> 122 Reviews </h4>
         </div>
         <div class="d-flex mt-5">
           <div class="stars me-5">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
+            <ngb-rating [rate]="5" [readonly]="true" [max]="5"></ngb-rating>
           </div>
-          <h5> 122 reviews</h5>
+          <h5> 122 </h5>
         </div>
         <div class="d-flex">
           <div class="stars me-5">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star" style="color: black;"></i>
+            <ngb-rating [rate]="4" [readonly]="true" [max]="5"></ngb-rating>
           </div>
-          <h5> 122 reviews</h5>
+          <h5> 122 </h5>
         </div>
         <div class="d-flex">
           <div class="stars me-5">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star" style="color: black;"></i>
-            <i class="fa fa-star" style="color: black;"></i>
+            <ngb-rating [rate]="3" [readonly]="true" [max]="5"></ngb-rating>
           </div>
-          <h5> 122 reviews</h5>
+          <h5> 122 </h5>
         </div>
         <div class="d-flex">
           <div class="stars me-5">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star" style="color: black;"></i>
-            <i class="fa fa-star" style="color: black;"></i>
-            <i class="fa fa-star" style="color: black;"></i>
+            <ngb-rating [rate]="2" [readonly]="true" [max]="5"></ngb-rating>
           </div>
-          <h5> 122 reviews</h5>
+          <h5> 122 </h5>
         </div>
         <div class="d-flex">
           <div class="stars me-5">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star" style="color: black;"></i>
-            <i class="fa fa-star" style="color: black;"></i>
-            <i class="fa fa-star" style="color: black;"></i>
-            <i class="fa fa-star" style="color: black;"></i>
+            <ngb-rating [rate]="1" [readonly]="true" [max]="5"></ngb-rating>
           </div>
-          <h5> 122 reviews</h5>
+          <h5> 122 </h5>
         </div>
-        <button>write a reviews</button>
+        <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">write a review</button>
+      </div>
+
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="exampleModalLabel">Write a New Review</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="full-name" class="col-form-label">Full Name</label>
+                  <input type="text"  id="full-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Your Message</label>
+                  <textarea  id="message-text"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label>Your Rating</label><br/><br/>
+                  <ngb-rating [max]="5" [formControl]="ratingProduct"></ngb-rating>
+                  <div class="form-text small">
+                    <div *ngIf="ratingProduct.valid" class="text-success">Thanks!</div>
+                    <div *ngIf="ratingProduct.invalid" class="text-danger">Please rate us</div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="cancel-button" data-bs-dismiss="modal">Close Review</button>
+              <button type="button" class="post-button">Post Review</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="posts d-flex flex-column">
         <div class="post">

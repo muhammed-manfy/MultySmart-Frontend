@@ -39,8 +39,15 @@
   align-items: center;
   text-align: center;
   text-transform: capitalize;
-  color: #011B10;
+  color: #B7BF96;
+  cursor: pointer;
 }
+.Filter .characters span:hover{
+  background-color: #B7BF96;
+  color: #FFFFFF;
+}
+
+
 .Filter .all > span{
   font-family: 'Crimson Pro';
   font-style: normal;
@@ -50,6 +57,10 @@
   color: #FFFFFF;
   background: #F4B741;
   padding: 10px;
+  cursor: pointer;
+}
+.Filter .all > span:hover{
+  background-color: #B7BF96;
 }
 input::placeholder{
   font-family: 'Crimson Pro';

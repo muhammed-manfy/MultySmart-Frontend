@@ -21,46 +21,17 @@
   <div class="container">
     <h2>videos collection  about homeworks</h2>
     <p>The best Instagram clips are available for you on our website</p>
-    <div class="row mb-5">
+    <div class="row mb-5" *ngFor="let video of videosList">
         <div class="col-7 video">
-            <video width="600" height="400" controls>
-              <source src="../../assets/Videos/BarberShop.mp4" type="video/mp4">
+            <video controls>
+              <source [src]="video.video" type="video/mp4">
             </video>
         </div>
         <div class="col-5 title">
-            <h4>#video title</h4>
-            <p>Had repulsive dashwoods suspicion sincerity but advantage now him.
-              Remark easily garret nor nay. Civil those mrs enjoy shy fat merry.</p>
+            <h4>#{{video.title}}</h4>
+            <p>{{video.description}}</p>
         </div>
     </div>
-
-  <!-- seconed video  -->
-    <div class="row mb-5">
-      <div class="col-7 video-2">
-          <video width="600" height="400" controls>
-            <source src="../../assets/Videos/BarberShop.mp4" type="video/mp4">
-          </video>
-      </div>
-      <div class="col-5 title-2">
-          <h4>#video title</h4>
-          <p>Had repulsive dashwoods suspicion sincerity but advantage now him.
-            Remark easily garret nor nay. Civil those mrs enjoy shy fat merry.</p>
-      </div>
-    </div>
-
-  <!-- third video  -->
-  <div class="row mb-5">
-    <div class="col-7 video-3">
-        <video width="600" height="400" controls>
-          <source src="../../assets/Videos/BarberShop.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="col-5 title-3">
-        <h4>#video title</h4>
-        <p>Had repulsive dashwoods suspicion sincerity but advantage now him.
-          Remark easily garret nor nay. Civil those mrs enjoy shy fat merry.</p>
-    </div>
-  </div>
   </div>
 </section>
 

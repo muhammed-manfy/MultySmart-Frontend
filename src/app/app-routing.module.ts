@@ -43,7 +43,7 @@ const routes: Routes = [
   {path:'brand-name',component:BrandNameComponent},
   {path:'checkout',component:CheckoutComponent},
   {path:'shipping',component:ShippingComponent},
-  {path:'product',component:ProductComponent},
+  {path:'product/:id',component:ProductComponent},
   {path:'dashboard',component:DashboardComponent,
     children:[
       {path:"users",component:AdminUsersComponent},
