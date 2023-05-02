@@ -6,35 +6,9 @@
 }
 
 .navbar .navbar-brand > img{
-  max-width: 130px;
-  max-height: 130px;
+  max-width: 120px;
+  max-height: 120px;
   cursor: -webkit-grab;
-}
-
-.navbar .icons {
-  overflow: visible;
-  -webkit-box-sizing: border-box;
-  box-sizing:border-box;
-  color: #133A1B;
-  font-size: 16px;
-  padding-top: 8px;
-  margin-right: 20px;
-}
-
-.navbar .icons{
-  i{
-    border: none;
-    outline: none;
-  }
-}
-
-
-.navbar  .icons:hover{
-  color: #B7BF96;
-}
-
-.displayIcons{
-  display: none;
 }
 
 .navbar .collapse{

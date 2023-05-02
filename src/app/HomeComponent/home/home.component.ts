@@ -17,12 +17,18 @@ export class HomeComponent implements OnInit {
   offersReceived:any;
   offersList=Array<offersInfo>();
   constructor(private projectService:ProjectsService ,
-    private offerService:OfferService) { }
+    private offerService:OfferService) { 
+      $(document).ready(function() {
+        ( $("#carouselIndicators") as any).carousel({
+            interval: 3500
+        });
+       });      
+    }
 
   ngOnInit(): void {
     this.getOffers();
     this.getProjects()
-
+    
   }
   getProjects(){
     this.projectService.getProjects().subscribe((allProjects:projectInfo)=>{

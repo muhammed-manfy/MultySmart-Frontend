@@ -1,11 +1,7 @@
 <!-- start navbar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand" href="#"><img src="../../../assets/images/Logo/Dark Green.png"/></a>
-    <a class="icons"  style="margin-left: 150px;"
-    [ngClass]="{displayIcons:this.widthOfScreen>992}">
-      <i class="fa fa-shopping-cart" aria-hidden="true" routerLink="/checkout"></i>
-    </a>
+    <a class="navbar-brand" href="#"><img src="../../../assets/images/Logo/Dark Green.png"/></a>   
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -39,9 +35,6 @@
           <li class="nav-item">
               <a class="nav-link" routerLink="/about-us">About Us</a>
           </li>
-          <a class="icons"  [ngClass]="{displayIcons:this.widthOfScreen<992}">
-            <i class="fa fa-shopping-cart"  routerLink="/checkout"></i>
-          </a>
         </ul>
     </div>
   </div>

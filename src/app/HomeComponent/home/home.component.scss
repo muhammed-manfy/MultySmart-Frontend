@@ -62,8 +62,8 @@
 }
 .carousel-inner .carousel-item > img{
   width: 100%;
-  max-height:670px;
-  background-size: contain;
+  max-height:700px;
+  background-size: cover;
 }
 .carousel-inner .carousel-item .carousel-caption{
   z-index: 3;
@@ -79,39 +79,43 @@
   text-transform: uppercase;
   text-align: center;
 }
-.carousel-indicators{
-  z-index: 2;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
-  left: 740px;
-  margin: 0 0 3px 0;
-  border: 1px solid #FFF;
-  border-radius: 25px;
-  width:120px;
-  height: 40px;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-}
+// .carousel-indicators{
+//   z-index: 2;
+//   display: flex;
+//   flex-direction:row;
+//   align-items: center;
+//   margin: auto;
+//   border: 1px solid #FFF;
+//   border-radius: 25px;
+//   width:90px;
+//   height:30px;
+//   margin-bottom: 10px;
+//   padding-bottom: 5px;
+// }
 
-.carousel-indicators > button{
-  box-sizing: content-box;
-  width: 25px;
-  height: 25px;
-  border-radius:100%;
-  text-indent: -999px;
-  cursor: -webkit-grab;
-  background-color: #fff;
-  background-clip: padding-box;
-  opacity: .5;
-  margin-bottom: -5px;
-  transition: opacity .8s ease;
-}
+// .carousel-indicators > button{
+//   box-sizing: content-box;
+//   width: 20px;
+//   height: 20px;
+//   border-radius:100%;
+//   cursor: -webkit-grab;
+//   background-color: #fff;
+//   background-clip: padding-box;
+//   opacity: .5;
+//   margin-bottom: -5px;
+//   transition: opacity .8s ease;
+// }
 .carousel-indicators .active{
   opacity: 1;
+  animation-name: Slider-button;
+  animation-duration: 4s;
+  animation-delay: .5s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
 }
-
+@keyframes Slider-button {
+  50% {background-color: #FFF; opacity: .4;}
+} 
 // carsoul is ending
 
 // get a prochure is starting
