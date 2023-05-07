@@ -1,10 +1,10 @@
 footer{
-  background-color:#011B10;
+  background-color: rgba($color: #E4DEAE, $alpha: 0.5);
   width: 100%;
   height: 300px;
   position: sticky;
   top: 100%;
-  color: #FFF;
+  color: #011B10;
 }
 .topSection{
   font-family: 'El Messiri';
@@ -51,7 +51,7 @@ footer{
 }
 .topSection .section .icons > li > a{
   text-decoration: none;
-  color: #FFF;
+  color: #011B10;
   font-size: 20px;
   cursor: -webkit-grab;
 }
@@ -59,10 +59,10 @@ footer{
   outline: none;
   border: none;
   margin-top: 10px;
-  background-color: #E4DEAE;
+  background-color: #011B10;
   padding:10px 20px;
   text-transform: capitalize;
-  color: #011B10;
+  color: #E4DEAE;
   font-weight: 500;
   cursor: -webkit-grab;
 }
@@ -76,7 +76,7 @@ footer{
 
 .bottomSection > hr{
   height: 3px;
-  color: #FFF;
+  color: #F4B741;
 }
 
 .bottomSection > p > span{
