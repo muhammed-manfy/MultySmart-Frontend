@@ -21,5 +21,4 @@ export class VideosComponent implements OnInit {
       console.log(videos);
     });
   }
-
 }

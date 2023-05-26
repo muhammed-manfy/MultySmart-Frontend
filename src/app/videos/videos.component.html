@@ -7,36 +7,176 @@
   <div class="container">
     <div class="row">
       <div class="title-page">
-        <img src="../../assets/images/Logo/White.png" alt="multySmartIcon"/>
-        <h1>wahtch our videos</h1>
+        <img src="../../assets/images/Logo/White.png" alt="multySmartIcon" />
+        <h1>Blog's</h1>
       </div>
     </div>
   </div>
 </section>
 <!-- header is ending -->
 
-
-<!-- videos is starting -->
-<section class="videos">
+<!-- blogs is starting  -->
+<section class="blogs">
   <div class="container">
-    <h2>videos collection  about homeworks</h2>
-    <p>The best Instagram clips are available for you on our website</p>
-    <div class="row mb-5" *ngFor="let video of videosList">
-        <div class="col-7 video">
-            <video controls>
-              <source [src]="video.video" type="video/mp4">
+    <h1 class="text-center">Recent Posts</h1>
+    <div class="row">
+      <div class="col-3">
+        <div class="filter">
+          <div class="categories text-center">
+            <h3><i class="fa fa-square"></i> categories</h3>
+            <div class="category">
+              <h5>sound system</h5>
+            </div>
+            <div class="category">
+              <h5>CCTV</h5>
+            </div>
+            <div class="category">
+              <h5>WIFI</h5>
+            </div>
+            <div class="category">
+              <h5>AC Control's</h5>
+            </div>
+            <div class="category">
+              <h5>Curations Control's</h5>
+            </div>
+            <div class="category">
+              <h5>Lighting Control's</h5>
+            </div>
+            <div class="category">
+              <h5>Threater's Cinema</h5>
+            </div>
+            <h3 style="padding-top:100px;"><i class="fa fa-square"></i> More Viewis</h3>
+          </div>
+          <div class="posts mx-5">
+            <div class="post">
+              <div class="image-post">
+                <img src="../../assets/images/Projets/ProjectsCover.jpg" alt="postImage">
+              </div>
+              <div class="post-details mt-2">
+                <h5>TOP 10 SMALL CAMERA IN THE WORLD</h5>
+              </div>
+            </div>
+            <!-- post end -->
+
+            <div class="post">
+              <div class="image-post">
+                <img src="../../assets/images/Projets/ProjectsCover.jpg" alt="postImage">
+              </div>
+              <div class="post-details mt-2">
+                <h5>TOP 10 SMALL CAMERA IN THE WORLD</h5>
+              </div>
+            </div>
+            <!-- post end -->
+
+            <div class="post">
+              <div class="image-post">
+                <img src="../../assets/images/Projets/ProjectsCover.jpg" alt="postImage">
+              </div>
+              <div class="post-details mt-2">
+                <h5>TOP 10 SMALL CAMERA IN THE WORLD</h5>
+              </div>
+            </div>
+            <!-- post end -->
+
+          </div>
+          <h3 style="padding-top:100px;" class="mx-5"><i class="fa fa-square"></i> Tags</h3>
+          <div class="tags">
+            <div class="tag">
+              <h5>Networking</h5>
+            </div>
+            <div class="tag">
+              <h5>Smart Home</h5>
+            </div>
+            <div class="tag">
+              <h5>CCTV</h5>
+            </div>
+            <div class="tag">
+              <h5>Gateways</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-9 videos">
+        <div class="blog">
+          <div class="image">
+            <video class="img-thumbnail" controls>
+              <source src="../../assets/Videos/BarberShop.mp4" />
             </video>
+            <!-- <img class="img-thumbnail" src="../../assets/images/Projets/proj6.png" alt="ProjectPost"> -->
+          </div>
+          <div class="details">
+            <h4>How Our Journals 2021</h4>
+            <p id="date">1/2/2020 10:30 AM</p>
+            <hr />
+            <p>Lorem ipsum dolor sit amet. Et sint voluptatem ea corrupti consequatur quo debitis nulla qui excepturi
+              consequatur cum consequatur optio eum tempora galisum.</p>
+          </div>
+          <a href="#">read more</a>
+          <div class="likes">
+            <i class="fa fa-heart"></i>
+            <p>20 likes</p>
+          </div>
         </div>
-        <div class="col-5 title">
-            <h4>#{{video.title}}</h4>
-            <p>{{video.description}}</p>
+        <div class="blog">
+          <div class="image">
+            <img class="img-thumbnail" src="../../assets/images/Projets/proj2.png" alt="ProjectPost">
+          </div>
+          <div class="details">
+            <h4>How Our Journals 2021</h4>
+            <p id="date">1/2/2020 10:30 AM</p>
+            <hr />
+            <p>Lorem ipsum dolor sit amet. Et sint voluptatem ea corrupti consequatur quo debitis nulla qui excepturi
+              consequatur cum consequatur optio eum tempora galisum.</p>
+          </div>
+          <a href="#">read more</a>
+          <div class="likes">
+            <i class="fa fa-heart"></i>
+            <p>20 likes</p>
+          </div>
         </div>
+        <div class="blog">
+          <div class="image">
+            <img class="img-thumbnail" src="../../assets/images/Projets/proj3.png" alt="ProjectPost">
+          </div>
+          <div class="details">
+            <h4>How Our Journals 2021</h4>
+            <p id="date">1/2/2020 10:30 AM</p>
+            <hr />
+            <p>Lorem ipsum dolor sit amet. Et sint voluptatem ea corrupti consequatur quo debitis nulla qui excepturi
+              consequatur cum consequatur optio eum tempora galisum.</p>
+          </div>
+          <a href="#">read more</a>
+          <div class="likes">
+            <i class="fa fa-heart"></i>
+            <p>20 likes</p>
+          </div>
+        </div>
+        <div class="blog">
+          <div class="image">
+            <img class="img-thumbnail" src="../../assets/images/Projets/proj4.png" alt="ProjectPost">
+          </div>
+          <div class="details">
+            <h4>How Our Journals 2021</h4>
+            <p id="date">1/2/2020 10:30 AM</p>
+            <hr />
+            <p>Lorem ipsum dolor sit amet. Et sint voluptatem ea corrupti consequatur quo debitis nulla qui excepturi
+              consequatur cum consequatur optio eum tempora galisum.</p>
+          </div>
+          <a href="#">read more</a>
+          <div class="likes">
+            <i class="fa fa-heart"></i>
+            <p>20 likes</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+<!-- blogs is ending  -->
 
-<!-- videos is ending -->
-
+<!-- Lorem ipsum dolor sit amet. Et sint voluptatem ea corrupti consequatur quo debitis nulla qui excepturi
+            consequatur cum consequatur optio eum tempora galisum. -->
 <!-- follow us is starting -->
 <section class="follow-us">
   <div class="overlay"></div>

@@ -1,15 +1,14 @@
-
 // header is calling
 @import '../../assets/styles/header.scss';
 
 // videos is starting
-.videos{
-  margin-top: 100px;
-  margin-bottom: 100px;
-  text-align: center;
-  font-style: normal;
+.blogs{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
 }
-.videos  h2{
+
+.blogs h1 {
   font-family: 'El Messiri';
   font-style: normal;
   font-weight: 600;
@@ -18,111 +17,181 @@
   text-transform: uppercase;
   color: #133A1B;
 }
-
-.videos  p {
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 27px;
+.blogs .blog {
+  padding-bottom: 20px;  
+}
+.blogs a{
+  border: 1px solid #133A1B;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
   color: #011B10;
-  margin-bottom: 100px;
+  font-family: "Crimson Pro";
+  text-transform: capitalize;
+  font-weight: 200;
 }
-.videos video:focus{
-  outline: none;
-  border: none;
-  box-shadow: 0 0 2px 2px #133A1B;
-  width: 550px;
-  height: auto;
+.blogs .blog .image video {
+  width: 100%;
+  box-shadow: 0px 0px 5px 2px rgba($color: #000000, $alpha: .2);
 }
-.videos .title{
-  background-color: #E4DEAE;
-}
-.videos .title h4{
+.blogs .blog .details h4 {
   font-family: 'El Messiri';
   font-weight: 600;
-  font-size: 25px;
-  line-height: 39px;
+  font-size: 24px;
   text-transform: uppercase;
-  color: #133A1B;
-  padding-top: 80px;
+  color:#133A1B;
+  padding-top: 20px;
 }
-.videos .title p{
+.blogs .blog .details p{
   font-family: 'Crimson Pro';
   font-weight: 400;
-  font-size: 20px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 25px;
   color: #133A1B;
-  padding-top: 50px;
+  margin: 0;
+  text-align: start;
+  padding-bottom: 20px;
 }
-.videos .video {
-  padding-right:100px;
-}
-
-.videos .video::before{
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-left: 40px solid #B7BF96;
-  border-top: 40px solid #B7BF96;
-  margin-left: -41px;
-  margin-top: -41px;
+.blogs .blog .details #date{
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
-.videos .video::after{
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-bottom: 40px solid #E4DEAE;
-  border-right: 40px solid #E4DEAE;
-  margin-left: -160px;
-  margin-top: 200px;
+.blogs .blog .likes {
+  display: flex;
+  justify-content: start;
+  padding-top: 20px;
 }
-// .videos .video-3::after{
-//   content: '';
-//   position: absolute;
-//   width: 200px;
-//   height: 200px;
-//   border-bottom: 40px solid #E4DEAE;
-//   border-right: 40px solid #E4DEAE;
-//   bottom: -1340px;
-//   left: 580px;
-// }
-// videos is ending
+.blogs .blog .likes i {
+  color: #000;
+  font-size: 18px;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+.blogs .blog .likes p {
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: rgba($color: #133A1B, $alpha: .6);
+  text-align: start;
+}
 
-.follow-us{
+.blogs .filter .categories {
+  width: 100%;
+}
+.blogs .filter .categories .category{
+  display: flex;
+  justify-content: start;
+  margin-left: 50px;
+  padding-bottom: 10px;
+ }
+ .blogs .filter .posts .image-post img{
+    width: 200px;
+    height: auto;
+    margin: 0;
+ }
+ .blogs .filter .posts .post-details h5{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgba($color: #133A1B, $alpha: .6);
+  letter-spacing: 1px;
+  width: 80%;
+}
+
+ .blogs .filter .categories .category h5:hover{
+  color:#F4B741;
+  cursor: pointer;
+ }
+ .blogs .filter  h3 {
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 47px;
+  text-transform: uppercase;
+  color:#133A1B;
+}
+
+.blogs .filter .category h5{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: rgba($color: #133A1B, $alpha: .6);
+  letter-spacing: 1px;
+  text-align: justify;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: .3);
+  width: 80%;
+}
+.blogs .filter .posts .post:hover{
+  color: #F4B741;
+}
+.blogs .filter .tags{
+  margin-left: 50px;
+}
+.blogs .filter .tags .tag h5{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: rgba($color: #133A1B, $alpha: .6);
+}
+.blogs .filter .tags .tag :hover{
+  color: #F4B741;
+  cursor: pointer;
+}
+// follow us is starting
+.follow-us {
   background-image: url('../../assets/Videos/coverImage.jpg');
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 300px;
-  margin-bottom: 100px;
   position: relative;
 }
-.follow-us  .overlay{
+
+.follow-us .overlay {
   position: absolute;
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-color:rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.follow-us .follow-content{
+.follow-us:hover {
+  .overlay {
+    background-color: rgba($color: #133A1B, $alpha: .6);
+    transition: ease-in-out;
+    transition-timing-function: linear;
+    transition-duration: 1s;
+  }
+}
+
+.follow-us .follow-content {
   position: absolute;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width:100%;
+  width: 100%;
+}
+.follow-us .follow-content:hover{
+  cursor: pointer;
 }
 
-.follow-us .follow-content img{
-  width: 150px;
-  height: 150px;
+.follow-us .follow-content img {
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
 }
 
-.follow-us .follow-content span{
+.follow-us .follow-content span {
   font-family: 'Crimson Pro';
   font-style: normal;
   font-weight: 300;
@@ -133,9 +202,8 @@
   padding-bottom: 10px
 }
 
-.follow-us .follow-content i{
+.follow-us .follow-content i {
   color: #FFFFFF;
   font-size: 25px;
 }
-
-
+// follow us is ending

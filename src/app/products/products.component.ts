@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { BrandService } from '../API Services/Brand/brand.service';
 import { ProductService } from '../API Services/Product/product.service';
 import { brandInfo } from '../Models/Brand.model';
@@ -78,4 +77,5 @@ export class ProductsComponent implements OnInit {
   navigationProduct(product:any){
     this.router.navigate(['/product/',product._id]);
   }
+  
 }

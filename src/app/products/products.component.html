@@ -16,67 +16,244 @@
 
 <!-- products is starting -->
 <section class="products">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <mat-toolbar class="toolbar">
-        <div class="filter">
-          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            filtter by brands
-          </a>
-          <ul class="dropdown-menu">
-            <li *ngFor="let brand of brandsList">
-              <a class="dropdown-item" (click)="selectBrand(brand.brand)">{{brand.brand}}</a>
-            </li>
-          </ul>
+      <div class="col-3 gategories">
+        <div class="d-flex justify-content-center">
+          <h3> <i class="fa fa-square"></i> Gategories</h3>
         </div>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" name="searchField" [(ngModel)]="this.searchFiled" placeholder="Search" aria-label="Search">
-          <button type="button">Search</button>
-        </form>
-      </mat-toolbar>
+        <div class="class-gategory px-3">
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> All Products </h5>
+          </div>
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> Routers </h5>
+          </div>
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> Switches </h5>
+          </div>
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> Controllers </h5>
+          </div>
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> Hub's </h5>
+          </div>
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> Thermostates </h5>
+          </div>
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> Cameras </h5>
+          </div>
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> Intercom </h5>
+          </div>
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> Access Points </h5>
+          </div>
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> Sound System </h5>
+          </div>
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> Sliding Door </h5>
+          </div>
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> Gate Barriers </h5>
+          </div>
+          <div class="category">
+            <h5><i class="fa fa-angle-double-right"></i> Door Locks </h5>
+          </div>
+        </div>
+        <div class="pt-2 px-3">
+          <h3 style="font-size:24px ; padding-bottom: 0;"><i class="fa fa-square"></i> Price Filter</h3>
+          <div class="filter">
+            <div class="price">
+              <h5><i class="fa fa-angle-double-right"></i> less for 100 AED </h5>
+            </div>
+            <div class="price">
+              <h5><i class="fa fa-angle-double-right"></i> 100 - 200 AED </h5>
+            </div>
+            <div class="price">
+              <h5><i class="fa fa-angle-double-right"></i> 300 - 400 AED </h5>
+            </div>
+          </div>
+          <h3 style="font-size:24px;padding:0;margin-bottom:0;margin-top:20px;"><i class="fa fa-square"></i> Tags</h3>
+          <div class="filter">
+            <div class="tags">
+              <div class="tag">
+                <h5>Networking</h5>
+              </div>
+              <div class="tag">
+                <h5>Smart Home</h5>
+              </div>
+              <div class="tag">
+                <h5>CCTV</h5>
+              </div>
+              <div class="tag">
+                <h5>Gateways</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-9 p-0 m-0">
+        <div class="toolbar">
+          <div class="filter">
+            <a href="#">Filter By</a><i class="fa fa-list"></i>
+          </div>
+          <div class="filter">
+            <a href="#">Sort By</a><i class="fa fa-list"></i>
+          </div>
+          <div class="search">
+            <form>
+              <input type="text" class="search-input" placeholder="Search" />
+              <button class="btn btn-secondary">Search <i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="dsiplay-product">
+          <div class="row">
+            <div class="col-4">
+              <div class="product-name">
+                <div class="image">
+                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
+                </div>
+                <div class="details">
+                  <h4>product name</h4>
+                  <div class="d-flex justify-content-between">
+                    <p>{{ 500 | currency:'aed'}}</p>
+                    <p id="offer-price"><del>{{ 800 | currency:'aed'}}</del></p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <!-- end product -->
+
+            <div class="col-4">
+              <div class="product-name">
+                <div class="image">
+                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
+                </div>
+                <div class="details">
+                  <h4>product name</h4>
+                  <p>500 aed</p>
+                </div>
+              </div>
+            </div>
+            <!-- end product -->
+
+            <div class="col-4">
+              <div class="product-name">
+                <div class="image">
+                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
+                </div>
+                <div class="details">
+                  <h4>product name</h4>
+                  <p>500 aed</p>
+                </div>
+              </div>
+            </div>
+            <!-- end product -->
+          </div>
+
+          <!-- row products start -->
+
+          <div class="row">
+            <div class="col-4">
+              <div class="product-name">
+                <div class="image">
+                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
+                </div>
+                <div class="details">
+                  <h4>product name</h4>
+                  <p>500 aed</p>
+                </div>
+              </div>
+            </div>
+            <!-- end product -->
+
+            <div class="col-4">
+              <div class="product-name">
+                <div class="image">
+                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
+                </div>
+                <div class="details">
+                  <h4>product name</h4>
+                  <p>500 aed</p>
+                </div>
+              </div>
+            </div>
+            <!-- end product -->
+
+            <div class="col-4">
+              <div class="product-name">
+                <div class="image">
+                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
+                </div>
+                <div class="details">
+                  <h4>product name</h4>
+                  <p>500 aed</p>
+                </div>
+              </div>
+            </div>
+            <!-- end product -->
+          </div>
+          <!-- row products ended -->
+
+          
+          <!-- row products start -->
+
+          <div class="row">
+            <div class="col-4">
+              <div class="product-name">
+                <div class="image">
+                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
+                </div>
+                <div class="details">
+                  <h4>product name</h4>
+                  <p>500 aed</p>
+                </div>
+              </div>
+            </div>
+            <!-- end product -->
+
+            <div class="col-4">
+              <div class="product-name">
+                <div class="image">
+                  <img src="../../assets/images/Partners/moorgen.jpeg" alt="image-Product">
+                </div>
+                <div class="details">
+                  <h4>product name</h4>
+                  <p>500 aed</p>
+                </div>
+              </div>
+            </div>
+            <!-- end product -->
+
+            <div class="col-4">
+              <div class="product-name">
+                <div class="image">
+                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
+                </div>
+                <div class="details">
+                  <h4>product name</h4>
+                  <p>500 aed</p>
+                </div>
+              </div>
+            </div>
+            <!-- end product -->
+          </div>
+          <!-- row products ended -->
+        </div>
+      </div>
     </div>
   </div>
-
-  <!-- sidenav is starting -->
-  <mat-sidenav-container class="products-container">
-    <mat-sidenav mode="side" opened class="product-categories">
-      <h4>gategories</h4>
-      <div class="category" (click)="selectCategory('')">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>all products</h5>
-      </div>
-      <div *ngFor="let category of categoriesList" (click)="selectCategory(category.category)" class="category">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-        <h5>{{category.category}}</h5>
-      </div>
-
-    </mat-sidenav>
-    <mat-sidenav-content class="products-contnet">
-      <div class="row">
-        <div *ngFor="let product of productsList | paginate:{itemsPerPage:pageSize,currentPage:currentPage,
-        totalItems:totalProducts}|filter:this.searchFiled" (click)="navigationProduct(product)" class="col-4 product">
-          <img [src]="product.images[0]" alt="multySmartProduct">
-          <h4>{{product.productName}}</h4>
-          <div class="prices">
-            <sup>$</sup><span id="price">{{product.price}}</span>
-            <sup>$</sup><span id="save-price"><s>{{product.savePrice}}</s></span>
-            <!-- <i class="fa fa-heart"></i><span>10</span> -->
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-  <div class="d-flex justify-content-center">
-    <pagination-controls [responsive]="true" nextLabel="" previousLabel="" (pageChange)="paginationHandle($event)"></pagination-controls>
-  </div>
 </section>
+
+<div class="d-flex justify-content-center">
+  <pagination-controls [responsive]="true" nextLabel="" previousLabel=""
+    (pageChange)="paginationHandle($event)"></pagination-controls>
+</div>
 <!-- products is ending-->
 
 

@@ -30,7 +30,8 @@ import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { VideosComponent } from './videos/videos.component';
-
+import { LoginUserComponent } from './login-user/login-user.component';
+import { RegisterUserComponent} from './register-user/register-user.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'products', component:ProductsComponent},
@@ -43,6 +44,8 @@ const routes: Routes = [
   {path:'brand-name',component:BrandNameComponent},
   {path:'checkout',component:CheckoutComponent},
   {path:'shipping',component:ShippingComponent},
+  {path:'login',component:LoginUserComponent},
+  {path:'register',component:RegisterUserComponent},
   {path:'product/:id',component:ProductComponent},
   {path:'dashboard',component:DashboardComponent,
     children:[

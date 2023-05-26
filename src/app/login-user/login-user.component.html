@@ -1,0 +1,33 @@
+<div class="login">
+    <div class="container">
+        <div class="row">
+            <h2>Login</h2>
+            <div class="image-user">
+                <i class="fa fa-user-alt"></i>
+            </div>
+            <div class="details-user">
+                <form>
+                    <div class="label">
+                        <label for="username">username</label>
+                        <input type="text" name="username" id="username" placeholder="username" />
+                    </div>
+                    <div class="label">
+                        <label for="password">password</label>
+                        <input [type]="passwordType" name="password-value" id="password" #password placeholder="Ex 1234556" />
+                    </div>
+                    <div class="label py-0 show">
+                        <input type=checkbox id="showPassword" name="showPassword" (click)="togglePasswordVisibility()"/>
+                        <label for="showPassword" class="m-0">show password</label>
+                    </div>
+                    <button type="submit"  class="btn btn-success my-4">login</button>
+                </form>
+                <div >
+                    <ul class="list-unstyled">
+                        <li>Do you have Account ? <a routerLink="/register">Register</a></li>
+                        <li><a href="#">forget password</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

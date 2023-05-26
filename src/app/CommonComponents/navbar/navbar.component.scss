@@ -1,5 +1,5 @@
 .navbar{
-  font-family: 'El Messiri';
+  font-family: 'Poppins';
   background-color: #FFF;
   box-sizing: border-box;
   height: 90px;
@@ -14,6 +14,7 @@
 .navbar .collapse{
   margin-left: 400px;
 }
+
 @media screen and (min-width:992px) and (max-width:1200px) {
   .navbar .collapse{
     margin-left: 200px;
@@ -24,14 +25,40 @@
     margin-left: 400px;
   }
 }
+.navbar .navbar-nav .login {
+  display: flex;
+  margin-left: 50px;
+  flex-wrap: wrap;
+}
+.navbar .navbar-nav .login i {
+  margin-left: 5px;
+  font-size: 18px;
+}
 
+.navbar .navbar-nav .login i > span{
+  position: absolute;
+  top: -1px;
+  right: 7px;
+  background-color: #B7BF96;
+  display: inline-block;
+  padding: 3px;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  text-align: center;
+}
+.navbar .navbar-nav .login .nav-item .nav-link:hover{
+  color: #133A1B;
+}
 .navbar .navbar-nav .nav-item .nav-link {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   padding-top: 10px;
   line-height: 18px;
-  color: #133A1B;
+  color: rgba($color: #133A1B, $alpha: .6);
+  position: relative;
   text-decoration: none;
   text-transform: capitalize;
   cursor: -webkit-grab;
@@ -39,10 +66,8 @@
 
 .navbar .navbar-nav .nav-item .nav-link:focus,
 .navbar .navbar-nav .nav-item .nav-link:hover{
-  color: #B7BF96;
+  color: #133A1B;
 }
-
-
 @media screen and (max-width:992px){
   .navbar .navbar-nav .nav-item .nav-link{
       margin-bottom: 4px;

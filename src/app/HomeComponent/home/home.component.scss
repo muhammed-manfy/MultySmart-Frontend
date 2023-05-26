@@ -5,7 +5,6 @@
   line-height: 70px;
   text-transform: uppercase;
   color:#B7BF96;
-  // border: 3px #133A1B dotted;
   width: max-content;
   margin: auto;
   padding: 0 20px;
@@ -509,6 +508,10 @@
   @include h2();
   padding-bottom: 50px;
   color: #133A1B;
+}
+.areas .card .card-header{
+  padding: 0;
+  margin: 0;
 }
 .areas .card-header img {
   width: 100%;

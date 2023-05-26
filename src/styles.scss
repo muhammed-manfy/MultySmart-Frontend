@@ -13,8 +13,7 @@
 // MDB SCSS
 @import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
 html, body { height: 100%; }
-body { margin: 0; font-family:'El Messiri' ,'Crimson Pro', serif; }
-
+body { margin: 0; font-family:'El Messiri' ,'Crimson Pro','Poppins', serif; }
 
 .validationSnackBar{
   background-color: red;

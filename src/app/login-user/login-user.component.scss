@@ -1,0 +1,84 @@
+.login{
+    text-align: center;
+    width: 50%;
+    height: auto;
+    position: relative;
+    top: 40px;
+    margin:0px auto;
+    padding-top: 40px;
+    box-shadow: 0px 0px 4px 1px rgba($color: #000000, $alpha: .24);
+}
+.login h2 {
+    font-family: 'El Messiri';
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: rgba($color: #133A1B, $alpha: .6);
+    width: max-content;
+    margin: auto;
+    padding: 0 20px;
+}
+.login .image-user i {
+    font-size: 100px;
+    padding: 30px;
+    border: 1px  solid rgba($color: #133A1B, $alpha: .6);
+    border-radius: 100px;
+    color: rgba($color: #133A1B, $alpha: .6);
+    margin-bottom: 20px;
+}
+.login .details-user .label {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+.login .details-user .label label {
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 18px;
+    text-align: start;
+    color: #011B10;
+    margin-bottom: 5px;
+}
+.login .details-user .label input {
+    font-style: normal;
+    font-family: 'Crimson Pro';
+    font-weight: 300;
+    text-transform: capitalize;
+    font-size: 16px;
+    text-align: start;
+    outline: none;
+    border: none;
+    background-color: rgba($color: #B7BF96, $alpha: .8);
+    padding: 10px 20px;
+    color: #FFF;
+    border-radius: 10px;
+}
+.login .details-user .label input::placeholder{
+    color: #FFF;
+}
+.login .details-user .show {
+    display: flex;
+    flex-direction: row;
+}
+.login .details-user form > button {
+    font-style: normal;
+    font-family: 'Crimson Pro';
+    font-weight: 300;
+    width: 250px;
+}
+.login .details-user ul li{
+    font-style: normal;
+    font-family: 'Crimson Pro';
+    font-weight: 400;
+}
+.login .details-user ul li a{
+    font-style: normal;
+    font-family: 'Crimson Pro';
+    font-weight: 400;
+    text-decoration: none;
+}

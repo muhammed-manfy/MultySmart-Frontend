@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import { MatButtonModule} from '@angular/material/button';
-import { MatIconModule} from '@angular/material/icon';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './CommonComponents/navbar/navbar.component';
 import { FooterComponent } from './CommonComponents/footer/footer.component';
@@ -15,6 +15,7 @@ import { ProductsComponent } from './products/products.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { VideosComponent } from './videos/videos.component';
 import { BrandsComponent } from './brands/brands.component';
@@ -27,8 +28,9 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { ProductComponent } from './product/product.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import { MatMenuModule} from '@angular/material/menu';
-import { MatListModule} from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatExpansionModule} from '@angular/material/expansion';
 import { AdminUsersComponent } from './admin/users/users.component';
 import { AdminProjectsComponent} from './admin/projects/projects.component';
@@ -62,7 +64,10 @@ import { MessagesComponent } from './admin/messages/messages.component';
 import { DeleteMessagesComponent } from './Dialogs/Messages/delete-messages/delete-messages.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { LoginUserComponent } from './login-user/login-user.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -107,7 +112,9 @@ import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
     UpdateBrandComponent,
     UpdateOfferComponent,
     MessagesComponent,
-    DeleteMessagesComponent
+    DeleteMessagesComponent,
+    LoginUserComponent,
+    RegisterUserComponent
   ],
   imports: [
     BrowserModule,
@@ -131,8 +138,12 @@ import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
     MatPaginatorModule,
     NgxPaginationModule,
     Ng2SearchPipeModule,
-    NgbRatingModule
+    MatChipsModule,
+    MatSlideToggleModule,
+    MatCheckboxModule,
+    MatInputModule
   ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
