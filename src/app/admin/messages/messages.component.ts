@@ -12,7 +12,7 @@ import { messageInfo } from 'src/app/Models/Message';
 })
 export class MessagesComponent implements OnInit {
   messagesReceived:any;
-  messagesList= Array<messageInfo>();
+  messagesList:Array<messageInfo> =[];
   pageSize = 4;
   currentpage = 0;
   totalMessages:any;
@@ -25,7 +25,6 @@ export class MessagesComponent implements OnInit {
   }
 
   handlePAgination(event:PageEvent){
-    this.pageEvent =event;
     this.getMessagePagination(event.pageSize,event.pageIndex);
   }
 

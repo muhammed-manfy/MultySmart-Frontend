@@ -4,91 +4,63 @@
     <div class="row">
       <mat-toolbar class="toolbar">
         <div class="d-flex align-items-center">
-          <h2 class="pt-1">Dashboard</h2>
-          <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon"
-          (click)="sidnav.toggle()"><mat-icon>menu</mat-icon>
+          <h2 class="pt-1">Admin Dashboard</h2>
+          <button mat-icon-button aria-label="Example icon button with a menu icon"
+            (click)="sidnav.toggle()"><mat-icon>menu</mat-icon>
           </button>
         </div>
         <div class="menu-admin">
-          <button mat-icon-button [matMenuTriggerFor]="notifications"  aria-label="Example icon-button with a notification">
-            <mat-icon>notifications</mat-icon>
+          <button mat-icon-button (click)="logoutAdmin()">
+            <mat-icon>logout</mat-icon>
           </button>
-
-          <mat-menu #notifications="matMenu" class="menu">
-            <button mat-menu-item class="notifications-item">
-              <mat-icon>account_circle</mat-icon>
-              <span>muhammed is add comment</span>
-            </button>
-            <mat-divider class="divider"></mat-divider>
-            <button mat-menu-item class="notifications-item">
-              <mat-icon>account_circle</mat-icon>
-              <span>muhammed is add delete</span>
-            </button>
-          </mat-menu>
-          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-            <mat-icon>more_vert</mat-icon>
-          </button>
-          <mat-menu #menu="matMenu" class="menu">
-            <button routerLink="/dashboard/messages" mat-menu-item class="menu-item">
-              <mat-icon>message</mat-icon>
-              <span>Messages</span>
-            </button>
-
-            <button mat-menu-item class="menu-item">
-              <mat-icon>comments</mat-icon>
-              <span mat-button>Comments</span>
-            </button>
-            <mat-divider class="divider"></mat-divider>
-            <button mat-menu-item class="menu-item">
-              <mat-icon>logout</mat-icon>
-              <span mat-button>LogOut</span>
-            </button>
-          </mat-menu>
         </div>
       </mat-toolbar>
     </div>
   </div>
 
-<!-- sidenav is starting -->
-<mat-sidenav-container class="sidnav-container">
-  <mat-sidenav #sidnav mode="side" opened class="sidenav">
-      <div class="top-section">
-        <img src="../../../assets/images/Projets/pro1.jpg" alt="multySmartAdmin"/>
-        <h4>Admin Name</h4>
-      </div>
+  <!-- sidenav is starting -->
+  <mat-sidenav-container class="sidnav-container">
+    <mat-sidenav #sidnav mode="side" opened class="sidenav">
       <div class="bottom-section">
         <div class="item-list">
           <div class="links">
-            <i class="fa fa-user-friends"></i>
+            <i class="fa fa-check-square"></i>
+            <h5 routerLink="/dashboard">Dashboard</h5>
+          </div>
+          <div class="links">
+            <i class="fa fa-check-square"></i>
+            <h5 routerLink="/dashboard/profile">Profile</h5>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="item-list">
+          <div class="links">
+            <i class="fa fa-check-square"></i>
             <h5 routerLink="/dashboard/users">Users</h5>
           </div>
         </div>
         <mat-divider></mat-divider>
         <div class="item-list">
           <div class="links projects">
-            <i class="fa fa-area-chart"></i>
-            <h5>Projects</h5>
+            <i class="fa fa-check-square"></i>
+            <h5>Blog's</h5>
           </div>
           <ul class="list-unstyled projects-list text-start">
-            <li routerLink='/dashboard/add-project'> add project </li>
-            <li routerLink="/dashboard/projects"> projects </li>
+            <li routerLink='/dashboard/add-blog'> add blog </li>
+            <li routerLink="/dashboard/blogs"> blog's </li>
           </ul>
         </div>
         <mat-divider></mat-divider>
         <div class="item-list offers">
-          <div class="links">
-            <i class="fas fa-hand-holding-usd"></i>
-            <h5>offers</h5>
+          <div routerLink="/dashboard/orders" class="links">
+            <i class="fa fa-check-square"></i>
+            <h5>orders</h5>
           </div>
-          <ul class="list-unstyled offers-list">
-            <li routerLink='/dashboard/add-offer'> add offer </li>
-            <li routerLink="/dashboard/offers"> offers </li>
-          </ul>
         </div>
         <mat-divider></mat-divider>
         <div class="item-list product">
           <div class="links">
-            <i class="fas fa-dice-d6"></i>
+            <i class="fa fa-check-square"></i>
             <h5>product</h5>
           </div>
           <ul class="list-unstyled product-list">
@@ -99,31 +71,68 @@
         <mat-divider></mat-divider>
 
         <div class="item-list brands">
-          <div class="links">
-            <i class="fas fa-handshake"></i>
-            <h5>brands</h5>
+          <div routerLink="/dashboard/messages" class="links">
+            <i class="fa fa-check-square"></i>
+            <h5>messages</h5>
           </div>
-          <ul class="list-unstyled brands-list">
-            <li routerLink='/dashboard/add-brand'> add brand </li>
-            <li routerLink="/dashboard/brands"> brands </li>
-          </ul>
         </div>
         <mat-divider></mat-divider>
-        <div class="item-list videos">
-          <div class="links">
-            <i class="fa fa-play-circle"></i>
-            <h5>videos</h5>
+        <div class="item-list">
+          <div routerLink="/dashboard/deliverd" class="links">
+            <i class="fa fa-check-square"></i>
+            <h5>Delieverd</h5>
           </div>
-          <ul class="list-unstyled videos-list">
-            <li routerLink='/dashboard/add-video'> add video </li>
-            <li routerLink="/dashboard/videos"> videos </li>
-          </ul>
+        </div>
+        <mat-divider></mat-divider>
+
+        <div class="item-list">
+          <div routerLink="/dashboard/canceled" class="links">
+            <i class="fa fa-check-square"></i>
+            <h5 >Canceled</h5>
+          </div>
         </div>
         <mat-divider></mat-divider>
       </div>
-  </mat-sidenav>
-  <mat-sidenav-content class="sidenav-contnet">
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-contnet">
+      <router-outlet *ngIf="this.url !='/dashboard'; else dashboard"></router-outlet>
+      <ng-template #dashboard>
+        <div class="text-center mt-5" *ngIf="this.ordersList.length == 0">
+          <h2>You Don't Have Requesets Orders Now</h2>
+        </div>
+        <div class="requsets-orders" *ngIf="this.ordersList.length !=0">
+          <h2>Orders Requsets</h2>
+          <div *ngFor="let order of ordersList ; let counter = index" class="row m-2">
+            <h3>Order ID :{{order._id}}</h3>
+            <small style="font-size: 16px; padding-bottom: 5px;">Order No: {{counter + 1}} </small>
+            <br /><br />
+            <div *ngFor="let item of order.products" class="col-3">
+              <div class="card">
+                <img [src]="item.product.image" class="card-img-top" alt="product image">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.product.productName}}</h5>
+                  <h6>{{item.product.price | currency:'AED'}}</h6>
+                </div>
+                <ul class="list-group d-block list-group-flush">
+                  <li class="list-group-item">brand : {{item.product.brand}}</li>
+                  <li class="list-group-item">Category :{{item.product.category}}</li>
+                  <li class="list-group-item">Tag : {{item.product.tag}}</li>
+                  <li class="list-group-item">Status : {{item.status}}</li>
+                  <li class="list-group-item">Product Count : {{item.ID_NO}}</li>
+                </ul>
+                <div class="card-footer">
+                  <small (click)="changeStatus(item.ID_NO,order._id)" class="text-body-secondary"> <i
+                      class="fa fa-send"></i>Change Status</small>
+                  <small (click)="viewUserData(order)" class="text-body-secondary mx-2"><i class="fa fa-list"></i>view user</small>
+                  <small class="text-body-secondary mx-2">{{order.created_at | date:'short'}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <mat-paginator *ngIf="ordersList.length != 0" class="pagination" (page)="handlePagination($event)" [length]="totalOrders"
+      [pageIndex]="currentPage" [pageSize]="pageSize" aria-label="Select page"></mat-paginator>
+      </ng-template>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </section>

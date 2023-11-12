@@ -8,218 +8,135 @@
     <div class="row">
       <div class="title-page">
         <img src="../../assets/images/Logo/White.png" alt="multySmartIcon" />
-        <h1>product Name</h1>
+        <h1>Product Page</h1>
       </div>
     </div>
   </div>
 </section>
 <!-- header is ending -->
 
-
-<!-- procucts is starting -->
-<section class="product-name">
+<!-- product is starting  -->
+<section class="product">
   <div class="container">
     <div class="row">
-      <div class="col-6 images-container">
-        <div *ngFor="let image of dataProduct.images" class="product-image">
-          <img [src]="image" alt="MultySmartProduct" />
-        </div>
-        <!-- <div class="product-image">
-          <img src="../../assets/images/Products/knxe4.png" alt="MultySmartProduct" />
-        </div>
+      <div class="col-xs-12 col-md-5">
         <div class="product-image">
-          <img src="../../assets/images/Products/71-gbu.png" alt="MultySmartProduct" />
-        </div>
-        <div class="product-image">
-          <img src="../../assets/images/Products/photo_5868503010013985228_y.jpg" alt="MultySmartProduct" />
-        </div> -->
-      </div>
-      <div class="col-6 product-details">
-        <div class="description">
-          <p>{{this.dataProduct.productName}}</p>
-        </div>
-        <div class="rating">
-          <div class="stars-rating">
-            <i class="fa fa-star fa-2x"></i>
-            <i class="fa fa-star fa-2x"></i>
-            <i class="fa fa-star fa-2x"></i>
-            <i class="fa fa-star fa-2x"></i>
-            <i class="fa fa-star fa-2x"></i>
-          </div>
-          <h5>(22,677 Rating | 122 Reviews)</h5>
-        </div>
-        <div class="prices">
-          <span>$<strong>{{dataProduct.price}}</strong></span>
-          <span><sup>$</sup><s>50</s></span>
-          <span><strong>save </strong> $18</span>
-          <i class="fa fa-heart"> <span> 300</span></i>
-        </div>
-        <div class="add-to-cart d-flex mb-2">
-          <div class="total-products me-5 pt-2">
-            <i class="fa fa-minus"></i>
-            <span>1</span>
-            <i class="fa fa-plus"></i>
-          </div>
-          <button>add to cart</button>
-        </div>
-        <div class="product-speceifcation mt-5">
-          <div class="d-flex justify-content-between align-items-end product-description-toggle">
-            <h4>description</h4>
-            <i class="fa fa-plus"></i>
-          </div>
-          <hr />
-          <p id="product-description-toggle">{{dataProduct.description}}</p>
-        </div>
-        <div class="product-speceifcation mt-2">
-          <div class="d-flex justify-content-between align-items-end product-features-toggle">
-            <h4>product features</h4>
-            <i class="fa fa-plus"></i>
-          </div>
-          <hr />
-          <p id="product-features-toggle">{{dataProduct.features}}</p>
+          <img [src]="productInfo.image" class="img-thumbnail" alt="productImg">
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- products is ending -->
-
-<!-- brands related is starting -->
-<section class="brands-related">
-  <div class="container">
-    <h2>brands realted with product</h2>
-    <div class="row">
-      <div class="col-4 images">
-        <img src="../../assets/images/Products/knxe2.png" alt="multySmart" />
-      </div>
-      <div class="col-4 images">
-        <img src="../../assets/images/Products/knxe4.png" alt="multySmart" />
-      </div>
-      <div class="col-4 images">
-        <img src="../../assets/images/Products/photo_5868503010013985228_y.jpg" alt="multySmart" />
-      </div>
-    </div>
-  </div>
-</section>
-<!-- brands related is ending -->
-
-<!-- reviews is starting -->
-<section class="reviews">
-  <div class="container">
-    <h2>reviews</h2>
-    <div class="d-flex">
-      <div class="rating mt-5">
-        <div class="total-rating">
-          <div class="rating-stars mb-2">
-            <ngb-rating [rate]="5"  [readonly]="true" [max]="5"></ngb-rating>
+      <div class="col-xs-12 col-md-7">
+        <div class="product-details">
+          <div class="product-name">
+            <h3>{{productInfo.productName}}</h3>
           </div>
-          <h4> 122 Reviews </h4>
-        </div>
-        <div class="d-flex mt-5">
-          <div class="stars me-5">
-            <ngb-rating [rate]="5" [readonly]="true" [max]="5"></ngb-rating>
+          <div class="product-price">
+            <span>{{productInfo.price}} AED</span>
           </div>
-          <h5> 122 </h5>
-        </div>
-        <div class="d-flex">
-          <div class="stars me-5">
-            <ngb-rating [rate]="4" [readonly]="true" [max]="5"></ngb-rating>
+          <div class="product-description">
+            <p>{{productInfo.description}}.</p>
           </div>
-          <h5> 122 </h5>
-        </div>
-        <div class="d-flex">
-          <div class="stars me-5">
-            <ngb-rating [rate]="3" [readonly]="true" [max]="5"></ngb-rating>
+          <div class="product-brand">
+            <h5> brand : <span> {{productInfo.brand}}</span></h5>
           </div>
-          <h5> 122 </h5>
-        </div>
-        <div class="d-flex">
-          <div class="stars me-5">
-            <ngb-rating [rate]="2" [readonly]="true" [max]="5"></ngb-rating>
+          <div class="product-brand">
+            <h5> type : <span>{{productInfo.category}}</span></h5>
           </div>
-          <h5> 122 </h5>
-        </div>
-        <div class="d-flex">
-          <div class="stars me-5">
-            <ngb-rating [rate]="1" [readonly]="true" [max]="5"></ngb-rating>
-          </div>
-          <h5> 122 </h5>
-        </div>
-        <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">write a review</button>
-      </div>
-
-
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title" id="exampleModalLabel">Write a New Review</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="cart">
+            <div class="count">
+              <span (click)="productCountCalcDecrease(this.productCounter)"
+                class="material-symbols-outlined">remove</span>
+              <span>{{this.productCounter}}</span>
+              <span (click)=" productCountCalcIncrease(this.productCounter)"
+                class="material-symbols-outlined">add_circle</span>
             </div>
-            <div class="modal-body">
-              <form>
-                <div class="mb-3">
-                  <label for="full-name" class="col-form-label">Full Name</label>
-                  <input type="text"  id="full-name">
-                </div>
-                <div class="mb-3">
-                  <label for="message-text" class="col-form-label">Your Message</label>
-                  <textarea  id="message-text"></textarea>
-                </div>
-                <div class="mb-3">
-                  <label>Your Rating</label><br/><br/>
-                  <ngb-rating [max]="5" [formControl]="ratingProduct"></ngb-rating>
-                  <div class="form-text small">
-                    <div *ngIf="ratingProduct.valid" class="text-success">Thanks!</div>
-                    <div *ngIf="ratingProduct.invalid" class="text-danger">Please rate us</div>
+            <button (click)="backToShop()" class="back-to-shop">back to Shop <i class="fa solid fa-refresh"></i></button>
+            <button (click)="addToCartPage()">add to cart</button>
+          </div>
+          <div class="shipping-product">
+            <h3>shipping information</h3>
+            <div class="deleviery-details">
+              <h5>Emirates:</h5>
+              <p> Dubai - Sharjha - Al-Ain - Ras Al-Khima </p>
+              <p> - Abu Dhabi - Fujiraha - EM Qaiuain </p>
+            </div>
+            <div class="deleviery-details">
+              <h5>pay methods:</h5>
+              <p>Cash Only</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- product is ending -->
+    <div class="row">
+      <div class="container">
+        <div class="features-reviews">
+          <mat-tab-group mat-align-tabs="start">
+            <mat-tab label="Reviews({{commentsProductList.length}})">
+              <div class="reviews-counts">
+                <h5>{{commentsProductList.length}} REVIEWS FOR SHIP YOUR PRODUCT</h5>
+              </div>
+              <div class="reviews-text">
+                <div class="reviews-users">
+                  <!-- user data started -->
+                  <div *ngFor="let comment of commentsProductList | paginate: {itemsPerPage: pageSize,
+                    currentPage: currentPage + 1 , totalItems: totalComments}" class="user">
+                    <div *ngIf="commentsProductList.length!=0" class="user-details">
+                      <h5>{{comment.username}}</h5>
+                      <p>{{comment.comment}}.</p>
+                    </div>
+                    <div *ngIf="commentsProductList.length == 0" class="user-details">
+                      <h3>A Product Don't have Reviews</h3>
+                    </div>
+                    <div class="user-date">
+                      <h5 style="font-weight: 500;font-size: 12px; font-family: 'El Messiri';">{{comment.created_at |
+                        date:'short'}}</h5>
+                    </div>
                   </div>
+              </div>
+                <!-- user data ended -->
+                <div *ngIf="this.commentsProductList.length > 6" class="d-flex justify-content-center">
+                  <pagination-controls class="my-pagination" [responsive]="true" nextLabel="" previousLabel=""
+                    (pageChange)="paginationHandle($event)"></pagination-controls>
                 </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="cancel-button" data-bs-dismiss="modal">Close Review</button>
-              <button type="button" class="post-button">Post Review</button>
-            </div>
-          </div>
+              </div>
+              <div class="new-review">
+                <h5>Write A Review </h5>
+                <div class="row">
+                  <form [formGroup]="commentProductForm" (ngSubmit)="createProductComment()">
+                    <div class="form w-100">
+                      <div class="label">
+                        <label for="firstName">first name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name"
+                          formControlName="firstName" />
+                      </div>
+                      <div class="label">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name"
+                          formControlName="lastName" />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="label w-100">
+                        <label for="comment">Comment</label>
+                        <textarea name="comment" placeholder="write a message here ...." id="comment" cols="30"
+                          rows="10" formControlName="comment"></textarea>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <button type="submit"> post review </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
         </div>
-      </div>
-      <div class="posts d-flex flex-column">
-        <div class="post">
-          <h3>client name</h3>
-          <div class="">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <h5>title review</h5>
-          <p>Lorem ipsum dolor sit amet. Et sint voluptatem ea corrupti consequatur quo debitis nulla qui excepturi
-            consequatur cum consequatur optio eum tempora galisum. Eos ducimus consequuntur aut autem autem qui alias
-            autem sed dolor repellendus et cumque incidunt vel dolor explicabo. Ut provident dolores sed quos
-            reprehenderit sed aspernatur architecto qui voluptas aliquid.</p>
-        </div>
-        <div class="post">
-          <h3>client name</h3>
-          <div class="">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <h5>title review</h5>
-          <p>Lorem ipsum dolor sit amet. Et sint voluptatem ea corrupti consequatur quo debitis nulla qui excepturi
-            consequatur cum consequatur optio eum tempora galisum. Eos ducimus consequuntur aut autem autem qui alias
-            autem sed dolor repellendus et cumque incidunt vel dolor explicabo. Ut provident dolores sed quos
-            reprehenderit sed aspernatur architecto qui voluptas aliquid.</p>
-        </div>
-        <button>see more</button>
       </div>
     </div>
   </div>
 </section>
-<!-- reviews is ending -->
+<!-- product is ending -->
 
 <!-- footer is starting -->
 <app-footer></app-footer>

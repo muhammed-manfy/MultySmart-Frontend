@@ -1,68 +1,63 @@
-<div class="add-product">
+<!-- checkout is strating -->
+<section class="add-product mx-5">
   <div class="container">
     <div class="row">
-      <form [formGroup]="addProductForm" (ngSubmit)="formSubmit($event)">
-        <div class="mb-3">
-          <label for="Product-name" class="form-label">Product Name</label>
-          <input type="text" class="form-control" id="Product-name"
-          formControlName="productName"  placeholder="Enter Project Name Here ...">
+        <div class="info-form">
+          <h3>Add Product</h3>
+          <form [formGroup]="addProductForm" (ngSubmit)="submitProduct($event)">
+            <div class="d-flex justifiy-content-center flex-row w-100">
+              <div class="label w-75">
+                <label for="productName">product name</label>
+                <input type="text" id="productName" formControlName="productName" name="productName"
+                  placeholder="product name" />
+              </div>
+              <div class="label w-75">
+                <label for="price">price</label>
+                <input type="text" id="price" formControlName="price" name="price" placeholder="128 AED" />
+              </div>
+            </div>
+            <div class="d-flex justifiy-content-center flex-row w-100">
+              <div class="label w-50">
+                <label for="gategory">category</label>
+                <select name="category" id="category">
+                  <option *ngFor="let CATEGORY of CATEGORIES ; let counter = index"
+                  [value]="CATEGORY" [selected]="CATEGORY">{{CATEGORY}}</option>
+                </select>
+              </div>
+              <div class="label w-50">
+                <label for="tag">tag</label>
+                <select name="tag" id="tag">
+                  <option *ngFor="let TAG of TAGS"
+                  [value]="TAG" [selected]="TAG">{{TAG}}</option>
+                </select>
+              </div>
+              <div class="label w-50">
+                <label for="brand">brand</label>
+                <input type="text" id="brand" name="brand" formControlName="brand" placeholder="brand" />
+              </div>
+            </div>
+            <div class="d-flex justifiy-content-center flex-row w-100">
+              <div class="label w-100">
+                <label for="comment">Description</label>
+                <textarea name="description" formControlName="description" placeholder="write a description here ...."
+                  id="description" cols="30" rows="10"></textarea>
+              </div>
+            </div>
+            <div class="d-flex flex-row w-100">
+              <div class="input-group mb-3">
+                <input type="file" class="form-control" (change)="uploadImage($event)" id="inputGroupFile02"
+                  formControlName="image">
+                <label class="input-group-text" for="inputGroupFile02" style="cursor: pointer;">Upload Image</label>
+              </div>
+            </div>
+            <div>
+              <div class="ms-3 pt-3">
+                <button>Submit</button>
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="mb-3">
-          <label for="Description" class="form-label">Description Product</label>
-          <textarea class="form-control" id="Description" rows="3"
-          formControlName="description" placeholder="Enter your Description"></textarea>
-        </div>
-        <div class="mb-3 d-flex justify-content-start">
-          <div class="w-25 me-5">
-            <label for="price-product" class="form-label">Price  Product</label>
-            <input type="text" class="form-control" id="Product-name"
-            formControlName="price" placeholder="Enter Price $">
-          </div>
-          <div class="w-25">
-            <label for="save-price" class="form-label">save price</label>
-            <input type="text" class="form-control" name="savePrice" id="save-price" placeholder="Amount Of save $">
-          </div>
-        </div>
-        <div class="mb-3">
-            <label for="Features" class="form-label">Features Product</label>
-            <div class="d-flex">
-              <input type="text" #item  class="form-control w-75 me-3"
-              formControlName="features" id="Features" placeholder="Enter Feature Here ...">
-              <button type="button" class="btn btn-outline-primary" (click)="addItem(item.value)">Add item</button>
-          </div>
-          <div class=" items pt-2"  *ngFor="let item of this.featuresItem ; let i = index">
-            <span *ngIf="this.verifyOfItems == 0 ">{{item}}</span>
-            <i class="fa fa-close" (click)="removeItem(i)"></i>
-          </div>
-          <div class="w-75 alert alert-danger mt-3" *ngIf="this.verifyOfItems > 0">
-              <span style="font-weight: 400; font-family: Crimson Pro; text-transform: uppercase;">
-                plesae insert data</span>
-          </div>
-        </div>
-        <div class="mb-3">
-          <label for="select-categories">Category</label>
-          <select class="form-select mt-2" name="category"  id="select-categories">
-              <option *ngFor="let category of categoriesList"  [selected]="true">
-                  {{category.category}}
-              </option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label for="select-brand">Brand</label>
-          <select class="form-select mt-2" name="brand" id="select-brand">
-              <option *ngFor="let brand of brandsList"  [selected]="true">
-                {{brand.brand}}
-              </option>
-          </select>
-        </div>
-        <div class="input-group mb-3">
-          <input type="file" class="form-control" multiple (change)="uploadImages($event)" id="inputGroupFile02" formControlName="image">
-          <label class="input-group-text" for="inputGroupFile02" style="cursor: pointer;">Upload Image</label>
-        </div>
-        <button type="submit" class="btn btn-outline-primary">Add Product</button>
-      </form>
+      </div>
     </div>
-  </div>
-</div>
-
+</section>
+<!-- check out is ending -->

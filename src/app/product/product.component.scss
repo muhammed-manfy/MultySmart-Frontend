@@ -1,406 +1,540 @@
 // header is calling
 @import '../../assets/styles/header.scss';
 
-// product-name is starting
-.product-name{
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-.product-name .images-container{
-  display: grid;
-  grid-template-columns:310px 310px;
-  gap: 10px;
-  box-shadow: 0px 0px 10px #DDD;
-  padding:10px;
-  width: auto;
-}
-.product-name .images-container .product-image{
-  width: auto;
-}
-.product-name .images-container .product-image img{
-  width: 300px;
-  height: 300px;
-}
-.product-name .product-details{
-  display: flex;
-  flex-direction: column;
-  padding: 20px 40px;
-}
-.product-name .product-details .description p{
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  text-transform: lowercase;
-  color: #011B10;
-}
-.product-name .product-details .rating{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-}
-.product-name .product-details .rating .stars-rating i{
-  color: #F4B741;
-}
-.product-name .product-details .rating h5{
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  text-transform: capitalize;
-  color: #133A1B;
-}
-.product-name .product-details .prices{
-  margin-bottom: 30px;
-  display: flex;
-
-}
-.product-name .product-details .prices span:nth-child(1){
-  font-family: 'Crimson Pro';
-  font-size: 30px;
-}
-.product-name .product-details .prices span:nth-child(1) > strong{
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  text-transform: uppercase;
-  color: #133A1B;
-}
-.product-name .product-details .prices span:nth-child(2) {
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 25px;
-  text-transform: uppercase;
-  color: #DDD;
-}
-.product-name .product-details .prices span:nth-child(3){
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 20px;
-  color: #F4B741;
-}
-.product-name .product-details .prices span:nth-child(3) > strong{
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  text-transform: capitalize;
-  color: #B7BF96;
-}
-.product-name .product-details .prices i{
-  color: #F4B741;
-  font-size: 20px;
-}
-.product-name .product-details .prices i > span{
-  font-family: 'Crimson Pro';
-  font-weight: 500;
-  font-size: 20px;
-  color: #011B10;
-}
-.product-name .product-details .prices span{
-  padding-right: 20px;
-}
-.product-name .product-details .total-products {
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.product-name .product-details .total-products span{
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  color: #133A1B;
-  padding:10px 20px
-}
-.product-name .product-details .total-products i{
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 22px;
-  color: #133A1B;
-  padding:0 10px;
-}
-.product-name .product-details .add-to-cart button{
-  border: none;
-  outline: none;
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #133A1B;
-  padding: 10px 20px;
-}
-
-.product-name .product-details .product-speceifcation h4{
-  margin-bottom: 0;
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #133A1B;
-  cursor: pointer;
-}
-.product-name .product-details .product-speceifcation i{
-  font-family: 'Crimson Pro';
-  font-weight: 600;
-  font-size: 22px;
-  color: #133A1B;
-  border-radius: 100px;
-  border: 2px solid #133A1B;
-  width: 25px;
-  height: 25px;
-  padding-top: 0;
-  padding-left: 4px;
-  cursor: pointer;
-}
-
-.product-name .product-details .product-speceifcation p{
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  text-transform: lowercase;
-  color: #011B10;
-}
-// product name is ending
-
-
-
-// brands-related is starting
-.brands-related{
-  margin-bottom: 100px;
-}
-.brands-related h2{
-  font-family: 'El Messiri';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 45px;
-  text-transform: uppercase;
-  color: #133A1B;
-  text-align: center;
-  padding-bottom: 50px;
-}
-.brands-related .images img{
-  width: 400px;
-  height: 400px;
-}
-.reviews{
-  position: relative;
-  margin-bottom: 100px;
-}
-.reviews h2{
-  font-family: 'El Messiri';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 45px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #133A1B;
-  padding-bottom: 50px;
-}
-.reviews .rating {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-.reviews .rating .total-rating h4{
-  font-family: 'El Messiri';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  text-transform: capitalize;
-  color: #133A1B;
-}
-.reviews .rating .total-rating ::ng-deep ngb-rating span {
-  font-size: 28px;
-  color: #F4B741;
-}
-
-.reviews .rating h5{
-  font-family: 'El Messiri';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  text-transform: capitalize;
-  color: #B7BF96;
-  padding: 7px 0px;
-}
-.reviews .rating  .stars ::ng-deep ngb-rating span{
-  color: #F4B741;
-  font-size: 30px;
-  padding: 5px 0px;
-}
-.reviews .rating button{
-  border: none;
-  outline: none;
-  width: 40%;
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  text-transform: capitalize;
-  color: #133A1B;
-  background-color: #FFFFFF;
-  border: 1px solid #133A1B;
-  padding: 10px 20px;
+// product is starting
+.product {
+  user-select: none;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.reviews .posts{
+.product .product-image img {
   width: 100%;
-}
-.reviews .posts .post{
-  width: 70%;
-  margin: auto;
-  margin-bottom: 20px;
-  padding: 20px 40px;
-  text-align: center;
-  background: #E4DEAE;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.reviews .posts .post h3{
-  font-family: 'El Messiri';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  text-transform: capitalize;
-  color: #133A1B;
-}
-.reviews .posts .post i{
-  color: #F4B741;
-  font-size: 20px;
-  padding-bottom: 10px;
-}
-.reviews .posts .post h5{
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  text-transform: capitalize;
-  color: #133A1B;
-}
-.reviews .posts .post p{
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  text-transform:lowercase;
-  color: #133A1B;
+  height: 600px;
 }
 
-.reviews .posts button{
-  border: none;
-  outline: none;
+@media screen and (max-width:425px) {
+  .product .product-image img {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width:425px) and (max-width:576px) {
+  .product .product-image img {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width:576px) and (max-width:768px) {
+  .product .product-image img {
+    height: 500px;
+  }
+}
+
+.product .product-name h3 {
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: #133A1B;
+  margin: 0;
+}
+
+.product .product-description p {
   font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
-  text-transform: capitalize;
-  color: #133A1B;
-  background-color: #FFFFFF;
-  border: 1px solid #133A1B;
-  padding: 10px 20px;
-  box-shadow: 0px 0px 4px #011B10;
-  width: 20%;
-}
-
-.modal{
-  font-family: 'El Messiri';
-  position: absolute;
-}
-.modal .modal-header,
-.modal .modal-body,
-.modal .modal-footer{
-  outline: none;
-  border: none;
-}
-.modal .modal-dialog .modal-content{
-  background-color: #E4DEAE;
-}
-.modal .modal-header{
-  display: flex;
-}
-.modal .modal-body > label{
-  font-size: 20px;
-  font-weight: 700;
+  line-height: 22px;
+  text-align: start;
+  width: 80%;
+  border-bottom: 1px solid rgba($color: #000, $alpha: .25);
   font-style: normal;
+  padding: 10px 0;
+  color: rgba($color: #133A1B, $alpha: .6);
 }
 
-.modal .modal-body input{
-    font-family: inherit;
-    line-height: inherit;
-    width: 100%;
-    padding: 10px 5px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    font-size: 14px;
-    opacity: .8;
+.product .product-price {
+  padding: 5px 0;
 }
 
-.modal .modal-body textarea{
-  font-family: inherit;
-  line-height: inherit;
-  width: 100%;
-  padding: 10px 5px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  font-size: 14px;
-  opacity: .8;
-  height: 100px;
-}
-
-.modal .modal-title{
-  font-family: 'El Messiri';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
+.product .product-price span {
+  font-family: 'Crimson Pro';
+  font-weight: 500;
+  font-size: 19px;
+  text-align: center;
   text-transform: capitalize;
-  color: #133A1B;
-  margin: 0px;
+  color: #F4B741;
 }
 
-.modal .modal-footer{
-  display: flex;
-  flex-direction: column;
-}
-.modal .modal-footer > button{
+.product .product-brand {
+  border-bottom: 1px solid rgba($color: #133A1B, $alpha: .25);
+  margin: 20px 0;
+  padding: 0;
   width: 80%;
 }
-.modal .modal-footer .cancel-button{
-  border: 1px solid #133A1B;
-  outline: none;
-  padding: 10px;
-  font-size: 16px;
-  color: #011B10;
-  background: #B7BF96;
-  border-radius: 15px;
+
+@media screen and (max-width:425px) {
+  .product .product-name h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .product .product-description p {
+    font-size: 16px;
+  }
+
+  .product .product-price span {
+    font-size: 16px;
+  }
 }
 
-.modal .modal-footer .post-button{
-  border: 1px solid #133A1B;
-  outline: none;
-  padding: 10px;
+@media screen and (min-width:425px) and (max-width:576px) {
+  .product .product-name h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .product .product-description p {
+    font-size: 18px;
+  }
+
+  .product .product-price span {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width:576px) and (max-width:768px) {
+  .product .product-name h3 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+.product .product-brand h5 {
+  font-family: 'crimson pro';
+  font-weight: 400;
   font-size: 16px;
+  line-height: 25px;
+  text-transform: capitalize;
+  margin: 0;
+  color: rgba($color: #133A1B, $alpha: .6);
+}
+
+.product .product-brand span {
+  color: #F4B741;
+}
+
+.product .cart {
+  margin-bottom: 40px;
+}
+
+.product .cart .count {
+  margin-bottom: 30px;
+  margin-right: 50px;
+}
+
+.product .cart .count {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Crimson Pro";
+}
+
+@media screen and (max-width:576px) {
+  .product .cart {
+    text-align: center;
+  }
+
+  .product .cart .count {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+.product .cart .count span {
+  padding: 0px 10px;
+}
+
+.product .cart .count span:hover {
+  cursor: pointer;
+}
+
+.product .cart .count span:nth-child(2) {
+  padding: 12px 40px;
+  background-color: #FFF;
+  font-size: 18px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, .25);
+}
+
+.product .cart button {
+  outline: none;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-transform: uppercase;
   color: #FFF;
-  background: #133A1B;
-  border-radius: 15px;
+  font-weight: 500;
+  background-color: #FFF;
+  background-color: #133A1B;
+  font-family: "Crimson Pro";
 }
 
-::ng-deep ngb-rating  span{
-  font-size: 28px;
+@media screen and (max-width:425px) {
+  .product .cart {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product .cart button {
+    font-size: 16px;
+    padding: 10px 20px;
+    // margin-bottom: 10px;
+    width: 50%;
+    margin: 10px auto;
+  }
+}
+
+@media screen and (min-width:425px) and (max-width:576px) {
+  .product .cart button {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (min-width:576px) and (max-width:768px) {
+  .product .cart button {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+  .product .cart button {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .product .cart button {
+    margin-left: 5px;
+  }
+}
+
+.product .shipping-product h3 {
+  font-family: 'El Messiri';
+  font-weight: 500;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #133A1B;
+  width: 80%;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: .25);
+}
+
+@media screen and (max-width:425px) {
+  .product .shipping-product h3 {
+    font-size: 18px;
+  }
+}
+
+.product .shipping-product h5 {
+  font-family: 'crimson pro';
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding-right: 10px;
+}
+
+.product .shipping-product p {
+  font-family: 'Crimson Pro';
+  font-weight: 200;
+  font-size: 18px;
+  text-align: start;
+  width: 80%;
+  word-break: break-all;
+  font-style: normal;
+  padding: 5px 0;
+}
+
+.product .shipping-product .deleviery-details {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+}
+@media screen and (max-width:425px) {
+  .product .shipping-product h3 {
+    font-size: 18px;
+  }
+
+  .product .shipping-product .deleviery-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+
+  .product .shipping-product h5 {
+    font-size: 16px;
+  }
+
+  .product .shipping-product p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width:425px) and (max-with:576px) {
+  .product .shipping-product .deleviery-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .product .shipping-product .deleviery-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+// product is ending
+
+
+// reviews and features is starting
+
+.features-reviews {
+  margin: 50px 0;
+  user-select: text;
+}
+
+::ng-deep .features-reviews .mat-tab-group .mat-tab-label {
+  color: #133A1B;
+  font-family: 'Crimson pro';
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding-right: 10px;
+  border-bottom: 1px solid #ccc;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+::ng-deep .features-reviews .mat-tab-group .mat-tab-label:foucs {
+  font-weight: 700;
+}
+
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #F4B741;
+}
+
+::ng-deep .features-reviews .mat-tab-group .mat-tab-body-content {
+  overflow: hidden;
+}
+
+.features-reviews .reviews-counts {
+  padding: 10px;
+}
+
+.features-reviews .reviews-counts h5 {
+  font-family: 'crimson pro';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: rgba($color: #133A1B, $alpha: .6);
+}
+
+.features-reviews .reviews-users .user {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  border-left: 1px solid #ccc;
+}
+
+@media screen and (max-width:425px) {
+  .features-reviews .reviews-users .user {
+    display: flex;
+    align-items: start;
+    flex-wrap: warp;
+    flex-direction: column;
+  }
+}
+
+.features-reviews .reviews-users .user .user-image {
+  padding-right: 5px;
+}
+
+.features-reviews .reviews-users .user .user-image img {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0, 0, 0);
+}
+
+.features-reviews .reviews-users .user .user-details {
+  width: 80%;
+}
+
+@media screen and (max-width:425px) {
+  .features-reviews .reviews-users .user .user-details {
+    width: 100%;
+  }
+}
+
+.features-reviews .reviews-users .user .user-details h5 {
+  font-family: 'crimson pro';
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+}
+
+.features-reviews .reviews-users .user .user-details p {
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 15px;
+  width: 80%;
+  word-break: break-all;
+  font-style: normal;
+  padding: 5px 0;
+}
+
+.features-reviews .reviews-users .user .user-details a {
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 15px;
+  font-style: normal;
+  padding: 5px 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.features-reviews .new-review .form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.features-reviews .new-review h5 {
+  font-family: 'crimson pro';
+  font-weight: 500;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 20px;
   color: #133A1B;
 }
 
-::ng-deep ngb-rating:focus{
-  outline: none;
-  color: #F4B741;
+.features-reviews .new-review .label {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
+
+@media screen and (max-width:768px) {
+  .features-reviews .new-review .label {
+    width: 100%;
+  }
+}
+@media screen and (min-width:768px) and (max-width:992px){
+  .features-reviews .new-review .label {
+    width: 50%;
+  }
+}
+@media screen and (min-width:992px){
+  .features-reviews .new-review .label {
+    width: 50%;
+  }
+}
+
+.features-reviews .new-review .label label {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 18px;
+  text-align: start;
+  color: #011B10;
+  margin-bottom: 5px;
+}
+
+.features-reviews .new-review .label input,
+.features-reviews .new-review .label textarea {
+  font-style: normal;
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 16px;
+  text-align: start;
+  outline: none;
+  border: 1px solid rgba($color: #ccc, $alpha: .6);
+  padding: 20px 40px;
+  color: #133A1B;
+  border-radius: 10px;
+}
+
+.features-reviews .new-review .label input::placeholder {
+  color: #133A1B;
+}
+
+.features-reviews .new-review button {
+  border: none;
+  outline: none;
+  padding: 15px 30px;
+  color: #133A1B;
+  background: #FFF;
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Crimson Pro";
+  text-transform: uppercase;
+  border: 1px solid #ccc;
+}
+
+.features-reviews .new-review button:hover {
+  box-shadow: 0px 0px 3px rgba($color: #000, $alpha: .25);
+}
+
+// reviews and features is ending
+.no-items {
+  margin: 100px auto;
+}
+
+h2 {
+  font-family: 'El Messiri';
+  font-weight: 500;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #133A1B;
+  width: 80%;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: .25);
+}
+
+// start pageination
+::ng-deep .ngx-pagination .pagination-next.disabled:after {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: #F4B741;
+  font-size: 18px;
+}
+
+::ng-deep .ngx-pagination .pagination-previous.disabled:before {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: #F4B741;
+  font-size: 18px;
+}
+
+::ng-deep .ngx-pagination li.current {
+  background-color: #F4B741;
+  border-radius: 100%;
+}
+
+// end pageniation

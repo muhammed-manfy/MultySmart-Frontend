@@ -1,0 +1,34 @@
+<div class="blogs">
+  <div class="container-fluid">
+    <!-- show when data is  not found on the page -->
+    <div class="no-display p-5" *ngIf="this.blogsList.length == 0">
+      <h2 >Don't have any an order</h2>
+    </div>
+    <!-- product is starting -->
+    <div class="row my-5">
+      <div class="col-4" *ngFor="let blog of blogsList">
+        <div class="card">
+          <video controls none>
+            <source [src]="blog.video" type="video/mp4" alt="blog Video"/>
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">{{blog.title}}</h5>
+            <p class="card-text">{{blog.description}}.</p>
+          </div>
+          <ul class="list-group d-block list-group-flush">
+            <li class="list-group-item">{{blog.category}}</li>
+            <li class="list-group-item">{{blog.tag}}</li>
+          </ul>
+          <div class="card-footer">
+            <small (click)="deleteBlog(blog._id)" class="text-body-secondary"> <i class="fa fa-trash-o"></i> Delete</small>
+            <small (click)="updateBlog(blog)" class="text-body-secondary mx-3"> <i class="fa fa-edit"></i> Edit</small>
+            <small class="text-body-secondary mx-4">{{blog.created_at | date:'short'}}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- product is ending -->
+    <mat-paginator *ngIf="this.blogsList.length!=0" class="pagination" (page)="handlePagination($event)" [length]="totalBlogs"
+      [pageIndex]="currentPage" [pageSize]="pageSize" aria-label="Select page"></mat-paginator>
+  </div>
+</div>

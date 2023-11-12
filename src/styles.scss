@@ -15,11 +15,16 @@
 html, body { height: 100%; }
 body { margin: 0; font-family:'El Messiri' ,'Crimson Pro','Poppins', serif; }
 
-.validationSnackBar{
-  background-color: red;
-  color: #FFF;
+.error{
+  background-color: #FFF;
+  color: red;
+  font-weight: 500;
+  font-family:'El Messiri';
 }
-.successSnackBar{
-  background-color: green;
-  color: #FFF;
+
+.success{
+  background-color: #FFF;
+  color: green;
+  font-weight: 500;
+  font-family:'El Messiri';
 }

@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { ProductsComponent } from './products/products.component';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',

@@ -1,0 +1,124 @@
+.register {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  top: 10px;
+  margin: 0px auto;
+}
+
+.register h2 {
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: rgba($color: #133A1B, $alpha: .6);
+  width: max-content;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.register .image-register {
+  padding: 0;
+  margin: 0;
+}
+
+.register .image-register img {
+  width: 100%;
+  height: 90%;
+  margin-top: 30px;
+}
+
+.register i {
+  font-size: 30px;
+  padding: 10px;
+  border: 1px solid rgba($color: #133A1B, $alpha: .6);
+  border-radius: 100px;
+  color: rgba($color: #133A1B, $alpha: .6);
+}
+
+.register .details-user .label {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.register .details-user .label label {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: start;
+  color: #011B10;
+  margin-bottom: 5px;
+  letter-spacing: .3px;
+}
+
+.register .details-user .label input {
+  font-style: normal;
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 16px;
+  text-align: start;
+  outline: none;
+  border: none;
+  background-color: rgba($color: #B7BF96, $alpha: .8);
+  padding: 10px 20px;
+  color: #FFF;
+  border-radius: 10px;
+}
+
+.register .details-user .label input::placeholder {
+  color: #FFF;
+}
+
+.register .details-user .show {
+  display: flex;
+  flex-direction: row;
+}
+
+.register .details-user form>button {
+  font-style: normal;
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  width: 250px;
+}
+
+.register .details-user ul li {
+  font-style: normal;
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+}
+
+.register .details-user ul li a {
+  font-style: normal;
+  font-family: 'Crimson Pro';
+  font-weight: 400;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width:425px) {
+  .register .image-register {
+    display: none;
+  }
+
+  .register .details-user .label {
+    width: 100%;
+  }
+  .register .details-user .label label{
+    font-size: 14px;
+  }
+
+  .register h2 {
+    font-size: 18px;
+    padding: 0;
+  }
+  .register .details-user form>button {
+    width: 50%;
+  }
+
+}

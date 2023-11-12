@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { extend } from 'jquery';
-import { catchError, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, catchError, Observable, Subject } from 'rxjs';
 import { productInfo } from 'src/app/Models/Product.model';
+import { Comment } from 'src/app/Models/Comment.model';
 import { BasicApiService } from '../Basic/basic-api.service';
 
 @Injectable({
@@ -10,39 +10,63 @@ import { BasicApiService } from '../Basic/basic-api.service';
 })
 export class ProductService extends BasicApiService {
 
-  constructor( private http:HttpClient) {
+  constructor(private http: HttpClient) {
     super();
   }
 
-  async createProduct(product:any):Promise<Observable<productInfo>>{
-    return  await this.http.post<productInfo>(this.BaseUrl+'/products/create',product)
-    .pipe(catchError(this.handleError));
+  async createProduct(product: any): Promise<Observable<productInfo>> {
+    return await this.http.post<productInfo>(this.BaseUrl + '/products/create', product, { headers: this.adminHeaders });
   }
 
-  async getProducts(){
-    return await this.http.get<productInfo>(this.BaseUrl+'/products').pipe(catchError(this.handleError));
+  async getProducts(): Promise<Observable<productInfo>> {
+    return await this.http.get<productInfo>(this.BaseUrl + '/products');
   }
 
-  async  deleteProducts(id:any){
-    return await this.http.delete(this.BaseUrl+'/products/delete/'+id).pipe(catchError(this.handleError));
+  async deleteProducts(id: any) {
+    return await this.http.delete(this.BaseUrl + '/products/delete/' + id, { headers: this.adminHeaders });
   }
 
-  async updateProducts(id:any,productData:any):Promise<Observable<productInfo>>{
-    return await this.http.put<productInfo>(this.BaseUrl+'/products/update/'+id,productData)
-    .pipe(catchError(this.handleError));
+  async updateProducts(id: any, productData: any): Promise<Observable<productInfo>> {
+    return await this.http.put<productInfo>(this.BaseUrl + '/products/update/' + id, productData, { headers: this.adminHeaders });
   }
-  async getProductsPagination(pageSize:Number,currentPage:Number){
-    return await this.http.post<productInfo>(this.BaseUrl+'/products/pagination',{pageSize:pageSize,
-      currentPage:currentPage}).pipe(catchError(this.handleError));
+  async getProductsPagination(pageSize: Number, currentPage: Number) {
+    return await this.http.post<productInfo>(this.BaseUrl + '/products/pagination', {
+      pageSize: pageSize, currentPage: currentPage
+    });
   }
-  getCategories():Observable<any>{
-    return this.http.get(this.BaseUrl+'/categories').pipe(catchError(this.handleError));
+
+  async productsDisplay(category: any, brand: any, tag: any, pageSize: Number, currentPage: Number): Promise<Observable<productInfo>> {
+    return await this.http.post<productInfo>(this.BaseUrl + '/products/displayProducts', {
+      pageSize: pageSize,
+      currentPage: currentPage,
+      brand: brand,
+      category: category,
+      tag: tag
+    });
   }
-  async productsDisplay(category:any,brand:any,pageSize:Number,currentPage:Number):Promise<Observable<productInfo>>{
-    return await this.http.post<productInfo>(this.BaseUrl+'/products/productsDisplay',{pageSize:pageSize,currentPage :currentPage,
-    brandRequset:brand,categoryRequset:category}).pipe(catchError(this.handleError));
+
+  async getProductsCart(productsIds: any): Promise<Observable<productInfo>> {
+    return await this.http.post<productInfo>(this.BaseUrl + '/products/getProductsCart', productsIds);
   }
-  async getProductInfo(id:string){
-    return await this.http.get(this.BaseUrl+'/products/getProductInfo/' + id).pipe(catchError(this.handleError));
+
+  async getProductInfo(id: string): Promise<Observable<productInfo>> {
+    return await this.http.get<productInfo>(this.BaseUrl + '/products/getProduct/' + id);
+  }
+
+  async createProductComment(commentData: any) {
+    return await this.http.post<Comment>(this.BaseUrl + '/comments/createProductComment', commentData);
+  }
+
+  async updateProductComment(commentData: any, commentId: any) {
+    return await this.http.put<Comment>(this.BaseUrl + '/comments/updateProductComment/' + commentId, commentData);
+  }
+
+  async deleteProductComment(commentId: any) {
+    return await this.http.delete<Comment>(this.BaseUrl + '/comments/deleteProductComment/' + commentId);
+  }
+
+  async getProductComment(productId: any,currentPage:any,pageSize:any):Promise<Observable<Comment[]>> {
+    return await this.http.post<Comment[]>(this.BaseUrl + '/comments/getProductComments/' + productId,{
+      currentPage:currentPage, pageSize:pageSize});
   }
 }

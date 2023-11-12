@@ -1,0 +1,54 @@
+<div class="product-details">
+  <div class="conatiner">
+    <div class="row">
+      <div class="col-xs-12 col-lg-6">
+        <div class="user-info">
+          <h2>Deleviery Address</h2>
+          <ol class="list-unstyled">
+            <li>{{userInfo.data.username}}</li>
+            <li>{{userInfo.data.email}}</li>
+            <li>{{userInfo.data.city + ' ' + userInfo.data.address}}</li>
+          </ol>
+          <a (click)="navigateToAddress()">Edit info</a><br/>
+          <ol class="list-unstyled">
+            <li>{{'+971 '+ userInfo.data.phone}}</li>
+          </ol>
+          <a (click)="navigateToProfile()">Edit phone</a>
+          <div class="footer"></div>
+        </div>
+        <div class="product-info">
+          <div class="order-info text-start">
+            <h3>Order-ID : {{orderInfo._id}}</h3>
+            <h4>status : {{productInfo.status}}</h4>
+          </div>
+          <div class="order-details">
+            <div class="image">
+              <img class="img-thumbnail" [src]="productInfo.product.image" alt="Order Product">
+            </div>
+            <div class="mx-3">
+              <h4>{{productInfo.product.productName}}</h4>
+              <small>placed on : {{productInfo.product.created_at | date}}</small>
+              <h5>{{productInfo.product.price}} AED</h5>
+              <h6>Quantity : {{productInfo.amount}}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <div class="payment-method">
+          <h3>Payment method</h3>
+          <p><i class="fa fa-money"></i> Cash On Delivery</p>
+        </div>
+        <div class="subtotal">
+          <h3>Order Invoice</h3>
+          <div class="invoice-details">
+            <h4>Subtotal</h4>
+            <h5>{{getSubtotal() | currency:'AED'}}</h5>
+          </div>
+          <hr />
+          <h4>Delivery Free</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

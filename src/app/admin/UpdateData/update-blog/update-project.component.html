@@ -1,0 +1,55 @@
+<!-- checkout is strating -->
+<section class="add-product mx-5">
+  <div class="container">
+    <div class="row">
+      <div class="info-form">
+        <h3>Edit Blog</h3>
+        <form [formGroup]="blogForm" (ngSubmit)="blogSubmit($event)">
+          <div class="d-flex justifiy-content-center flex-row w-100">
+            <div class="label w-75">
+              <label for="blogTitle">Blog Title</label>
+              <input type="text" id="blogTitle" formControlName="blogTitle" name="blogTitle"
+                 [placeholder]="blogInfo.title" />
+            </div>
+          </div>
+          <div class="d-flex justifiy-content-center flex-row w-100">
+            <div class="label w-50">
+              <label for="category">category</label>
+              <select name="category" id="category">
+                <option *ngFor='let CATEGORY of CATEGORIES' [value]='CATEGORY' [selected]="CATEGORY">
+                  {{CATEGORY}}
+                </option>
+              </select>
+            </div>
+            <div class="label w-50">
+              <label for="tag">tag</label>
+              <select name="tag" id="tag">
+                <option *ngFor="let TAG of TAGS" [value]="TAG" [selected]="TAG">{{TAG}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex justifiy-content-center flex-row w-100">
+            <div class="label w-100">
+              <label for="comment">Description</label>
+              <textarea name="description" formControlName="description" [placeholder]="blogInfo.description"
+                  id="description" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+          <div class="d-flex flex-row w-100">
+            <div class="input-group mb-3">
+              <input type="file" class="form-control" (change)="uploadVideo($event)" id="inputGroupFile02"
+                formControlName="video" [placeholder]="blogInfo.video">
+              <label class="input-group-text" for="inputGroupFile02" style="cursor: pointer;">Upload Video</label>
+            </div>
+          </div>
+          <div>
+            <div class="ms-3 pt-3">
+              <button>Applay Changes</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- check out is ending -->

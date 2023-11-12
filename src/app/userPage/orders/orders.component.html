@@ -1,0 +1,30 @@
+<section class="orders">
+  <div class="container">
+    <div class="row">
+      <div class="requsets-orders">
+        <div *ngFor="let order of this.ordersInfo" class="row pb-3">
+            <h2>Order - ID:{{order._id}}</h2>
+            <h5 class="text-start"> placed on: {{order.created_at | date :'short'}}</h5>
+          <div *ngFor="let product of this.order.products" class="product col-xs-12 col-sm-6 col-lg-4">
+            <div class="card">
+              <img [src]="product.product.image" class="card-img-top" alt="product image">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.product.productName}}</h5>
+                  <h6>{{product.product.price | currency:"AED"}}</h6>
+                </div>
+                  <ul class="list-group d-block list-group-flush">
+                    <li class="list-group-item " style="color: green;">Status : {{product.status}}</li>
+                  </ul>
+                <div class="card-footer">
+                  <small (click)="productDetailsNavigate(product,order)" [routerLink]="'/'+username+'/product-details'" class="text-body-secondary">detalis view </small>
+                  <small class="text-body-secondary mx-4">{{order.created_at | date}} </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <mat-paginator class="pagination" *ngIf="this.ordersInfo.length >= 2 " [length]="totalOrders" (page)="handlePagination($event)"
+      [pageIndex]="currentPage" [pageSize]="pageSize" aria-label="Select page"></mat-paginator>
+  </div>
+</section>

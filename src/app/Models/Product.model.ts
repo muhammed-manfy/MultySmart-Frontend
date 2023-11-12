@@ -1,19 +1,12 @@
 export interface productInfo {
-  _id:String;
-
+  _id: string;
   productName: String;
-
   price: Number;
-
-  savePrice: Number;
-
-  images: File[];
-
+  image: String;
   description: String;
-
-  features: String[];
-
+  tag: String;
   brand: String;
-
   category: String;
+  created_at: Date;
+  updated_at: Date;
 }

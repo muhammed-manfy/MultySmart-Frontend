@@ -1,0 +1,154 @@
+
+// profile is starting
+.profile{
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .profile .info-form h3{
+    font-family: 'Crimson Pro';
+    font-weight: 400;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #10002b;
+    width: 16%;
+    border-bottom: 2px solid #5e548e;
+  }
+
+  .profile .info-form h4{
+    font-family: 'Crimson Pro';
+    font-weight: 400;
+    font-size: 22px;
+    color: #10002b;
+  }
+  .profile .info-form h5{
+    font-family: 'Crimson Pro';
+    font-weight: 200;
+    font-size: 20px;
+    color: #10002b;
+  }
+  .profile .info-form h5  i{
+    font-weight: 200;
+    font-size: 16px;
+    color: #10002b;
+  }
+  .profile .info-form h5:hover{
+    cursor: pointer;
+  }
+  .profile .info-form .label {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .profile .info-form .label label{
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 18px;
+    text-align: start;
+    color: #5e548e;
+    margin-bottom: 5px;
+  }
+  .profile .info-form .label input{
+    font-style: normal;
+    font-family: 'Crimson Pro';
+    font-weight: 300;
+    font-size: 16px;
+    text-align: start;
+    outline: none;
+    border: 1px solid rgba($color: #ccc, $alpha: .6);
+    padding: 20px 40px;
+    color: #10002b;
+    border-radius: 10px;
+  }
+
+  .profile .info-form .label input::placeholder{
+    color: #5e548e;
+  }
+  .profile .info-form a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 300;
+    width: 20%;
+    cursor: pointer;
+    padding: 15px 30px;
+    font-family: "Crimson Pro";
+    color: #FFF;
+  }
+  .profile .info-form button{
+    border: none;
+    outline: none;
+    width: 20%;
+    margin: 10px;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    cursor: -webkit-grab;
+    font-family: "Crimson Pro";
+    background-color: #10002b;
+    color: #FFFFFF;
+  }
+  .profile .info-form button:hover{
+    color: #FFF;
+    background-color: #5e548e;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  .display-data{
+    display: none;
+  }
+
+  @media screen and (max-width:425px) {
+    .profile .info-form h3{
+      width:40%;
+      font-size: 20px;
+    }
+    .profile .info-form .label h4{
+      font-size: 18px;
+    }
+    .profile .info-form .label h5{
+      font-size: 16px;
+    }
+    .profile .info-form .label {
+      width: 100%;
+      padding: 0;
+    }
+    .profile .info-form .label input{
+      width: 100%;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    .profile .info-form button{
+      width: 60%;
+      padding: 6px 12px;
+      font-size: 16px;
+    }
+    .profile .info-form a {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+
+
+@media screen and (min-width: 425px) and (max-width:768px) {
+  .profile .info-form button{
+    width: 60%;
+  }
+  .profile .info-form a {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width:1400px) {
+  .profile .info-form button{
+    width: 30%;
+  }
+  .profile .info-form a {
+    width: 50%;
+  }
+}

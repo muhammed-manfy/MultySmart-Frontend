@@ -1,7 +1,4 @@
-// products is starting
-// .products{
-//   // padding-bottom: 100px;
-// }
+
 .products .toolbar{
   background: #5e548e;
   display: flex;
@@ -51,14 +48,15 @@
   -webkit-overflow-scrolling: touch;
   display: block;
   overflow: hidden;
-  height:800px;
+  height:1500px;
+  color: #10002b;
 }
 .products .sidnav-container{
   background-color: #FFF;
 }
 
 .products .sidnav-container .sidenav{
-  width: 20%;
+  width: 16%;
   background: #10002b;
   border-radius: 0px 15px 15px 0px;
   overflow: hidden;
@@ -72,32 +70,20 @@
     flex-direction: column;
     text-align: center;
   }
-  .top-section img{
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 20px auto;
-  }
-  .top-section h4{
-    font-family: 'El Messiri';
-  font-weight: 500;
-  font-size: 20px;
-  text-transform: uppercase;
-  }
+
   .bottom-section{
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
   }
   .bottom-section .links{
     display:  flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    padding-left: 40px;
   }
   .bottom-section .links:hover{
     background-color: #eef4ed;
@@ -139,4 +125,56 @@
   }
 }
 
+h2{
+  font-family: 'El Messiri';
+  font-weight: 500;
+  font-size: 25px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+.requsets-orders{
+  margin-top: 20px;
+  color: #5e548e;
+  font-family: "Crimson Pro";
+  user-select: none;
+}
+.requsets-orders h2{
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  text-align: center;
+}
 
+.requsets-orders h3{
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+.requsets-orders .card .card-body h5{
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Crimson Pro";
+}
+.requsets-orders .card .card-body h6{
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Crimson Pro";
+}
+.requsets-orders .card .card-footer small{
+  cursor: pointer;
+}
+.requsets-orders .pagination{
+  background-color: #DDD;
+  color: #5e548e;
+  margin-top: 50px;
+}
+
+.pagination{
+  background-color: #DDD;
+  color: #5e548e;
+  margin-top: 50px;
+}

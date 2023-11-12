@@ -1,5 +1,5 @@
 .users{
-  width: 90%;
+  width: 97%;
   margin: auto;
   margin-top: 30px;
   font-family: "El Messiri";
@@ -21,7 +21,14 @@
 }
 .users td i{
   color: #5e548e;
+  cursor: pointer;
 }
 .users tr:hover{
   background-color: #F9F9F9;
+}
+
+.pagination{
+  background-color: #DDD;
+  color: #5e548e;
+  margin-top: 50px;
 }

@@ -1,0 +1,122 @@
+// return is starting
+.product {
+    padding: 20px;
+}
+
+.product .order-details {
+    display: flex;
+    align-items: start;
+    padding: 20px 0;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.product .order-details .image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  @media screen and (max-width:425px) {
+    .product .order-details .image img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .product .order-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+.product .order-details h4 {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: #000;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "El Messiri";
+  }
+
+  .product .order-details small {
+    color: #000;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: "El Messiri";
+  }
+
+  .product .order-details h5 {
+    color: #000;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    padding-top: 10px;
+    font-family: "El Messiri";
+  }
+
+  .product .order-details h6 {
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: "El Messiri";
+  }
+
+.return .product .status {
+    background-color: brown;
+    width: 10%;
+    color: #FFF;
+    font-weight: 600;
+    font-family: "Crimson Pro";
+}
+.return .subtotal {
+    margin: 100px 0;
+    font-style: normal;
+}
+.return .subtotal h3 {
+    font-family: 'El Messiri';
+    font-weight: 300;
+    font-size: 30px;
+    width: 20%;
+    text-transform: uppercase;
+    color: #133A1B;
+    margin-left: 20px;
+    border-bottom: 2px solid #F4B741;
+}
+
+
+.return .subtotal .subtotal-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.return .subtotal .subtotal-buttons button {
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: "Crimson Pro";
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #FFF;
+    background-color:#10002b;
+}
+
+.return .subtotal .subtotal-buttons button:hover {
+    color: #FFF;
+    background-color: #5e548e;
+}
+// return is ending
+
+.pagination{
+  background-color: #DDD;
+  color: #5e548e;
+  position:sticky;
+  width: 90%;
+  margin: auto;
+}

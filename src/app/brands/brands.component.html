@@ -24,10 +24,10 @@
         </form>
       </div>
       <div class="col-8 characters">
-        <span *ngFor="let charcater of charactersList" (click)="filterBrands(charcater)">{{charcater}}</span>
+        <span></span>
       </div>
       <div class="text-center pt-5 all">
-        <span (click)="resetBrnads('')">All</span>
+        <span>All</span>
       </div>
     </div>
   </div>
@@ -44,8 +44,8 @@
     </div>
     <hr/>
     <div class="row">
-      <div *ngFor="let brand of brandsList | filter : this.searchField" class="col-4 brands-names">
-        <a style="margin: auto;">{{brand.brand}}</a>
+      <div class="col-4 brands-names">
+        <a style="margin: auto;"></a>
       </div>
     </div>
   </div>

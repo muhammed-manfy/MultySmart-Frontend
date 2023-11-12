@@ -1,89 +1,162 @@
-footer{
+footer {
   background-color: rgba($color: #E4DEAE, $alpha: 0.1);
   width: 100%;
   height: 300px;
   position: sticky;
   top: 100%;
   color: #011B10;
+  user-select: none;
+  overflow: hidden;
 }
-.topSection{
+
+.topSection {
   font-family: 'El Messiri';
-  display: flex;
-  align-items: normal;
   text-align: center;
   padding-top: 50px;
-  letter-spacing: 0.02em;
   font-style: normal;
-  text-align: center;
 }
-.topSection .section > h3{
+
+.topSection .section > h3 {
   font-weight: 500;
   font-size: 25px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'El Messiri';
 }
-.topSection .section > img{
+.topSection .section > hr{
+  width: 136px;
+  height: 4px;
+  color: #F4B741;
+  margin: 20px auto;
+}
+.topSection .section>img {
   max-width: 180px;
   max-height: 180px;
   margin-top: -35px;
 }
-.topSection .section > p{
+
+.topSection .section>p {
   letter-spacing: 0.02em;
   font-weight: 400;
   line-height: 28px;
   font-size: 16px;
 }
 
-.topSection .section > ul >li {
+.topSection .section>ul>li {
   font-weight: 300;
   line-height: 32px;
   text-align: start;
   padding-left: 120px;
   font-size: 16px;
 }
-.topSection .section .icons{
+
+.topSection .section .icons {
   display: flex;
   margin: auto;
 }
-.topSection .section .icons > li{
+
+.topSection .section .icons>li {
   padding-left: 10px;
 }
-.topSection .section .icons > li > a{
+
+.topSection .section .icons>li>a {
   text-decoration: none;
   color: #011B10;
   font-size: 20px;
   cursor: -webkit-grab;
 }
-.topSection .section #contactLink{
+
+.topSection .section #contactLink {
   outline: none;
   border: none;
   margin-top: 10px;
   background-color: #011B10;
-  padding:10px 20px;
+  padding: 10px 20px;
   text-transform: capitalize;
   color: #E4DEAE;
   font-weight: 500;
   cursor: -webkit-grab;
 }
 
-.bottomSection{
+.bottomSection {
   font-family: 'Crimson Pro';
   position: relative;
   text-align: center;
-  margin-top:-15px;
+  margin-top: -15px;
 }
 
-.bottomSection > hr{
+.bottomSection>hr {
   height: 3px;
   color: #F4B741;
 }
 
-.bottomSection > p > span{
+.bottomSection>p>span {
   font-style: normal;
   font-family: 'El Messiri';
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
   color: #F4B741;
+}
+
+@media screen and (max-width: 576px)  {
+  footer {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .topSection {
+    margin-bottom: 10px;
+  }
+  .topSection .section>ul>li {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+  .topSection .section>h3{
+    margin: 0;
+  }
+
+}
+
+@media screen and (min-width:576px) {
+  footer {
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .topSection{
+    padding: 0;
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
+  .topSection .section>ul>li {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .topSection .content{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+@media screen and (min-width: 992px) {
+  .topSection .section>ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .topSection .section>ul>li {
+    font-size: 16px;
+    text-align: start;
+  }
 }

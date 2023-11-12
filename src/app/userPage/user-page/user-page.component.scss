@@ -1,0 +1,193 @@
+
+.user .toolbar {
+  background: #5e548e;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.user .toolbar {
+  h2 {
+    font-family: 'El Messiri';
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+  }
+}
+
+::ng-deep .menu {
+  background-color: white;
+}
+
+::ng-deep .notifications-item {
+  color: #5e548e;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Crimson Pro";
+}
+
+::ng-deep .menu-item {
+  color: #5e548e;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: 'Crimson Pro';
+}
+
+::ng-deep .menu-item:hover {
+  color: #DDD;
+}
+
+::ng-deep .menu-item .mat-icon,
+::ng-deep .notifications-item .mat-icon {
+  color: #5e548e;
+}
+
+::ng-deep .divider {
+  background-color: #5e548e;
+}
+
+.sidnav-container {
+  user-select: none;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  overflow: hidden;
+  height: 1000px;
+}
+
+.user .sidnav-container {
+  background-color: #FFF;
+  color: #10002b;
+  user-select: none;
+}
+
+.user .sidnav-container .sidenav {
+  width: 20%;
+  background: #10002b;
+  border-radius: 0px 15px 15px 0px;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width:576px) {
+  .user .sidnav-container .sidenav{
+    width: 70%;
+  }
+  .user .sidnav-container.sidenav.top-section > img{
+    width:190px;
+    height: 190px;
+  }
+}
+
+@media screen and (min-width:576px) and (max-width:768px) {
+  .user .sidnav-container .sidenav{
+    width: 40%;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+  .user .sidnav-container .sidenav{
+    width: 30%;
+  }
+}
+
+@media screen and (min-width:992px) and (max-width:1024px) {
+  .user .sidnav-container .sidenav{
+    width: 30%;
+  }
+}
+
+.user .sidnav-container .sidenav {
+  .top-section {
+    font-family: 'Crimson Pro';
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-section img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 20px auto;
+    background-color: transparent;
+    object-fit: unset;
+  }
+
+  .top-section h4 {
+    font-family: 'El Messiri';
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: 10px;
+    text-transform: uppercase;
+  }
+
+  .bottom-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .bottom-section .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding-left: 80px;
+  }
+
+  .bottom-section .links:hover {
+    background-color: #eef4ed;
+    color: #10002b;
+    cursor: pointer;
+  }
+
+  .bottom-section h5 {
+    font-family: "Crimson Pro";
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    padding-bottom: 7px;
+    cursor: pointer;
+    padding-left: 10px;
+  }
+
+  .bottom-section h5:focus {
+    border: none;
+    outline: none;
+  }
+
+  .bottom-section i {
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .bottom-section ul li {
+    font-family: 'Crimson Pro';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: capitalize;
+    margin: 10px 0;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .bottom-section ul li:focus {
+    border: none;
+    outline: none;
+  }
+}

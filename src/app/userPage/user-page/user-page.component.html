@@ -1,0 +1,63 @@
+<!-- products is starting -->
+<section class="user">
+  <div class="container-fluid">
+    <div class="row">
+      <mat-toolbar class="toolbar">
+        <div class="d-flex align-items-center">
+          <h2 class="pt-1">Dashboard</h2>
+          <button mat-icon-button style="color:white;" aria-label="Example icon button with a menu icon"
+            (click)="sidnav.toggle()"><mat-icon>menu</mat-icon>
+          </button>
+        </div>
+        <div class="menu-user">
+          <button (click)="logoutUser()" mat-icon-button aria-label="Example icon-button with a menu">
+            <mat-icon>logout</mat-icon>
+          </button>
+        </div>
+      </mat-toolbar>
+    </div>
+  </div>
+
+  <!-- sidenav is starting -->
+  <mat-sidenav-container class="sidnav-container">
+    <mat-sidenav #sidnav [mode]="this.widthScreen >= 768 ?'side':'over'" [opened]="this.widthScreen >= 768 ? true : false" class="sidenav">
+      <div class="top-section">
+        <img [src]="user.data.image" class="img-thumbnail" alt="UserImg" />
+        <h4>{{this.user.data.username}}</h4>
+      </div>
+      <div class="bottom-section">
+        <div class="item-list">
+          <div [routerLink]="'/'+username+'/profile'" class="links">
+            <i class="fas fa-user-circle"></i>
+            <h5>profile</h5>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="item-list">
+          <div [routerLink]="'/'+username+'/address'" class="links">
+            <i class="fa fa-address-card"></i>
+            <h5>Address</h5>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="item-list">
+          <div  [routerLink]="'/'+username+'/orders'"  class="links">
+            <i class="fa fa-credit-card"></i>
+            <h5>Orders</h5>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="item-list">
+          <div [routerLink]="'/'+username+'/returns'" class="links">
+            <i class="fas fa-redo"></i>
+            <h5>returns</h5>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-contnet">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</section>

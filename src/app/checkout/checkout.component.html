@@ -19,27 +19,92 @@
 <section class="checkout">
   <div class="container">
     <div class="row">
-      <div class="col-5 product-item">
-        <img src="../../assets/images/Products/LinksysRouter.png" alt="MultySmart" />
-        <div class="product-item-details">
-          <h4>product name</h4>
-          <h5>32 USD</h5>
-          <div class="item-number">
-            <i class="fa fa-plus-square" (click)="increment(totalOfProduct)"></i>
-            <span>{{totalOfProduct}}</span>
-            <i class="fa fa-minus-square" (click)="decrement(totalOfProduct)"></i>
-          </div>
-          <a href="#">remove</a>
+      <div class="col-xs-12 col-lg-8">
+        <div class="info-form">
+          <h3>Shipping Information</h3>
+          <form [formGroup]="userOrderForm" (ngSubmit)="ordersRequest($event)">
+            <div class="user-data">
+              <div class="label">
+                <label for="firstName">first name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name"
+                  formControlName="firstName" />
+              </div>
+              <div class="label">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" formControlName="lastName" />
+              </div>
+            </div>
+            <!-- end div  -->
+            <div class="user-data">
+              <div class="label">
+                <label for="companyName">Company name</label>
+                <input type="text" id="companyName" name="companyName" placeholder="company Name (optinal)" />
+              </div>
+              <div class="label">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Address" formControlName="address" />
+              </div>
+            </div>
+            <!-- end div -->
+            <div class="user-data">
+              <div class="label">
+                <label for="town">Town/City</label>
+                <input type="text" id="town" name="town" placeholder="city name" formControlName="city" />
+              </div>
+              <div class="label">
+                <label for="emarite">Emarite</label>
+                <select name="emarite" id="emarite">
+                  <option *ngFor="let PLACE of REGIONS" [value]="PLACE" selected>{{PLACE}}</option>
+                </select>
+              </div>
+            </div>
+            <!-- end div -->
+            <div class="user-data">
+              <div class="label">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" formControlName="email" />
+              </div>
+              <div class="label">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="508732415" formControlName="phone" />
+              </div>
+            </div>
+            <!-- end div -->
+            <div>
+              <div class="submit-button">
+                <button type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-
-      <div class="col-4 checkout-product">
-        <div class="head-checkout">
-          <h4>subtotal</h4>
-          <h5>32 usd</h5>
+      <div class="col-xs-12 col-lg-4">
+        <div class="subtotal">
+          <h3>Grand Total</h3>
+          <ng-template #NotFoundOrders>
+            <div class="no-items">
+              <h2>You Don' Have Any Order</h2>
+              <i class="fa regular fa-shopping-cart"></i>
+            </div>
+          </ng-template>
+          <div class="calc-amounts" *ngIf="this.totalOrders != null ; else NotFoundOrders">
+            <div *ngFor="let product of productsData" class="product-amount">
+              <h5> {{product.productName}}</h5>
+              <h5 style="font-weight: 600;"> {{product.price}} AED</h5>
+            </div>
+            <div class="product-amount">
+              <h5>Shipping delivered free!</h5>
+            </div>
+            <div style="border:none" class="product-amount">
+              <h4>total cost</h4>
+              <h5>{{getTotalOrders()}} AED</h5>
+            </div>
+            <div style="border-bottom:1px solid rgba(0, 0, 0, .25);" class="product-amount">
+              <h5 style="text-transform:capitalize; font-weight: 500;">An order will be avaliable in 2 or 3 work days
+              </h5>
+            </div>
+          </div>
         </div>
-        <button id="checkout-button">Checkout</button>
-        <button id="shopping-button">Countinue Shopping</button>
       </div>
     </div>
   </div>

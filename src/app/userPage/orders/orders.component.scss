@@ -1,0 +1,92 @@
+// orders is starting
+
+
+.orders {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: "Crimson Pro";
+}
+
+.requsets-orders {
+  color: #5e548e;
+  user-select: none;
+  border-bottom: .5px solid #5e548e;
+}
+
+.requsets-orders h2 {
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .requsets-orders h2 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .requsets-orders h2 {
+    font-size: 20px;
+  }
+}
+.requsets-orders h5 {
+  font-family: 'El Messiri';
+  font-weight: 500;
+  font-size: 18px;
+  text-align: start;
+}
+
+@media screen and (max-width: 425px) {
+  .requsets-orders h5 {
+    font-size: 14px;
+  }
+}
+
+.requsets-orders .card .card-body h5 {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Crimson Pro";
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 425px) {
+  .requsets-orders .card .card-body h5 {
+    font-size: 14px;
+  }
+}
+
+.requsets-orders .card .card-body h6 {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Crimson Pro";
+}
+
+.requsets-orders .card .card-footer small:hover:not(:nth-child(2)) {
+  cursor: pointer;
+}
+
+small {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  background-color: #FFF;
+  padding: 5px 10px;
+}
+
+.requsets-orders .pagination {
+  background-color: #DDD;
+  color: #5e548e;
+  margin-top: 50px;
+}
+
+.orders .pagination {
+  background-color: #DDD;
+  color: #5e548e;
+  margin-top: 50px;
+}
+
+
+// orders is ending

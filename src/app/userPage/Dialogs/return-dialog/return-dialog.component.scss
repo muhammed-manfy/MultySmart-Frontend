@@ -1,0 +1,92 @@
+::ng-deep .mat-dialog-container {
+  background-color: #FFF;
+  border-radius: 10px;
+  color: #10002b;
+  width: 1000px;
+  user-select: none;
+}
+
+h2 {
+  font-family: 'El Messiri';
+  font-weight: 500;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #5e548e;
+}
+
+::ng-deep .mat-horizontal-stepper-header-container {
+  background-color: #FFF;
+}
+
+::ng-deep .mat-horizontal-content-container {
+  background-color: #FFF;
+  height: auto;
+  padding: 10px;
+  box-shadow: inset 0px 0px 2px rgba($color: #000000, $alpha: .1);
+}
+
+::ng-deep .mat-step-text-label {
+  color: #10002b;
+  font-weight: 400;
+  font-family: "Crimson Pro";
+}
+.products {
+  padding: 10px;
+  font-size: 16px;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  user-select: none;
+}
+.products .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.products .image-product > img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+.products .name-product h5{
+  font-weight: 400;
+  font-family: "Crimson Pro"; 
+  font-size: 16px;
+  color: #10002b;
+  text-transform: capitalize;
+  font-style: normal;
+}
+.products .name-product p{
+  font-weight: 300;
+  font-family: "Crimson Pro"; 
+  font-size: 16px;
+  color: #10002b;
+}
+.check-reason {
+  display :flex;
+  flex-direction: row;  
+  justify-content: space-between;
+  padding:20px 10px;
+  user-select: none;
+}
+.check-reason section {
+  padding: 0 2px;
+}
+
+::ng-deep .mat-checkbox-inner-container{
+  background-color: #5e548e;
+}
+
+::ng-deep .mat-checkbox {
+  color: #10002b;
+  font-family: "Crimson Pro";
+}
+
+button {
+  font-weight: 300;
+  font-family: "Crimson Pro"; 
+  font-size: 16px;
+  color: #10002b;
+}

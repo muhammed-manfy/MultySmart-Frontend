@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>Products</h2>
+<mat-dialog-content class="mat-typography">
+  <mat-stepper #stepper>
+    <mat-step>
+      <ng-template matStepLabel>Choose Product</ng-template>
+      <div *ngFor="let order of userOrdersInfo" class="products row">
+        <div *ngFor="let item of order.products" class="product col-4">
+          <div class="image-product">
+            <img class="img-thumbnail" [src]="item.product.image" alt="productImage">
+          </div>
+          <div class="name-product">
+            <h5>{{item.product.productName}}</h5>
+            <p>{{item.product.price | currency:"AED"}}</p>
+          </div>
+          <div class="me-4 check-product">
+            <section class="example-section">
+              <mat-checkbox color="primary" (click)="selectProduct(item.ID_NO,order._id)"
+                class="example-margin">selected</mat-checkbox>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>Select Reason to Return</ng-template>
+      <div class="me-4 example-section check-reason">
+        <section *ngFor="let text of REASONS_TO_RETURN_A_PRODUCT" class="example-section">
+          <mat-checkbox color="primary" (click)="selectReason(text)" >{{text}}</mat-checkbox>
+        </section>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" (click)="orderCanceled()" cdkFocusInitial>Applay Now</button>
+</mat-dialog-actions>

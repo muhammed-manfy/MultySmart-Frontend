@@ -2,129 +2,435 @@
 @import '../../assets/styles/header.scss';
 
 // checkout is starting
-.checkout{
+.checkout {
   margin-top: 100px;
   margin-bottom: 100px;
-}
-.checkout .product-item{
-  background: #E4DEAE;
-  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  height: 300px;
-  margin: auto;
-}
-.checkout .product-item img{
-  width: 60%;
+  user-select: none;
 }
 
-.checkout .product-item .product-item-details{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-}
-.checkout .product-item .product-item-details h4{
+.checkout .info-form h3 {
   font-family: 'El Messiri';
-  font-weight: 600;
-  font-size: 25px;
-  text-transform: capitalize;
-  color: #133A1B;
-}
-.checkout .product-item .product-item-details h5{
-  font-family: 'Crimson Pro';
-  font-weight: 500;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #011B10;
-}
-.checkout .product-item .product-item-details .item-number{
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 10px 10px;
-}
-.checkout .product-item .product-item-details .item-number i{
-  color: #133A1B;
-  padding: 0 15px;
-  font-weight: 400;
-  font-size: 20px;
-  cursor: pointer;
-}
-.checkout .product-item .product-item-details .item-number span{
-  font-family: 'Crimson Pro';
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 28px;
+  font-weight: 200;
+  font-size: 30px;
   text-transform: uppercase;
   color: #133A1B;
+  width: 52%;
+  border-bottom: 2px solid #F4B741;
 }
 
-.checkout .product-item .product-item-details a{
-  font-family: 'Crimson Pro';
-  font-weight: 200;
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #011B10;
-  padding-top: 25px;
-  text-decoration: none;
+.checkout .info-form .user-data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-//checkout is ending
-.checkout .checkout-product{
-  background: #B7BF96;
-  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 18px;
-}
-.checkout .checkout-product {
+
+.checkout .info-form .label {
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-}
-.checkout .checkout-product .head-checkout{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 60px;
-}
-.checkout .checkout-product .head-checkout h4{
-  font-family: 'Crimson Pro';
-  font-weight: 600;
-  font-size: 25px;
-  text-transform: uppercase;
-  color: #011B10;
-}
-.checkout .checkout-product .head-checkout h5{
-  font-family: 'Crimson Pro';
-  font-weight: 600;
-  font-size: 25px;
-  text-transform: uppercase;
-  color: #011B10;
 }
 
-.checkout .checkout-product button{
+.checkout .info-form .label label {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 18px;
+  text-align: start;
+  color: #011B10;
+  margin-bottom: 5px;
+}
+
+.checkout .info-form .label input,
+.checkout .info-form .label select {
+  font-style: normal;
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  font-size: 16px;
+  text-align: start;
+  outline: none;
+  border: 1px solid rgba($color: #ccc, $alpha: .6);
+  padding: 20px 40px;
+  color: #133A1B;
+  border-radius: 10px;
+  background-color: #FFF;
+}
+
+.checkout .info-form .label input::placeholder {
+  color: #133A1B;
+}
+
+.checkout .info-form button {
   border: none;
   outline: none;
-  width: 70%;
+  width: 20%;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 15px 30px;
   text-transform: uppercase;
+  font-size: 18px;
   letter-spacing: 1px;
   font-weight: 500;
   cursor: -webkit-grab;
-}
-.checkout .checkout-product #checkout-button{
-  background: #133A1B;
+  font-family: "Crimson Pro";
+  background-color: #133A1B;
   color: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.checkout .checkout-product #shopping-button{
-  background: #FFFFFF;
-  border: 2px solid #133A1B;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.checkout .info-form button:hover {
+  color: #FFF;
+  background-color: #011B10;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
-.checkout .checkout-product #checkout-button:focus,
-.checkout .checkout-product #shopping-button:focus{
-  cursor: progress;
+.checkout .subtotal {
+  font-style: normal;
+  border-left: 2px solid #F4B741;
+  height: 100%;
+}
+
+.checkout .subtotal h3 {
+  font-family: 'El Messiri';
+  font-weight: 200;
+  font-size: 30px;
+  width: 70%;
+  text-transform: uppercase;
+  color: #133A1B;
+  margin-left: 20px;
+  border-bottom: 2px solid #F4B741;
+}
+
+.checkout .subtotal .calc-amounts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  padding: 20px;
+}
+
+.checkout .subtotal .calc-amounts .product-amount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkout .subtotal .calc-amounts .product-amount h5 {
+  font-family: 'crimson pro';
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #133A1B
+}
+
+.checkout .subtotal .calc-amounts .product-amount h4 {
+  font-family: 'Crimson Pro';
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #133A1B;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.checkout .subtotal .subtotal-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.checkout .subtotal .subtotal-buttons button {
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: "Crimson Pro";
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #133A1B;
+}
+
+.checkout .subtotal .subtotal-buttons button:hover {
+  color: #FFF;
+  background-color: #133A1B
+}
+
+.no-items {
+  margin: 100px auto;
+  text-align: center;
+}
+
+.no-items>h2 {
+  font-family: 'Crimson Pro';
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #133A1B;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.no-items>i {
+  font-size: 30px;
+  color: #133A1B;
+}
+
+
+@media screen and (max-width:425px) {
+  .checkout {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .checkout .info-form .user-data {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .checkout .info-form h3 {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .checkout .info-form .label {
+    padding: 0;
+    width: 100%;
+  }
+
+  .checkout .info-form .label label {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .checkout .submit-button {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .checkout .submit-button button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .checkout .subtotal {
+    border: none;
+  }
+
+  .checkout .subtotal h3 {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .checkout .subtotal .calc-amounts {
+    align-items: normal;
+  }
+
+  .checkout .subtotal .calc-amounts .product-amount {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .checkout .subtotal .calc-amounts .product-amount h5 {
+    font-size: 14px;
+  }
+
+  .checkout .subtotal .calc-amounts .product-amount h4 {
+    font-size: 14px;
+    padding-top: 10px;
+    margin: 0 0 12px;
+    padding: 0;
+  }
+
+  .checkout .subtotal .calc-amounts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width:425px) and (max-width:576px) {
+  .checkout {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .checkout .info-form .user-data {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .checkout .info-form h3 {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .checkout .info-form .label {
+    padding: 0;
+    width: 100%;
+  }
+
+  .checkout .info-form .label label {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .checkout .submit-button {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .checkout .submit-button button {
+    width: 40%;
+    font-size: 16px;
+  }
+
+  .checkout .subtotal {
+    border: none;
+  }
+
+  .checkout .subtotal h3 {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .checkout .subtotal .calc-amounts {
+    align-items: normal;
+  }
+
+  .checkout .subtotal .calc-amounts .product-amount {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .checkout .subtotal .calc-amounts .product-amount h5 {
+    font-size: 16px;
+  }
+
+  .checkout .subtotal .calc-amounts .product-amount h4 {
+    font-size: 16px;
+    padding-top: 10px;
+    margin: 0 0 12px;
+    padding: 0;
+  }
+
+  .checkout .subtotal .calc-amounts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width:576px) and (max-width:768px) {
+  .checkout {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .checkout .info-form .user-data {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .checkout .info-form h3 {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .checkout .info-form .label {
+    padding: 0;
+    width: 100%;
+  }
+
+  .checkout .info-form .label label {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .checkout .submit-button {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .checkout .submit-button button {
+    width: 40%;
+    font-size: 16px;
+  }
+
+  .checkout .subtotal {
+    border: none;
+  }
+
+  .checkout .subtotal h3 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .checkout .subtotal .calc-amounts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+  .checkout .subtotal {
+    border: none;
+    margin-top: 50px;
+  }
+
+  .checkout .subtotal h3 {
+    width: 50%;
+    margin: 0;
+  }
+  .checkout .info-form .label input,
+  .checkout .info-form .label select {
+    margin: 0 10px;
+  }
+  .checkout .info-form .label {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .checkout .info-form .label{
+    width: 100%;
+  }
+  .checkout .subtotal .calc-amounts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+  }
+  .checkout .subtotal .calc-amounts .product-amount {
+    margin-top: 20px;
+  }
+  .checkout .subtotal .calc-amounts .product-amount  h5{
+    line-height: 20px;
+  }
 }

@@ -1,0 +1,82 @@
+<!-- navbar is starting -->
+<app-navbar></app-navbar>
+<!--navbar is ending-->
+
+<!-- header is starting -->
+<section class="header">
+  <div class="container">
+    <div class="row">
+      <div class="title-page">
+        <img src="../../assets/images/Logo/White.png" alt="multySmartIcon" />
+        <h1>cart</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- header is ending -->
+
+<ng-template #NoDataDisplay>
+  <div class="no-items">
+    <h2>Your Cart is Empty!</h2>
+    <i class="fa regular fa-shopping-cart"></i>
+  </div>
+</ng-template>
+
+<section *ngIf="this.productsData.length != 0 ; else NoDataDisplay" class="cart">
+  <div class="container">
+    <div class="row">
+      <div class="product">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">QTY</th>
+              <th scope="col">Cancel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of productsData">
+              <td><img [src]="product.image" alt="ProductImage"></td>
+              <td>{{product.productName}}</td>
+              <td>{{product.price}} AED</td>
+              <td>{{getProductsAmount(product.productName)}}</td>
+              <td><span (click)="cancelOrder(product.productName)" style="cursor: pointer;" class="material-symbols-outlined">cancel</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="subtotal">
+        <h3>Grand Total</h3>
+        <div *ngFor="let product of productsData" class="calc-amounts">
+          <div class="product-amount">
+            <h5>{{product.productName}}</h5>
+            <h5>{{product.price}} AED</h5>
+          </div>
+        </div>
+        <div class="calc-amounts">
+          <div class="product-amount">
+            <h5>Delevired Free!</h5>
+            <h5 *ngIf=" this.userIsAuthenticated">An order will be avaliable in 2 or 3 days</h5>
+          </div>
+          <div style="border:none" class="product-amount">
+            <h4>subtotal cost</h4>
+            <h5 style="font-weight: 600; padding-top: 8px;">{{ getTotalOrders()}} AED </h5>
+          </div>
+        </div>
+
+        <div class="subtotal-buttons">
+          <button  routerLink="/shop"> back to shop <i class="fas fa-redo"></i> </button>
+          <button  (click)="buyProductWithUserAuth()">  Buy Now <i class="fas fa-arrow-right"></i> </button>
+          <button  (click)="navigateToShipping()" routerLink="/checkout">  continue shipping <i class="fas fa-arrow-right"></i> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer is starting -->
+<app-footer></app-footer>
+<!--footer is ending-->

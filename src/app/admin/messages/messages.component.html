@@ -1,5 +1,5 @@
 <div class="admin-messages">
-  <div class="row p-3">
+  <div class="row p-0">
     <div *ngFor="let message of messagesList" class="col-5 p-3 m-auto message">
       <div class="message-details">
         <h4><i class="fa fa-user-circle"></i> {{message.fullName}}</h4>
@@ -11,7 +11,10 @@
       <span class="pt-3">{{message.created_at}}</span>
     </div>
   </div>
-  <div class=" p-5 justify-content-center">
+  <div class="text-center p-5 show-messages">
+    <h2>Don't Have Messages</h2>
+  </div>
+  <div *ngIf="messagesList.length != 0" class=" p-5 justify-content-center">
     <mat-paginator class="pagination" (page)="handlePAgination($event)" [length]="totalMessages" [pageIndex]="currentpage" [pageSize]="pageSize" aria-label="Select page"></mat-paginator>
   </div>
 </div>

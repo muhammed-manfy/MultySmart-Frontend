@@ -1,0 +1,30 @@
+<div class="login mt-5">
+    <div class="container">
+        <div class="row">
+            <h2>Login</h2>
+            <div class="image-user">
+                <i class="fa fa-user-alt"></i>
+            </div>
+            <div class="details-user">
+                <form [formGroup]="this.adminForm" (ngSubmit)="formSubmit()">
+                    <div class="label">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" formControlName="email"
+                            placeholder="emailadmin@gmail.com" />
+                    </div>
+                    <div class="label">
+                        <label for="password">password</label>
+                        <input [type]="passwordType" name="password-value" formControlName="password" id="password"
+                            #password placeholder="Ex Mn@1234556" />
+                    </div>
+                    <div class="label py-0 show">
+                        <input type=checkbox id="showPassword" name="showPassword"
+                            (click)="togglePasswordVisibility()" />
+                        <label for="showPassword" class="m-0">show password</label>
+                    </div>
+                    <button type="submit" class="btn btn-success my-4">login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

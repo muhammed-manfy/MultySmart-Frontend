@@ -17,158 +17,74 @@
 
 <!-- blogs is starting  -->
 <section class="blogs">
-  <div class="container">
-    <h1 class="text-center">Recent Posts</h1>
+  <div class="container-fluid">
+    <h1 *ngIf="this.screenWidth >= 768" class="text-center">Recent Posts</h1>
     <div class="row">
-      <div class="col-3">
+      <div *ngIf="this.screenWidth >= 768" class="col-md-3">
         <div class="filter">
           <div class="categories text-center">
             <h3><i class="fa fa-square"></i> categories</h3>
-            <div class="category">
-              <h5>sound system</h5>
+            <div *ngFor="let CATEGORY of CATEGORIES" class="category">
+              <h5 (click)="selectCategory(CATEGORY)">{{CATEGORY}}</h5>
             </div>
-            <div class="category">
-              <h5>CCTV</h5>
-            </div>
-            <div class="category">
-              <h5>WIFI</h5>
-            </div>
-            <div class="category">
-              <h5>AC Control's</h5>
-            </div>
-            <div class="category">
-              <h5>Curations Control's</h5>
-            </div>
-            <div class="category">
-              <h5>Lighting Control's</h5>
-            </div>
-            <div class="category">
-              <h5>Threater's Cinema</h5>
-            </div>
-            <h3 style="padding-top:100px;"><i class="fa fa-square"></i> More Viewis</h3>
-          </div>
-          <div class="posts mx-5">
-            <div class="post">
-              <div class="image-post">
-                <img src="../../assets/images/Projets/ProjectsCover.jpg" alt="postImage">
-              </div>
-              <div class="post-details mt-2">
-                <h5>TOP 10 SMALL CAMERA IN THE WORLD</h5>
-              </div>
-            </div>
-            <!-- post end -->
-
-            <div class="post">
-              <div class="image-post">
-                <img src="../../assets/images/Projets/ProjectsCover.jpg" alt="postImage">
-              </div>
-              <div class="post-details mt-2">
-                <h5>TOP 10 SMALL CAMERA IN THE WORLD</h5>
-              </div>
-            </div>
-            <!-- post end -->
-
-            <div class="post">
-              <div class="image-post">
-                <img src="../../assets/images/Projets/ProjectsCover.jpg" alt="postImage">
-              </div>
-              <div class="post-details mt-2">
-                <h5>TOP 10 SMALL CAMERA IN THE WORLD</h5>
-              </div>
-            </div>
-            <!-- post end -->
-
           </div>
           <h3 style="padding-top:100px;" class="mx-5"><i class="fa fa-square"></i> Tags</h3>
           <div class="tags">
-            <div class="tag">
-              <h5>Networking</h5>
-            </div>
-            <div class="tag">
-              <h5>Smart Home</h5>
-            </div>
-            <div class="tag">
-              <h5>CCTV</h5>
-            </div>
-            <div class="tag">
-              <h5>Gateways</h5>
+            <div *ngFor="let TAG of TAGS" class="tag">
+              <h5 (click)="selectTags(TAG)">{{TAG}}</h5>
             </div>
           </div>
         </div>
       </div>
+      <div class="col-xs-12 col-md-9 videos">
+        <button class="d-md-none" type="button" data-bs-toggle="offcanvas" mat-icon-button
+          data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><mat-icon
+            style="color: #F4B741;">menu</mat-icon></button>
+        <h1 class="d-md-none">Recent Posts</h1>
+        <!-- sidebar is starting here -->
+        <div class="offcanvas-lg offcanvas-end d-lg-none" tabindex="-1" id="offcanvasResponsive"
+          aria-labelledby="offcanvasResponsiveLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
+              aria-label="Close"></button>
+          </div>
 
-      <div class="col-9 videos">
-        <div class="blog">
+          <div class="offcanvas-body">
+            <div class="filter">
+              <div class="categories text-center">
+                <h3><i class="fa fa-square"></i> categories</h3>
+                <div *ngFor="let CATEGORY of CATEGORIES" class="category">
+                  <h5 (click)="selectCategory(CATEGORY)">{{CATEGORY}}</h5>
+                </div>
+              </div>
+              <h3 style="padding-top:100px;" class="mx-5"><i class="fa fa-square"></i> Tags</h3>
+              <div class="tags">
+                <div *ngFor="let TAG of TAGS" class="tag">
+                  <h5 (click)="selectTags(TAG)">{{TAG}}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar is ending here -->
+        <div *ngFor="let blog of BlogsList | paginate:{itemsPerPage: this.pageSize,
+          currentPage: this.currentPage + 1, totalItems: this.totalBlogs}" class="blog">
           <div class="image">
             <video class="img-thumbnail" controls>
-              <source src="../../assets/Videos/BarberShop.mp4" />
+              <source [src]="blog.video" />
             </video>
-            <!-- <img class="img-thumbnail" src="../../assets/images/Projets/proj6.png" alt="ProjectPost"> -->
           </div>
           <div class="details">
-            <h4>How Our Journals 2021</h4>
-            <p id="date">1/2/2020 10:30 AM</p>
+            <h4>{{blog.title}}</h4>
+            <p id="date">{{blog.created_at | date:'short'}}</p>
             <hr />
-            <p>Lorem ipsum dolor sit amet. Et sint voluptatem ea corrupti consequatur quo debitis nulla qui excepturi
-              consequatur cum consequatur optio eum tempora galisum.</p>
-          </div>
-          <a href="#">read more</a>
-          <div class="likes">
-            <i class="fa fa-heart"></i>
-            <p>20 likes</p>
+            <p>{{blog.description}}.</p>
           </div>
         </div>
-        <div class="blog">
-          <div class="image">
-            <img class="img-thumbnail" src="../../assets/images/Projets/proj2.png" alt="ProjectPost">
-          </div>
-          <div class="details">
-            <h4>How Our Journals 2021</h4>
-            <p id="date">1/2/2020 10:30 AM</p>
-            <hr />
-            <p>Lorem ipsum dolor sit amet. Et sint voluptatem ea corrupti consequatur quo debitis nulla qui excepturi
-              consequatur cum consequatur optio eum tempora galisum.</p>
-          </div>
-          <a href="#">read more</a>
-          <div class="likes">
-            <i class="fa fa-heart"></i>
-            <p>20 likes</p>
-          </div>
-        </div>
-        <div class="blog">
-          <div class="image">
-            <img class="img-thumbnail" src="../../assets/images/Projets/proj3.png" alt="ProjectPost">
-          </div>
-          <div class="details">
-            <h4>How Our Journals 2021</h4>
-            <p id="date">1/2/2020 10:30 AM</p>
-            <hr />
-            <p>Lorem ipsum dolor sit amet. Et sint voluptatem ea corrupti consequatur quo debitis nulla qui excepturi
-              consequatur cum consequatur optio eum tempora galisum.</p>
-          </div>
-          <a href="#">read more</a>
-          <div class="likes">
-            <i class="fa fa-heart"></i>
-            <p>20 likes</p>
-          </div>
-        </div>
-        <div class="blog">
-          <div class="image">
-            <img class="img-thumbnail" src="../../assets/images/Projets/proj4.png" alt="ProjectPost">
-          </div>
-          <div class="details">
-            <h4>How Our Journals 2021</h4>
-            <p id="date">1/2/2020 10:30 AM</p>
-            <hr />
-            <p>Lorem ipsum dolor sit amet. Et sint voluptatem ea corrupti consequatur quo debitis nulla qui excepturi
-              consequatur cum consequatur optio eum tempora galisum.</p>
-          </div>
-          <a href="#">read more</a>
-          <div class="likes">
-            <i class="fa fa-heart"></i>
-            <p>20 likes</p>
-          </div>
-        </div>
+      </div>
+      <div *ngIf="this.BlogsList.length > 2" class="d-flex justify-content-center">
+        <pagination-controls class="my-pagination" [responsive]="true" nextLabel="" previousLabel=""
+          (pageChange)="paginationHandle($event)"></pagination-controls>
       </div>
     </div>
   </div>

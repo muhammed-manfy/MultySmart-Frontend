@@ -1,85 +1,70 @@
+
+// add-product is starting
 .add-product{
-  width: 60%;
-  background-color: #FFF;
-  padding: 20px;
-  margin: auto;
-  margin-top: 20px;
-  box-shadow: 0px 0px 4px rgb(88, 84, 84);
-  border-radius: 20px;
+  margin-top: 50px;
 }
-$font-family :"Crimson Pro";
-input::placeholder,
-textarea::placeholder{
-  font-size: 13px;
+.add-product .info-form h3{
+  font-family: 'El Messiri';
   font-weight: 200;
-  color: #ccc;
-  font-family: $font-family;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #10002b;
+  width: 32%;
+  border-bottom: 2px solid #5e548e;
 }
-select{
-  font-family: $font-family;
-  color: #ccc;
-  font-size: 14px;
+.add-product .info-form .label {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.add-product .info-form .label label{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 18px;
+  text-align: start;
+  color: #5e548e;
+  margin-bottom: 5px;
+}
+.add-product .info-form .label input,
+.add-product .info-form .label textarea,
+.add-product .info-form .label select{
+  font-style: normal;
+  font-family: 'Crimson Pro';
   font-weight: 300;
-}
-option{
-  font-size: 14px;
-  font-weight: 200;
-  color: #ccc;
-  padding: 20px;
-  font-family: $font-family;
+  text-transform: capitalize;
+  font-size: 16px;
+  text-align: start;
+  outline: none;
+  border: 1px solid rgba($color: #ccc, $alpha: .6);
+  padding: 20px 40px;
+  color: #10002b;
+  border-radius: 10px;
 }
 
-label{
-  font-family: $font-family;
-  font-weight: 500;
-  font-size: 16px;
+.add-product .info-form .label input::placeholder{
   color: #5e548e;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
-button{
-  background-color: #5e548e;
-  color: #FFF;
-  outline: none;
-  border:none;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-family:$font-family;
-  border-radius: 5px;
-  text-transform: uppercase;
-}
-button:focus{
-  background-color: #5e548e;
-  color: #FFF;
-  cursor: progress;
-}
-.items{
-  background-color: #DDD;
-  padding: 5px;
-  margin-top: 5px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 75%;
-}
-.items span{
-  color: #5e548e;
-  font-size: 14px;
-  font-weight: 200;
-  font-family: $font-family;
-  text-transform: uppercase;
-  padding: 5px;
-}
-.items i{
-  color: red;
-  padding: 10px;
-  cursor: pointer;
-}
-input,textarea{
+
+.add-product .info-form button{
   border: none;
   outline: none;
-  border-bottom: .5px solid #DDD;
-  font-family: $font-family;
-  font-size: 16px;
+  width: 20%;
+  margin: 0 auto;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: -webkit-grab;
+  font-family: "Crimson Pro";
+  background-color: #10002b;
+  color: #FFFFFF;
 }
+.add-product .info-form button:hover{
+  color: #FFF;
+  background-color: #5e548e;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+

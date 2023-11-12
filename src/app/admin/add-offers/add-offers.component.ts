@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { OfferService } from 'src/app/API Services/Offer/offer.service';
 import { offersInfo } from 'src/app/Models/Offer.model';
-import { ShowOfferNotificationsComponent } from 'src/app/ValidatorNotification/ValidatorOffer/show-offer-notifications/show-offer-notifications.component';
+
 
 @Component({
   selector: 'app-add-offers',
@@ -40,19 +40,19 @@ export class AddOffersComponent implements OnInit {
 
   }
 
-  valdiationNotification() {
-    this.snakBar.openFromComponent(ShowOfferNotificationsComponent, {
-      data: {
-        title: this.title,
-        price: this.priceAndPeriod,
-        features: this.features,
-        featureslength: this.featureslength
-      },
-      horizontalPosition: "end",
-      verticalPosition: "bottom",
-      duration: 4 * 1000
-    })
-  }
+  // valdiationNotification() {
+  //   this.snakBar.openFromComponent(ShowOfferNotificationsComponent, {
+  //     data: {
+  //       title: this.title,
+  //       price: this.priceAndPeriod,
+  //       features: this.features,
+  //       featureslength: this.featureslength
+  //     },
+  //     horizontalPosition: "end",
+  //     verticalPosition: "bottom",
+  //     duration: 4 * 1000
+  //   })
+  // }
 
   addItem(value: any) {
     if (value === '') {
@@ -72,7 +72,8 @@ export class AddOffersComponent implements OnInit {
       this.featureslength = false;
     }
     if (!this.addOfferForm.valid)
-      this.valdiationNotification()
+      // this.valdiationNotification()
+      return ;
     else {
       let title =this.addOfferForm.value.title;
       let priceAndPeriod =this.addOfferForm.value.priceAndPeriod;

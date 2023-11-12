@@ -1,41 +1,46 @@
-.navbar{
+.navbar {
   font-family: 'Poppins';
   background-color: #FFF;
   box-sizing: border-box;
-  height: 90px;
+  height: 70px;
+  user-select: none;
 }
 
-.navbar .navbar-brand > img{
-  max-width: 120px;
-  max-height: 120px;
+.navbar .navbar-brand>img {
+  max-width: 110px;
+  max-height: 110px;
   cursor: -webkit-grab;
+  user-select: none;
 }
 
-.navbar .collapse{
+.navbar .collapse {
   margin-left: 400px;
 }
 
 @media screen and (min-width:992px) and (max-width:1200px) {
-  .navbar .collapse{
+  .navbar .collapse {
     margin-left: 200px;
   }
 }
+
 @media screen and (min-width:1200px) {
-  .navbar .collapse{
+  .navbar .collapse {
     margin-left: 400px;
   }
 }
+
 .navbar .navbar-nav .login {
   display: flex;
   margin-left: 50px;
   flex-wrap: wrap;
 }
+
 .navbar .navbar-nav .login i {
   margin-left: 5px;
   font-size: 18px;
 }
 
-.navbar .navbar-nav .login i > span{
+.navbar .navbar-nav .login i>span {
   position: absolute;
   top: -1px;
   right: 7px;
@@ -48,9 +53,11 @@
   font-size: 10px;
   text-align: center;
 }
-.navbar .navbar-nav .login .nav-item .nav-link:hover{
+
+.navbar .navbar-nav .login .nav-item .nav-link:hover {
   color: #133A1B;
 }
+
 .navbar .navbar-nav .nav-item .nav-link {
   font-style: normal;
   font-weight: 400;
@@ -64,36 +71,74 @@
   cursor: -webkit-grab;
 }
 
-.navbar .navbar-nav .nav-item .nav-link:focus,
-.navbar .navbar-nav .nav-item .nav-link:hover{
+::ng-deep .menu {
+  background-color: white;
+}
+
+::ng-deep .menu-item {
+  color: #133A1B;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Crimson Pro";
+}
+
+::ng-deep .menu-item {
+  color: #133A1B;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: 'Crimson Pro';
+}
+
+::ng-deep .menu-item:hover {
+  color: #DDD;
+}
+
+::ng-deep .menu-item .mat-icon,
+::ng-deep .notifications-item .mat-icon {
   color: #133A1B;
 }
-@media screen and (max-width:992px){
-  .navbar .navbar-nav .nav-item .nav-link{
-      margin-bottom: 4px;
-      margin-left: 12px;
+
+.navbar .navbar-nav .nav-item .nav-link:focus,
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #133A1B;
+}
+
+@media screen and (max-width:992px) {
+  .navbar .navbar-nav .nav-item .nav-link {
+    margin-bottom: 4px;
+    margin-left: 12px;
   }
 
-  :focus{
-      outline: none;
+  .navbar {
+    height: auto;
   }
 
-  .navbar{
-      height: auto;
-  }
-  .navbar-light .navbar-toggler{
-      border: none;
+  :focus {
+    outline: none;
+    border: none;
   }
 
-  .navbar .navbar-brand >h2 {
-      font-size: 22px;
-      margin-left: 10px;
+  .navbar-toggler:focus {
+    box-shadow: none;
   }
-  .navbar .navbar-nav .nav-link .icon{
-      margin-left: 12px;
+
+  .navbar .navbar-brand>h2 {
+    font-size: 22px;
+    margin-left: 10px;
   }
-  .navbar .collapse{
-    margin-left:0px;
+
+  .navbar .navbar-nav .nav-link .icon {
+    margin-left: 12px;
+  }
+
+  .navbar .collapse {
+    margin-left: 0px;
+  }
+
+  .navbar .navbar-nav .login {
+    margin-left: 0;
   }
 }
+
 /* end navbar */

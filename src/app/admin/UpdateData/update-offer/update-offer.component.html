@@ -1,33 +1,9 @@
-<div class="add-offer">
-  <div class="container">
-    <div class="row">
-      <form (ngSubmit)="submitForm($event)">
-        <div class="mb-3">
-          <label for="offer-title" class="form-label">Offer Title</label>
-          <input type="text" class="form-control" id="offer-title" value="{{raoutingInfo.title}}" name="title">
-        </div>
-        <div class="mb-3">
-          <label for="Price" class="form-label">Price</label>
-          <input type="text" class="form-control" name="priceAndPeriod" id="Price"
-            value="{{raoutingInfo.priceAndPeriod}}">
-        </div>
-        <div class="mb-3">
-          <label for="Features" class="form-label">Features</label>
-          <div class="d-flex">
-            <input type="text" #item class="form-control w-75 me-3" id="Features" name="features">
-            <button type="button" class="btn btn-outline-primary" (click)="addItem(item.value)">Add item</button>
-          </div>
-          <div class=" items pt-2" *ngFor="let item of this.featuresItem ; let i = index">
-            <span *ngIf="this.verifyOfItems == 0 ">{{item}}</span>
-            <i class="fa fa-close" (click)="removeItem(i)"></i>
-          </div>
-          <div class="w-75 alert alert-danger mt-3" *ngIf="this.verifyOfItems > 0">
-            <span style="font-weight: 400; font-family: Crimson Pro; text-transform: uppercase;">
-              plesae insert data</span>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-outline-primary">Applay Changes</button>
-      </form>
-    </div>
-  </div>
-</div>
+<mat-dialog-content class="mat-typography">
+  <h4>Do you Delete Your Account</h4>
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+  <button mat-button mat-dialog-close cdkFocusInitial>Close</button>
+  <button style="background-color: rgba(255, 0, 0, .6);" (click)="deleteAccount(data.userId)" mat-button mat-dialog-close  cdkFocusInitial>Continue</button>
+</mat-dialog-actions>
+<!--  -->

@@ -1,0 +1,71 @@
+<!-- checkout is strating -->
+<section class="profile mx-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="info-form">
+                    <h3> Profile</h3>
+                    <form [formGroup]="this.profileForm">
+                        <div class="d-flex justifiy-content-center flex-column">
+                            <div class="mt-4 label">
+                                <h4 *ngIf="this.userInfo.data.email">{{this.userInfo.data.email}}</h4>
+                                <h5 (click)="emailToggled()">edit info <i class='fa-regular fa-circle-down'></i></h5>
+                                <div [ngClass]="{'display-data':emailDisplay ,'label':emailHidden}" class="label">
+                                    <input type="email" id="email" name="email" placeholder="example@gmail.com"
+                                        formControlName="email" />
+                                    <button (click)="updateEmail()">change</button>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 label">
+                                <h4 *ngIf="this.userInfo.data.phone">{{'+971'+' '+this.userInfo.data.phone}}</h4>
+                                <h5 (click)="phoneToggled()">phone info <i class='fa-regular fa-circle-down'></i></h5>
+                                <div [ngClass]="{'display-data':phoneDisplay ,'label':phoneHidden}" class="label">
+                                    <input type="tel" id="phone" name="phone" formControlName="phone"
+                                        placeholder="+971 508 732 415" />
+                                    <button (click)="updatePhone()">change</button>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 label">
+                                <h5 (click)="imageToggled()">profile picture <i class='fa-regular fa-circle-down'></i>
+                                </h5>
+                                <div [ngClass]="{'display-data':imageDisplay ,'label':imageHidden}" class="label ">
+                                    <input type="file" class="form-control" (change)="uploadImage($event)"
+                                        id="inputGroupFile02" formControlName="image">
+                                    <label class="input-group-text" for="inputGroupFile02"
+                                        style="cursor: pointer;">Upload Image</label>
+                                    <button (click)="changeImageProfile()">change</button>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 label mb-5">
+                                <h5 (click)="passwordToggled()">security info <i class='fa-regular fa-circle-down'></i>
+                                </h5>
+                                <div [ngClass]="{'display-data':passwordDisplay ,'label':passwordHidden}"
+                                    class="label w-75">
+                                    <input [type]="passwordType" #password id="password" name="password"
+                                        placeholder="Ex User@1234" formControlName="password" />
+                                    <div class="py-2">
+                                        <input type=checkbox id="showPassword" name="showPassword"
+                                            (click)="showPassword()" />
+                                        <label for="showPassword">show password</label>
+                                    </div>
+                                    <button (click)="updatePassword()">change</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end div -->
+                        <div>
+                            <div>
+                                <a (click)="deleteUser()" class="btn btn-danger">delete an account?</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- check out is ending -->
+

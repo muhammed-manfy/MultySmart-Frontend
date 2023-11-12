@@ -1,0 +1,47 @@
+<!-- checkout is strating -->
+<section class="address mx-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="info-form">
+                    <h3>Address Information</h3>
+                    <form [formGroup]="this.addressForm" (ngSubmit)="updateAddress($event)">
+                        <div class="section">
+                            <div class="label">
+                                <label for="companyName">Company name</label>
+                                <input type="text" id="companyName" name="companyName" [placeholder]="this.userInfo.companyName"
+                                    formControlName="companyName" />
+                            </div>
+                            <div class="label">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" placeholder="Address"
+                                    formControlName="address"[placeholder]="this.userInfo.address" />
+                            </div>
+                        </div>
+                        <!-- end div -->
+                        <div class="section">
+                            <div class="label">
+                                <label for="emarite">Emarite's</label>
+                                <select name="emarite" id="emarite">
+                                  <option *ngFor="let place of REGIONS" [value]="place" selected >{{place}}</option>
+                                </select>
+                            </div>
+                            <div class="label">
+                              <label for="city">town</label>
+                              <input type="text" name="city" id="city" formControlName="city"
+                              [placeholder]="this.userInfo.city">
+                          </div>
+                        </div>
+                        <!-- end div -->
+                        <div>
+                            <div class="ms-3 pt-3">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- check out is ending -->

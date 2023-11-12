@@ -1,0 +1,29 @@
+<section class="return">
+  <div class="container">
+    <div  *ngFor="let order of this.userCanceledOrders" class="row">
+      <div *ngFor="let item of order.products" slass="col-xs-12 xol-sm-6 col-lg-3">
+        <div class="product">
+          <div class="order-details">
+            <div class="image">
+              <img class="img-thumbnail" [src]="item.product.image" alt="Order Product">
+            </div>
+            <div class="mx-1 p-2 pt-3">
+              <h4>{{item.product.productName}}</h4>
+              <small>placed on : {{item.product.created_at | date :"short"}}</small>
+              <h5>{{item.product.price| currency:"AED"}}</h5>
+              <h6>Count of Product: {{item.amount}}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subtotal">
+      <div class="subtotal-buttons">
+        <button (click)="openDialog()"> Choose An Order <i class="fas fa-redo"></i> </button>
+      </div>
+    </div>
+  </div>
+</section>
+<mat-paginator  class="pagination" *ngIf="this.userCanceledOrders.length >= 2" (page)="handlePagination($event)"
+            [length]="totalOrders" [pageIndex]="currentPage" [pageSize]="pageSize" aria-label="Select page"></mat-paginator>
+

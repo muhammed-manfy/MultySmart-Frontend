@@ -1,59 +1,25 @@
 .products{
-  width: 95%;
-  margin: auto;
   margin-top: 20px;
-  font-family: "El Messiri";
-  box-shadow: 0 0 2px 2px #DDD;
-}
-.products img{
-  width: 70px;
-  height: 70px;
-  border: 2px solid #000;
-  display: inline;
-  border-radius: 50%;
-}
-.products thead{
-  text-transform: uppercase;
-  border-bottom:1px solid;
   color: #5e548e;
+  font-family: "Crimson Pro";
+  user-select: none;
 }
-.products tbody{
-  text-align: center;
-  text-transform: uppercase;
-  color: #5e548e;
+.products .card .card-body h5{
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Crimson Pro";
 }
-.products tbody td{
- border-bottom: 1px solid;
+.products .card .card-body h6{
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Crimson Pro";
 }
-.products tr:hover{
-  background-color:#F9F9F9;
-}
-.products td:nth-child(1){
-  padding-top: 30px;
-}
-.products td:nth-child(3){
-  padding-top: 30px;
-}
-.products td:nth-child(4){
-  padding-top: 30px;
-}
-.products td:nth-child(5){
-  padding-top: 30px;
-}
-.products td:nth-child(6){
-  padding-top: 30px;
-}
-.products td:nth-child(7){
-  padding-top: 30px;
-}
-.products td:nth-child(8){
-  padding-top: 30px;
-}
-.products td:nth-child(9){
-  padding-top: 30px;
-}
-
 .products .pagination{
   background-color: #DDD;
   color: #5e548e;
+  margin-top: 50px;
+}
+
+.products .card  small{
+  cursor: pointer;
 }

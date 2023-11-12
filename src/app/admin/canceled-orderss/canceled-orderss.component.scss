@@ -1,0 +1,41 @@
+.orders{
+  margin-top: 20px;
+  color: #5e548e;
+  font-family: "Crimson Pro";
+  user-select: none;
+}
+.orders .card .card-body h5{
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Crimson Pro";
+}
+.orders .card .card-body h6{
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Crimson Pro";
+}
+.orders  h2{
+  line-height: 10px;
+  font-weight: bold;
+}
+.orders  small{
+  font-size: 14px;
+}
+
+.orders .card .card-footer small:hover:not(:nth-child(3)){
+  cursor: pointer;
+}
+.orders .pagination{
+  background-color: #DDD;
+  color: #5e548e;
+  margin-top: 50px;
+}
+.no-display {
+  display: flex;
+  justify-content: center;
+}
+.no-display h2 {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Crimson Pro";
+}

@@ -1,0 +1,119 @@
+
+// address is starting
+.address{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.address .info-form h3{
+  font-family: 'El Messiri';
+  font-weight: 200;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #10002b;
+  width: 45%;
+  border-bottom: 2px solid #5e548e;
+}
+.address .info-form .section {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+.address .info-form .label {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.address .info-form .label label{
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 18px;
+  text-align: start;
+  color: #5e548e;
+  margin-bottom: 5px;
+}
+.address .info-form .label input,
+.address .info-form .label select{
+  font-style: normal;
+  font-family: 'Crimson Pro';
+  font-weight: 300;
+  text-transform: capitalize;
+  font-size: 16px;
+  text-align: start;
+  outline: none;
+  border: 1px solid rgba($color: #ccc, $alpha: .6);
+  padding: 20px 40px;
+  color: #10002b;
+  border-radius: 10px;
+}
+
+.address .info-form .label input::placeholder{
+  color: #5e548e;
+}
+
+.address .info-form button{
+  border: none;
+  outline: none;
+  width: 20%;
+  margin: 0 auto;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: -webkit-grab;
+  font-family: "Crimson Pro";
+  background-color: #10002b;
+  color: #FFFFFF;
+}
+.address .info-form button:hover{
+  color: #FFF;
+  background-color: #5e548e;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width:768px) {
+  .address .info-form h3{
+    font-size: 18px;
+    width: 100%;
+  }
+  .address .info-form .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .address .info-form .label input,
+  .address .info-form .label select{
+    font-size: 14px;
+  }
+
+  .address .info-form button{
+    width: 100%;
+    padding: 15px 30px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+  .address .info-form h3{
+    font-size: 24px;
+    width: 50%;
+  }
+  .address .info-form .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .address .info-form .label input,
+  .address .info-form .label select{
+    font-size: 16px;
+  }
+
+  .address .info-form button{
+    width: 40%;
+    padding: 15px 30px;
+  }
+}

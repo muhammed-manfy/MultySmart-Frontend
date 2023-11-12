@@ -10,29 +10,29 @@ import { ProductService } from 'src/app/API Services/Product/product.service';
 })
 export class DeleteProductComponent implements OnInit {
 
-  idProduct = this.data.id;
-  messageResponse: any;
-  constructor(@Inject(MAT_DIALOG_DATA)public data:any , public snackBar:MatSnackBar,
-  private productService:ProductService) { }
+  deleteProductApiResponse: any;
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, public snackBar: MatSnackBar,
+    private productService: ProductService) { }
 
   ngOnInit(): void {
   }
-  async deleteRecord() {
-    (await this.productService.deleteProducts(this.idProduct)).subscribe(response => {
-      this.messageResponse = response;
-        this.snackBar.open(this.messageResponse.message, "Ok", {
+  
+  async deleteRecord(id: any) {
+    (await this.productService.deleteProducts(id)).subscribe(response => {
+      this.deleteProductApiResponse = response;
+      this.snackBar.open(this.deleteProductApiResponse.message, "Ok", {
         horizontalPosition: "end",
         verticalPosition: "bottom",
         duration: 4 * 1000,
-        panelClass: ['successSnackBar']
+        panelClass: ['success']
       });
       window.location.reload();
-    }, (err) => {
-      this.snackBar.open("Some Error is happend On Server", "Ok", {
+    }, (error) => {
+      this.snackBar.open(error.error.message, "Ok", {
         horizontalPosition: "end",
         verticalPosition: "bottom",
         duration: 4 * 1000,
-        panelClass: ['validationSnackBar']
+        panelClass: ['error']
       });
     });
   }

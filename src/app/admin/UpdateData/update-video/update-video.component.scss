@@ -1,44 +1,37 @@
-.add-videos{
-  width: 60%;
+::ng-deep .mat-dialog-container{
   background-color: #FFF;
-  padding: 20px;
-  margin: auto;
-  margin-top: 100px;
-  box-shadow: 0px 0px 4px rgb(88, 84, 84);
-  border-radius: 20px;
+  border-radius: 10px;
+  width: 550px;
 }
-$font-family :"Crimson Pro";
-input::placeholder,
-textarea::placeholder{
-  font-size: 13px;
-  font-weight: 200;
-  font-family: $font-family;
-}
-label{
-  font-family: $font-family;
-  font-weight: 500;
-  font-size: 16px;
+$font-family:"Crimson Pro";
+.product-details .user-info h2{
   color: #5e548e;
+  font-size: 30px;
+  font-weight: 500;
+  font-family:$font-family;
+  text-align: center;
+  width: 100%;
 }
+
+.product-details .user-info li{
+  color: #5e548e;
+  font-size: 18px;
+  font-weight: 400;
+  font-family:$font-family;
+  text-align: left;
+  line-height: 2;
+}
+
 button{
   background-color: #5e548e;
   color: #FFF;
   outline: none;
   border:none;
-  padding: 10px 20px;
-  font-size: 14px;
+  font-size: 16px;
   font-family:$font-family;
   border-radius: 5px;
 }
 button:focus{
   background-color: #5e548e;
   color: #FFF;
-  cursor: progress;
-}
-input,textarea{
-  border: none;
-  outline: none;
-  border-bottom: .5px solid #DDD;
-  font-family: $font-family;
-  font-size: 16px;
 }

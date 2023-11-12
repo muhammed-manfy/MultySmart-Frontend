@@ -1,7 +1,6 @@
 // header is calling
 @import '../../assets/styles/header.scss';
 
-
 @mixin h2 {
   font-family: 'El Messiri';
   font-style: normal;
@@ -13,7 +12,7 @@
   color: #133A1B;
 }
 
-@mixin  p {
+@mixin p {
   font-family: 'Crimson Pro';
   font-weight: 300;
   font-size: 18px;
@@ -21,66 +20,208 @@
   text-align: center;
   color: #011B10;
 }
+
+.partners {
+  user-select: none;
+}
+
+.partners {
+  margin: 50px 0;
+  user-select: none;
+}
+
+.partners h2 {
+  @include h2;
+  border-bottom: 2px solid #F4B741;
+  width: 44%;
+  margin: 0 auto;
+  line-height: 40px;
+  margin-bottom: 50px;
+
+}
+
+@media screen and (max-width:425px) {
+  .partners h2 {
+    font-size: 18px;
+    width: auto;
+    margin: auto;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width:425px) and (max-width:768px) {
+  .partners h2 {
+    width: auto;
+    font-size: 30px;
+  }
+}
+
+.partners .carousel-inner {
+  position: relative;
+  height: 100%;
+  user-select: none;
+}
+
+.partners .carousel-inner .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 58, 27, 0.6);
+  z-index: 1;
+}
+
+.partners .carousel-inner .carousel-item .image {
+  padding: 0;
+  margin: 0;
+}
+
+.partners .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+}
+
+.partners .carousel-inner .carousel-item .image h2 {
+  @include h2();
+  border: 0;
+  padding-top: 40px;
+  font-size: 30px;
+}
+
+@media screen and (max-width:425px) {
+
+  .partners .carousel-inner .carousel-item .image h2 {
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (min-width:425px) and (max-width:992px) {
+
+  .partners .carousel-inner .carousel-item .image h2 {
+    font-size: 25px;
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (min-width:425px) {
+
+  .partners .carousel-inner .carousel-item .image h2 {
+    font-size: 30px;
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+.partners .carousel-inner .carousel-item .carousel-caption {
+  z-index: 3;
+  margin-bottom: 220px;
+}
+
+.partners .carousel-indicators button {
+  background-color: #133A1B;
+}
+
+.partners .carousel-indicators .active {
+  opacity: 1;
+  background-color: #F4B741;
+  animation-name: Slider-button;
+  animation-duration: 1s;
+  animation-delay: .1s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes Slider-button {
+  50% {
+    background-color: #FFF;
+    opacity: .4;
+  }
+}
+
+// carsoul is ending
+
+
 // .statistics is starting
-.statistics
-{
+.statistics {
+  user-select: none;
   margin-top: 50px;
   margin-bottom: 100px;
 }
-.statistics .statistical{
+
+.statistics .statistical {
   width: 250px;
   height: 150px;
   background: #FFFFFF;
-  box-shadow: 0px 4px 4px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: auto;
   text-align: center;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
 }
-.statistics .statistical span{
+
+@media screen and (min-width:425px) {
+  .statistics .statistical {
+    margin-bottom: 10px;
+  }
+}
+
+.statistics .statistical span {
   color: #F4B741;
   font-size: 30px;
   font-family: 'El Messiri';
   font-weight: 500;
   text-transform: uppercase;
 }
-.statistics .statistical h4{
+
+.statistics .statistical h4 {
   font-family: 'El Messiri';
   font-weight: 500;
   font-size: 25px;
   text-transform: uppercase;
   color: #133A1B;
 }
+
 // .statistics is ending
 
 // .choose us is ending
-.choose-us{
+.choose-us {
   display: flex;
   margin-bottom: 100px;
+  user-select: none;
 }
-.choose-us .why-choose-us{
+
+.choose-us .why-choose-us {
   width: 600px;
   padding-bottom: 30px;
   background-image: linear-gradient(#FFFFFF, #E4DEAE);
   box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px 21px 21px 21px;
 }
-.choose-us .why-choose-us h2{
+
+.choose-us .why-choose-us h2 {
   @include h2;
   padding-top: 50px;
   padding-bottom: 20px;
 }
-.choose-us .why-choose-us .details{
+
+.choose-us .why-choose-us .details {
   display: flex;
-  margin-left:50px ;
-  margin-top:20px ;
+  margin-left: 50px;
+  margin-top: 20px;
 }
-.choose-us .why-choose-us .details .fas{
+
+.choose-us .why-choose-us .details .fas {
   line-height: 2;
 }
-.choose-us .why-choose-us .details span{
+
+.choose-us .why-choose-us .details span {
   border-radius: 100%;
   background-color: #FFFFFF;
   text-align: center;
@@ -94,7 +235,8 @@
   font-size: 18px;
   font-weight: 600;
 }
-.choose-us .why-choose-us .details > h4{
+
+.choose-us .why-choose-us .details>h4 {
   font-family: 'El Messiri';
   margin-top: 15px;
   font-weight: 500;
@@ -102,59 +244,224 @@
   letter-spacing: .5px;
   text-transform: capitalize;
 }
-.choose-us .image-side{
+
+.choose-us .image-side {
   margin: auto;
 }
-.choose-us .image-side img{
+
+.choose-us .image-side img {
   width: 400px;
   height: 400px;
   box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 21px 0px 0px 21px;
 }
+
 // .choose us is ending
 
+@media screen and (max-width:425px) {
+  .choose-us .why-choose-us {
+    width: 100%;
+  }
+
+  .choose-us .why-choose-us>h2 {
+    font-size: 20px;
+  }
+
+  .choose-us .why-choose-us .details {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .choose-us .why-choose-us .details>h4 {
+    font-size: 16px;
+  }
+
+  .choose-us .image-side {
+    margin: 20px auto;
+  }
+
+  .choose-us .image-side img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width:425px) and (max-width:992px) {
+  .choose-us .why-choose-us {
+    width: 100%;
+  }
+
+  .choose-us .image-side {
+    margin: 20px auto;
+  }
+
+  .choose-us .image-side img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width:992px) and (max-width:1200px) {
+  .choose-us .why-choose-us {
+    width: 100%;
+  }
+
+  .choose-us .image-side {
+    margin: 20px auto;
+  }
+
+  .choose-us .image-side img {
+    width: 100%;
+    height: auto;
+  }
+}
 
 // what we do is starting
-
-.what-do{
+.what-do {
+  user-select: none;
   margin-bottom: 100px;
   text-align: center;
   font-style: normal;
 }
-.what-do h2{
+
+.what-do h2 {
   @include h2;
+  line-height: 60px;
+  width: 45%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  border-bottom: 2px solid #F4B741;
 }
-.what-do .video p{
-  width:87%;
-  margin: auto;
-  background-color:#B7BF96;
-  @include p;
-  padding: 10px;
+
+.what-do .works-images {
+  display: flex;
+  flex-direction: row;
+}
+
+.what-do .works-images img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background-position: center;
+}
+
+@media screen and (max-width:425px) {
+  .what-do .works-images {
+    display: inline-block;
+  }
+
+  .what-do h2 {
+    line-height: 2;
+    width: 70%;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width:425px) and (max-width:768px) {
+  .what-do .works-images {
+    display: inline-block;
+  }
+
+  .what-do h2 {
+    line-height: 2;
+    width: auto;
+    font-size: 30px;
+  }
 }
 //  what we do is ending
 
-// our story is starting
-.our-story{
+// our team is starting
+.our-team {
+  user-select: none;
   margin-bottom: 100px;
   font-style: normal;
   text-align: center;
 }
-.our-story h2{
-  @include h2;
-  padding-bottom: 50px;
-}
-.our-story p{
-  @include p();
-  width: 75%;
-  margin: auto;
-}
-// our story is ending
 
-.location{
-  margin-bottom: 100px;
-}
-.location h2{
+.our-team h2 {
   @include h2;
-  text-align: center;
-  padding-bottom: 50px;
+  border-bottom: 2px solid #F4B741;
+  width: 23%;
+  margin: auto;
+  line-height: 40px;
+  margin-bottom: 10px;
 }
+@media screen and (min-width:768px) {
+  .our-team .team {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.our-team .team .member .image-member img {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  border-radius: 100%;
+  border: 2px solid #000;
+  object-fit: cover;
+  object-position: center;
+}
+
+.our-team .team .member .member-name h4 {
+  font-family: 'El Messiri';
+  margin-top: 15px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.our-team .team .member .member-name h5 {
+  font-family: 'El Messiri';
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width:425px) {
+  .our-team h2 {
+    width: 70%;
+    font-size: 18px;
+  }
+
+  .our-team .team .member .member-name h4 {
+    font-size: 16px;
+  }
+
+  .our-team .team .member .member-name h5 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width:425px) {
+  .our-team h2 {
+    width: auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:425px) and (max-width:768px) {
+  .our-team h2 {
+    width: auto;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+// our team is ending
+
+.works-images {
+  display: flex;
+  flex-direction: row;
+}
+
+.works-images img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  background-position: center;
+  filter: brightness(50%);
+}
+

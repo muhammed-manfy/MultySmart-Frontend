@@ -18,232 +18,86 @@
 <section class="products">
   <div class="container">
     <div class="row">
-      <div class="col-3 gategories">
+      <div *ngIf="this.screenWidth > 992" class="col-lg-3 gategories">
         <div class="d-flex justify-content-center">
           <h3> <i class="fa fa-square"></i> Gategories</h3>
         </div>
-        <div class="class-gategory px-3">
+        <div *ngFor="let GATEGORY of GATEGORIES" class="class-gategory px-3">
           <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> All Products </h5>
-          </div>
-          <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> Routers </h5>
-          </div>
-          <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> Switches </h5>
-          </div>
-          <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> Controllers </h5>
-          </div>
-          <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> Hub's </h5>
-          </div>
-          <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> Thermostates </h5>
-          </div>
-          <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> Cameras </h5>
-          </div>
-          <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> Intercom </h5>
-          </div>
-          <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> Access Points </h5>
-          </div>
-          <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> Sound System </h5>
-          </div>
-          <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> Sliding Door </h5>
-          </div>
-          <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> Gate Barriers </h5>
-          </div>
-          <div class="category">
-            <h5><i class="fa fa-angle-double-right"></i> Door Locks </h5>
+            <h5 (click)="selectCategory(GATEGORY)"><i class="fa fa-angle-double-right"></i>{{GATEGORY}}</h5>
           </div>
         </div>
         <div class="pt-2 px-3">
-          <h3 style="font-size:24px ; padding-bottom: 0;"><i class="fa fa-square"></i> Price Filter</h3>
-          <div class="filter">
-            <div class="price">
-              <h5><i class="fa fa-angle-double-right"></i> less for 100 AED </h5>
-            </div>
-            <div class="price">
-              <h5><i class="fa fa-angle-double-right"></i> 100 - 200 AED </h5>
-            </div>
-            <div class="price">
-              <h5><i class="fa fa-angle-double-right"></i> 300 - 400 AED </h5>
-            </div>
-          </div>
           <h3 style="font-size:24px;padding:0;margin-bottom:0;margin-top:20px;"><i class="fa fa-square"></i> Tags</h3>
           <div class="filter">
-            <div class="tags">
-              <div class="tag">
-                <h5>Networking</h5>
-              </div>
-              <div class="tag">
-                <h5>Smart Home</h5>
-              </div>
-              <div class="tag">
-                <h5>CCTV</h5>
-              </div>
-              <div class="tag">
-                <h5>Gateways</h5>
+            <div *ngFor="let TAG of TAGS" class="tags">
+              <div (click)="selectTag(TAG)" class="tag">
+                <h5>{{TAG}}</h5>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-9 p-0 m-0">
+      <div class="col-xs-12 col-lg-9 p-0">
         <div class="toolbar">
-          <div class="filter">
-            <a href="#">Filter By</a><i class="fa fa-list"></i>
+          <!-- sidebar is starting here -->
+          <button class="d-lg-none" type="button" data-bs-toggle="offcanvas" mat-icon-button
+            data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><mat-icon
+              style="color: #F4B741;">menu</mat-icon></button>
+
+          <div class="offcanvas-lg offcanvas-end d-lg-none" tabindex="-1" id="offcanvasResponsive"
+            aria-labelledby="offcanvasResponsiveLabel">
+            <div class="offcanvas-header">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="d-flex justify-content-center">
+                <h3> <i class="fa fa-square"></i> Gategories</h3>
+              </div>
+              <div *ngFor="let GATEGORY of GATEGORIES" class="class-gategory px-3">
+                <div class="category">
+                  <h5 (click)="selectCategory(GATEGORY)"><i class="fa fa-angle-double-right"></i>{{GATEGORY}}</h5>
+                </div>
+              </div>
+              <div class="pt-2 px-3">
+                <h3 style="font-size:24px;padding:0;margin-bottom:0;margin-top:20px;"><i class="fa fa-square"></i> Tags
+                </h3>
+                <div class="filter">
+                  <div *ngFor="let TAG of TAGS" class="tags">
+                    <div (click)="selectTag(TAG)" class="tag">
+                      <h5>{{TAG}}</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="filter">
-            <a href="#">Sort By</a><i class="fa fa-list"></i>
-          </div>
+          <!-- sidebar is ending here -->
+
           <div class="search">
             <form>
-              <input type="text" class="search-input" placeholder="Search" />
-              <button class="btn btn-secondary">Search <i class="fa fa-search"></i></button>
+              <input type="text" name="textFilter" #textFilter class="search-input" placeholder="Search" />
+              <button (click)="searchFilter(textFilter.value)" class="btn btn-secondary"><i
+                  class="fa fa-search"></i></button>
             </form>
           </div>
         </div>
-        <div class="dsiplay-product">
-          <div class="row">
-            <div class="col-4">
-              <div class="product-name">
-                <div class="image">
-                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
-                </div>
-                <div class="details">
-                  <h4>product name</h4>
-                  <div class="d-flex justify-content-between">
-                    <p>{{ 500 | currency:'aed'}}</p>
-                    <p id="offer-price"><del>{{ 800 | currency:'aed'}}</del></p>
-                  </div>
-                  
-                </div>
+        <div class="dsiplay-product mt-3">
+          <div *ngFor="let product of productsList | paginate: {itemsPerPage: pageSize,
+              currentPage: currentPage + 1,totalItems: totalProducts} | filter: this.searchText"
+            (click)="navigateToProduct(product)" class="col-xs-12 col-sm-6 col-md-4">
+            <div class="product-name">
+              <div class="image">
+                <img class="img-thumbnail" [src]="product.image" alt="image-Product">
+              </div>
+              <div class="details">
+                <h4>{{product.productName}}</h4>
+                <p>{{product.price}} AED</p>
               </div>
             </div>
-            <!-- end product -->
-
-            <div class="col-4">
-              <div class="product-name">
-                <div class="image">
-                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
-                </div>
-                <div class="details">
-                  <h4>product name</h4>
-                  <p>500 aed</p>
-                </div>
-              </div>
-            </div>
-            <!-- end product -->
-
-            <div class="col-4">
-              <div class="product-name">
-                <div class="image">
-                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
-                </div>
-                <div class="details">
-                  <h4>product name</h4>
-                  <p>500 aed</p>
-                </div>
-              </div>
-            </div>
-            <!-- end product -->
           </div>
-
-          <!-- row products start -->
-
-          <div class="row">
-            <div class="col-4">
-              <div class="product-name">
-                <div class="image">
-                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
-                </div>
-                <div class="details">
-                  <h4>product name</h4>
-                  <p>500 aed</p>
-                </div>
-              </div>
-            </div>
-            <!-- end product -->
-
-            <div class="col-4">
-              <div class="product-name">
-                <div class="image">
-                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
-                </div>
-                <div class="details">
-                  <h4>product name</h4>
-                  <p>500 aed</p>
-                </div>
-              </div>
-            </div>
-            <!-- end product -->
-
-            <div class="col-4">
-              <div class="product-name">
-                <div class="image">
-                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
-                </div>
-                <div class="details">
-                  <h4>product name</h4>
-                  <p>500 aed</p>
-                </div>
-              </div>
-            </div>
-            <!-- end product -->
-          </div>
-          <!-- row products ended -->
-
-          
-          <!-- row products start -->
-
-          <div class="row">
-            <div class="col-4">
-              <div class="product-name">
-                <div class="image">
-                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
-                </div>
-                <div class="details">
-                  <h4>product name</h4>
-                  <p>500 aed</p>
-                </div>
-              </div>
-            </div>
-            <!-- end product -->
-
-            <div class="col-4">
-              <div class="product-name">
-                <div class="image">
-                  <img src="../../assets/images/Partners/moorgen.jpeg" alt="image-Product">
-                </div>
-                <div class="details">
-                  <h4>product name</h4>
-                  <p>500 aed</p>
-                </div>
-              </div>
-            </div>
-            <!-- end product -->
-
-            <div class="col-4">
-              <div class="product-name">
-                <div class="image">
-                  <img src="../../assets/images/Products/CCTV.jpg" alt="image-Product">
-                </div>
-                <div class="details">
-                  <h4>product name</h4>
-                  <p>500 aed</p>
-                </div>
-              </div>
-            </div>
-            <!-- end product -->
-          </div>
-          <!-- row products ended -->
+          <!-- end product -->
         </div>
       </div>
     </div>
@@ -251,8 +105,8 @@
 </section>
 
 <div class="d-flex justify-content-center">
-  <pagination-controls [responsive]="true" nextLabel="" previousLabel=""
-    (pageChange)="paginationHandle($event)"></pagination-controls>
+  <pagination-controls *ngIf="this.productsList.length > 9" class="my-pagination" [responsive]="true" nextLabel=""
+    previousLabel="" (pageChange)="paginationHandle($event)"></pagination-controls>
 </div>
 <!-- products is ending-->
 

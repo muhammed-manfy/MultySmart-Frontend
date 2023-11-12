@@ -1,41 +1,44 @@
-
 // header is calling
 @import '../../assets/styles/header.scss';
 
 // contact us is starting
-.contact-us{
+.contact-us {
+  user-select: none;
   margin-top: 100px;
   margin-bottom: 100px;
 }
-.contact-us .contact-section{
+
+.contact-us .contact-section {
   display: flex;
   justify-content: space-around;
 }
-.contact-us .contact-section .contact-media{
+
+.contact-us .contact-section .contact-media {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
 }
-.contact-us .contact-section .contact-media i{
+
+.contact-us .contact-section .contact-media i {
   border-radius: 100%;
   color: #FFFFFF;
   background: #133A1B;
   font-size: 22px;
   padding: 15px;
 }
-.contact-us .contact-section .contact-media p{
+
+.contact-us .contact-section .contact-media p {
   font-family: 'El Messiri';
   font-weight: 300;
   font-size: 18px;
-  text-transform: uppercase;
   color: #011B10;
   margin-top: 20px;
 }
-.contact-us .submit-section{
+
+.contact-us .submit-section {
   width: 75%;
   height: auto;
-  display: flex;
   padding: 10px;
   background: #FFFFFF;
   box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -43,11 +46,13 @@
   margin: auto;
   margin-top: 50px;
 }
-.contact-us .submit-section .submit-form{
+
+.contact-us .submit-section .submit-form {
   width: 100%;
   height: auto;
 }
-.contact-us .submit-section .submit-form form{
+
+.contact-us .submit-section .submit-form form {
   width: 75%;
   height: inherit;
   display: flex;
@@ -55,10 +60,10 @@
   margin: 70px auto;
 }
 
-.contact-us .submit-section .submit-form form input{
+.contact-us .submit-section .submit-form form input {
   border: none;
   outline: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid rgba($color: #133A1B, $alpha: .3);
   margin-bottom: 30px;
   font-family: 'Crimson Pro';
   font-weight: 300;
@@ -66,13 +71,15 @@
   text-transform: capitalize;
   color: #011B10;
 }
-::placeholder{
+
+::placeholder {
   color: #133A1B;
   font-weight: 500;
   font-size: 18px;
   font-family: 'El Messiri';
 }
-.contact-us .submit-section .submit-form form button{
+
+.contact-us .submit-section .submit-form form button {
   border: none;
   outline: none;
   background: #133A1B;
@@ -86,39 +93,303 @@
   padding: 20px 50px;
   cursor: -webkit-grab;
 }
-.contact-us .submit-section .submit-form form button:hover{
+
+.contact-us .submit-section .submit-form form button:hover {
   background-color: #B7BF96;
   color: #011B10;
 }
-.contact-us .submit-section .submit-form form button:focus{
+
+.contact-us .submit-section .submit-form form button:focus {
   cursor: progress;
 }
-.contact-us .submit-section .submit-form .social-media{
-  display:flex;
+
+.contact-us .submit-section .submit-form .social-media {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-.contact-us .submit-section .submit-form .social-media a{
-  border:  1px solid #133A1B;
+
+.contact-us .submit-section .submit-form .social-media a {
+  border: 1px solid #133A1B;
   color: #133A1B;
   padding: 10px;
   display: inline-block;
   border-radius: 100%;
-  margin:10px;
+  margin: 10px;
   font-size: 25px;
   text-decoration: none;
   cursor: -webkit-grab;
 }
-.contact-us .submit-section .submit-form .social-media a:hover{
+
+.contact-us .submit-section .submit-form .social-media a:hover {
   background-color: #133A1B;
   color: #FFFFFF;
 }
-.contact-us .submit-section .submit-form .social-media a:focus{
+
+.contact-us .submit-section .submit-form .social-media a:focus {
   cursor: progress;
 }
-.contact-us .submit-section .image-form img{
+
+.contact-us .submit-section .image-form img {
   width: 500px;
   height: 500px;
+  user-select: none;
 }
 
 // contact us is ending
+
+@media screen and (max-width:465px) {
+
+  .contact-us .submit-section {
+    box-shadow: none;
+    margin-top: 10px;
+  }
+
+  .contact-us .submit-section .image-form img {
+    display: none;
+  }
+
+  .contact-us .contact-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-us .contact-section .contact-media i {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .contact-us .contact-section .contact-media p {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .contact-us .submit-section {
+    width: 100%;
+  }
+  .contact-us .submit-section .submit-form form{
+    margin: 20px auto;
+    width: 80%;
+  }
+  .contact-us .submit-section .submit-form form input {
+    margin-bottom: 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  ::placeholder {
+    font-size: 12px;
+  }
+
+  .contact-us .submit-section .submit-form form button {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  .contact-us .submit-section .submit-form .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-us .submit-section .submit-form .social-media a {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (min-width:465px) and (max-width:576px) {
+
+  .contact-us .submit-section {
+    box-shadow: none;
+    margin-top: 10px;
+  }
+
+  .contact-us .submit-section .image-form img {
+    display: none;
+  }
+
+  .contact-us .contact-section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contact-us .contact-section .contact-media i {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .contact-us .contact-section .contact-media p {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .contact-us .submit-section {
+    width: 100%;
+  }
+  .contact-us .submit-section .submit-form form{
+    margin: 20px auto;
+    width: 80%;
+  }
+  .contact-us .submit-section .submit-form form input {
+    margin-bottom: 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  ::placeholder {
+    font-size: 12px;
+  }
+
+  .contact-us .submit-section .submit-form form button {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  .contact-us .submit-section .submit-form .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-us .submit-section .submit-form .social-media a {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (min-width:992px) {
+
+  .contact-us .submit-section{
+    display: flex;
+    height: 400px;
+  }
+  .contact-us .submit-section .image-form img {
+    width: 100%;
+    height: 380px;
+  }
+  .contact-us .contact-section .contact-media i {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .contact-us .contact-section .contact-media p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .contact-us .submit-section {
+    width: 80%;
+  }
+  .contact-us .submit-section .submit-form form{
+    margin: 10px auto;
+    width: 60%;
+  }
+  .contact-us .submit-section .submit-form form input {
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  ::placeholder {
+    font-size: 14px;
+  }
+
+  .contact-us .submit-section .submit-form form button {
+    font-size: 16px;
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  .contact-us .submit-section .submit-form .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-us .submit-section .submit-form .social-media a {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (min-width:576px) and (max-width:992px) {
+
+  .contact-us .submit-section {
+    box-shadow: none;
+    margin-top: 10px;
+  }
+  .contact-us .submit-section .image-form{
+    text-align: center;
+    margin-top: 10px;
+  }
+  .contact-us .submit-section .image-form img {
+    width: 80%;
+    height: 300px;
+  }
+
+  .contact-us .contact-section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contact-us .contact-section .contact-media i {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .contact-us .contact-section .contact-media p {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .contact-us .submit-section {
+    width: 100%;
+  }
+  .contact-us .submit-section .submit-form form{
+    margin: 20px auto;
+    width: 70%;
+  }
+  .contact-us .submit-section .submit-form form input {
+    margin-bottom: 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  ::placeholder {
+    font-size: 13px;
+  }
+
+  .contact-us .submit-section .submit-form form button {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  .contact-us .submit-section .submit-form .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-us .submit-section .submit-form .social-media a {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+  }
+}

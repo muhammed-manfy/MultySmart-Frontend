@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    $(document).ready(function() {
+      ( $("#carouselIndicators") as any).carousel({
+          interval: 1500
+      });
+     });
+   }
 
   ngOnInit(): void {
   }

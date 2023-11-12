@@ -27,27 +27,34 @@ export class AdminProductsComponent implements OnInit {
   }
 
   async getProductsPagination(pageSize:Number,currentPage:Number){
-    (await this.productService.getProductsPagination(pageSize,currentPage)).subscribe((products:productInfo)=>{
+     (await this.productService.getProductsPagination(pageSize,currentPage)).subscribe((products:productInfo)=>{
       this.productsReceived = products;
-      this.productsList = this.productsReceived.products.map((product:any)=>{
+      console.log(products);
+      this.productsList = this.productsReceived.products.map((product:productInfo)=>{
         return product;
       });
       this.totalProducts = this.productsReceived.totalProducts;
     });
   }
+
   handlePagination(event:PageEvent){
-    this.pageEvent = event;
     this.getProductsPagination(event.pageSize,event.pageIndex);
   }
+
+  updateProduct(productInfo:any){
+    this.router.navigate(['/dashboard/edit-product'],{
+      queryParams:{
+        product:JSON.stringify(productInfo)
+      }
+    });
+  }
+
   deleteProduct(id:any){
     this.dialog.open(DeleteProductComponent,{
       data:{
         id:id
       },
       width:"300px"
-    })
-  }
-  editProduct(product:any){
-    this.router.navigateByUrl('dashboard/edit-product',{state:product});
+    });
   }
 }

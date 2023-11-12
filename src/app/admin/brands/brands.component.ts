@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { BrandService } from 'src/app/API Services/Brand/brand.service';
 import { DeletebrandComponent } from 'src/app/Dialogs/Brands/deletebrand/deletebrand.component';
-import { brandInfo } from 'src/app/Models/Brand.model';
 
 @Component({
   selector: 'app-admin-brands',
@@ -14,7 +13,6 @@ import { brandInfo } from 'src/app/Models/Brand.model';
 })
 export class AdminBrandsComponent implements OnInit {
   brandsReceived:any;
-  brandsList = Array<brandInfo>();
   constructor(private brnadService: BrandService ,
      public dialog:MatDialog ,
     private router:Router) { }
@@ -25,23 +23,23 @@ export class AdminBrandsComponent implements OnInit {
     pageEvent!:PageEvent;
 
     ngOnInit(): void{
-    this.getBrandsPagination(this.pageSize,this.currentPage);
+    // this.getBrandsPagination(this.pageSize,this.currentPage);
   }
   handlePagination(event:PageEvent){
     this.pageEvent = event;
     this.totalBrands = event.length;
-    this.getBrandsPagination(event.pageSize,(event.pageIndex));
+    // this.getBrandsPagination(event.pageSize,(event.pageIndex));
   }
-  async getBrandsPagination(pageSize:any,currentPage:any):Promise<any>{
-    (await this.brnadService.getBrandsPagination(pageSize,currentPage)).subscribe((brands: brandInfo) => {
-      this.brandsReceived = brands;
-      console.log(brands)
-      this.brandsList = this.brandsReceived.brands.map((e:any)=>{
-        return e;
-      });
-      this.totalBrands = this.brandsReceived.totalBrands;
-    });
-  }
+  // async getBrandsPagination(pageSize:any,currentPage:any):Promise<any>{
+  //   (await this.brnadService.getBrandsPagination(pageSize,currentPage)).subscribe((brands: brandInfo) => {
+  //     this.brandsReceived = brands;
+  //     console.log(brands)
+  //     this.brandsList = this.brandsReceived.brands.map((e:any)=>{
+  //       return e;
+  //     });
+  //     this.totalBrands = this.brandsReceived.totalBrands;
+  //   });
+  // }
 
 
   updateBrand(brand:any){

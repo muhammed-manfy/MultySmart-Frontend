@@ -13,16 +13,12 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/products">Shop</a>
+          <a class="nav-link" routerLink="/shop">Shop</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/videos">Blog</a>
+          <a class="nav-link" routerLink="/blogs">Blogs</a>
         </li>
-
-        <!-- <li class="nav-item">
-          <a class="nav-link" routerLink="/services"></a>
-        </li> -->
 
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact-us">Contact Us</a>
@@ -33,10 +29,26 @@
         </li>
         <div class="login">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/login"><i class="fa fa-user"></i></a>
+            <!-- show when user is logged in  -->
+            <button *ngIf="this.userIsLogin" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon style="color: #133A1B; opacity: .6; margin-bottom:5px;">account_circle</mat-icon>
+            </button>
+            <mat-menu xPosition="before" class="menu" #menu="matMenu">
+              <button (click)="moveToProfile()" mat-menu-item class="menu-item">
+                <mat-icon>account_circle</mat-icon>
+                <span>profile</span>
+              </button>
+              <button (click)="logoutUser()" mat-menu-item class="menu-item">
+                <mat-icon>logout</mat-icon>
+                <span>Logout</span>
+              </button>
+            </mat-menu>
+              <!-- show when user is logged out -->
+            <a *ngIf="!this.userIsLogin" class="nav-link loggedIn" routerLink="/login">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"><i class="fas fa-shopping-cart"><span>1</span></i></a>
+            <a class="nav-link" routerLink="/cart"><i class="fas fa-shopping-cart"><span
+                  *ngIf="this.cartCount > 0">{{this.cartCount }}</span></i></a>
           </li>
         </div>
       </ul>

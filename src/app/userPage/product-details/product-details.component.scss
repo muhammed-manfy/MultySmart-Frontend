@@ -1,0 +1,282 @@
+.product-details {
+  margin: 40px;
+}
+
+.product-details .user-info,
+.product-details .product-info {
+  background-color: #F9F9F9;
+  padding: 20px 40px;
+  margin: 20px 0;
+}
+
+.product-details .user-info h2 {
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #5e548e;
+}
+.product-details .user-info ol>li {
+  font-family: "Crimson Pro";
+  font-weight: 400;
+  letter-spacing: .5px;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #000;
+}
+
+.product-details .user-info a {
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #FFF;
+  padding: 5px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Crimson Pro";
+  cursor: pointer;
+  color: #5e548e;
+}
+@media screen and (max-width:576px) {
+  .product-details .user-info h2 {
+    font-size: 16px;
+    line-height: normal;
+    width: 100%;
+  }
+  .product-details .user-info ol>li{
+    font-size: 14px;
+  }
+}
+.product-details .user-info a:hover {
+  background-color: #5e548e;
+  color: #FFF;
+}
+
+.product-details .user-info .footer {
+  background-color: #5e548e;
+  height: 5px;
+  width: auto;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.product-details .product-info h3 {
+  font-family: 'El Messiri';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #5e548e;
+  margin-bottom: 20px;
+}
+
+.product-details .product-info h4 {
+  font-family: 'El Messiri';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: green;
+  margin-top: 20px;
+}
+@media screen and (max-width:576px) {
+  .product-details .product-info h3 {
+    font-size: 16px;
+    text-align: start;
+  }
+  .product-details .product-info h4 {
+    font-size: 14px;
+  }
+}
+.product-details .product-info .order-details {
+  display: flex;
+  padding: 20px 0;
+  width: 100%;
+  font-family: "Crmison Pro";
+}
+
+.product-details .product-info .order-details .image img {
+  width: 150px;
+  height: 150px;
+}
+
+.product-details .product-info .order-details h4 {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: #000;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.product-details .product-info .order-details small {
+  color: rgba($color: #000000, $alpha: .5);
+  font-size: 14px;
+}
+
+.product-details .product-info .order-details h5 {
+  color: #000;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  padding-top: 10px;
+  font-family: "El Messiri";
+}
+
+.product-details .product-info .order-details h6 {
+  color: #000;
+  font-size: 16px;
+  font-family: "El Messiri";
+}
+
+@media screen and (max-width:576px) {
+  .product-details .product-info .order-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .product-details .product-info .order-details h4{
+    font-size: 16px;
+    line-height: normal;
+    width: 100%;
+  }
+  .product-details .product-info .order-details h5{
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .product-details .product-info .order-details small{
+    font-size: 12px;
+  }
+  .product-details .product-info .order-details h6{
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
+.product-details .payment-method {
+  background-color: #F9F9F9;
+  padding: 20px 40px;
+  margin: 20px 0;
+  width: 80%;
+}
+
+.product-details .payment-method h3 {
+  font-family: 'El Messiri';
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #5e548e;
+}
+
+.product-details .payment-method p {
+  font-family: 'Crimson Pro';
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 50px;
+  text-transform: capitalize;
+  color: rgba($color: #000000, $alpha: .65);
+}
+
+@media screen and (max-width:576px) {
+  .product-details .payment-method {
+    margin: auto;
+  }
+  .product-details .payment-method h3{
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+  }
+  .product-details .payment-method p{
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.product-details .subtotal {
+  background-color: #F9F9F9;
+  padding: 30px 40px;
+  margin: 50px 0;
+  width: 80%;
+}
+
+.product-details .subtotal h3 {
+  font-family: 'El Messiri';
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #5e548e;
+}
+
+.product-details .subtotal h4 {
+  color: rgba($color: #000000, $alpha: .65);
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Crmison Pro";
+}
+
+.product-details a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Crimson Pro";
+  cursor: pointer;
+  color: #5e548e;
+  background-color: #FFF;
+  padding: 5px 10px;
+}
+
+.product-details .subtotal .invoice-details {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.product-details .subtotal .invoice-details h4 {
+  color: rgba($color: #000000, $alpha: .65);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Crmison Pro";
+  margin: 0;
+}
+
+.product-details .subtotal .invoice-details h5 {
+  color: rgba($color: #000000, $alpha: .65);
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Crmison Pro";
+  margin: 0;
+}
+
+@media screen and (max-width:576px){
+  .product-details .subtotal {
+    width: 100%;
+    text-align: center;
+  }
+  .product-details .subtotal h3 {
+    font-size: 18px;
+  }
+  .product-details .subtotal h4 {
+    font-size: 16px;
+  }
+  .product-details .subtotal .invoice-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  .product-details .subtotal .invoice-details h4 {
+    font-size: 16px;
+    padding-top: 5px;
+    letter-spacing: .3px;
+  }
+  .product-details .subtotal .invoice-details h5 {
+    font-size: 14px;
+  }
+}

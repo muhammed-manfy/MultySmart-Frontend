@@ -1,0 +1,9 @@
+<mat-dialog-content class="mat-typography">
+    <h4>Do you Accept The Order</h4>
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+    <button mat-button mat-dialog-close cdkFocusInitial>cancel</button>
+    <button (click)="shippingOrder(data.id_no,data.order_id)" mat-button mat-dialog-close  cdkFocusInitial> Shipping Order</button>
+</mat-dialog-actions>
+<!--  -->

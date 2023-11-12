@@ -1,6 +1,7 @@
 // header page is starting
 
 .header{
+  user-select: none;
   height: 400px;
   background: #011B10;
 }
@@ -13,11 +14,12 @@
 }
 
 .header .title-page img{
-  max-width: 250px;
-  max-height: 250px;
+  width: 250px;
+  height: 250px;
   margin: 0px;
   padding:0px;
 }
+
 .header .title-page h1 {
   font-family: 'El Messiri';
   font-style: normal;
@@ -31,3 +33,44 @@
   color: #FFFFFF;
 }
 // header page is ending
+
+
+
+@media screen and (max-width:425px) {
+    .header .title-page h1 {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    .header {
+      height: auto;
+    }
+  }
+
+@media screen and (min-width:425px) and (max-width:576px) {
+.header .title-page img {
+    width: 150px;
+    height: 150px;
+  }
+  .header .title-page h1 {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  .header {
+    height: 200px;
+  }
+}
+
+
+@media screen and (min-width:576px) and (max-width:768px) {
+  .header .title-page img {
+      width: 200px;
+      height: 200px;
+    }
+    .header .title-page h1 {
+      font-size: 24px;
+      line-height: 1.4;
+    }
+    .header {
+      height: 300px;
+    }
+  }

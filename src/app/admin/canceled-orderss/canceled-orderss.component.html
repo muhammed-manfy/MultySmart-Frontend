@@ -1,0 +1,38 @@
+<div class="orders">
+  <div class="container-fluid">
+      <!-- show when data is  not found on the page -->
+    <div class="no-display p-5" *ngIf="this.ordersList.length == 0">
+      <h2 >Don't have any an order</h2>
+    </div>
+
+    <!-- product is starting -->
+    <div *ngFor="let order of ordersList ; let counter = index" class="row  p-3">
+     <div class="text-center">
+     <h2>Order ID :{{order._id}}</h2>
+      <small>Order No : {{counter + 1}}</small>
+    </div>
+      <br/><br/>
+      <div *ngFor="let item of order.products" class="col-4">
+        <div class="card">
+          <img [src]="item.product.image" lass="card-img-top" alt="product image">
+          <div class="card-body">
+            <h5 class="card-title">{{item.product.productName}}</h5>
+            <h6>{{item.product.price | currency:"AED"}}</h6>
+          </div>
+          <ul *ngFor="let text of item.returnProductText" class="list-group d-block list-group-flush">
+            <li class="list-group-item">Reason : {{text}}</li>
+          </ul>
+          <ul class="list-group d-block list-group-flush">
+            <li class="list-group-item" style="color:red;">Status : {{item.status}}</li>
+          </ul>
+          <div class="card-footer">
+            <small class="text-body-secondary"> <i class="fa fa-trash-o"></i> Delete</small>
+            <small class="text-body-secondary mx-4">{{item.product.created_at | date:'short'}}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <mat-paginator *ngIf="ordersList.length != 0" class="pagination" (page)="handlePagination($event)" [length]="totalOrders"
+      [pageIndex]="currentPage" [pageSize]="pageSize" aria-label="Select page"></mat-paginator>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.users{
+    margin-top: 30px;
+    font-family: "El Messiri";
+    padding: 20px;
+  }
+  .users tbody tr{
+    border-bottom: 1px solid;
+  }
+  .users thead{
+    color: #5e548e;
+    text-transform: uppercase;
+  }
+  .users th{
+    font-weight: 700;
+  }
+  .users tbody{
+    color: #5e545e;
+  }
+  .users td i{
+    color: #5e548e;
+  }
+  .users tr:hover{
+    background-color: #F9F9F9;
+  }
+  
