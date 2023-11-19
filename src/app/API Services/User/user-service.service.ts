@@ -6,7 +6,6 @@ import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Order } from 'src/app/Models/Order.model';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -42,8 +41,8 @@ export class UserServiceService extends BasicApiService {
   async deleteUser(userId: any) {
     return await this.http.delete(this.BaseUrl + "/users/deleteUser/" + userId, { headers: this.headers });
   }
-  changeImageProfile(userId: any, imageProfile: any) {
-    return this.http.put(this.BaseUrl + "/users/updateUserImage/" + userId, imageProfile, { headers: this.headers });
+  async changeImageProfile(userId: any, imageProfile: any) {
+    return await this.http.put(this.BaseUrl + "/users/updateUserImage/" + userId, imageProfile, { headers: this.headers });
   }
   async updateProductsStatusToCanceled(products_info: any ,orders_ids:any, reasonText:any) {
     return await this.http.put(this.BaseUrl + '/orders/updateProductsStatusToCanceled',{products_ids:products_info,

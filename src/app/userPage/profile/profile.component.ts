@@ -31,11 +31,11 @@ export class ProfileComponent implements OnInit {
   userInfo: any;
   imageUpload: any;
   ChangeImageApiResponse: any;
-  deleteUserApiResponse:any;
+  deleteUserApiResponse: any;
   userId = localStorage.getItem('user-id');
   constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar,
-    private userService: UserServiceService,private route:Router ,
-     private dialog:MatDialog) {
+    private userService: UserServiceService, private route: Router,
+    private dialog: MatDialog) {
     this.profileForm = this.formBuilder.group({
       'email': ['', [Validators.required]],
       'phone': ['', [Validators.required]],
@@ -75,6 +75,13 @@ export class ProfileComponent implements OnInit {
         panelClass: ['error']
       });
     } else {
+      var email = this.profileForm.get('email')?.value;
+      var emailPattern = /^([A-Za-z][0-9]*[-_]*)+@([\w-]+\.)+[\w-]{2,4}$/;
+      var emailValid = emailPattern.test(email);
+      if (!emailValid) {
+        this.snackBar.open('Please enter an email valid', "Close");
+        return;
+      }
       (await this.userService.updateEmailUser(emailValue, this.userId)).subscribe((response => {
         this.emailApiResponse = response;
         this.snackBar.open(this.emailApiResponse.message, "Ok", {
@@ -112,6 +119,16 @@ export class ProfileComponent implements OnInit {
         panelClass: ['error']
       });
     } else {
+      var userPhoneNumber = this.profileForm.get('phone')?.value;
+      if (userPhoneNumber.length > 10 || userPhoneNumber < 10) {
+        this.snackBar.open("Please enter phone number with 10 numbers", "Close", {
+          duration: 3 * 1000,
+          horizontalPosition: "end",
+          verticalPosition: "bottom",
+          panelClass: ['error']
+        });
+        return;
+      }
       (await this.userService.updatePhoneUser(phoneValue, this.userId)).subscribe((response => {
         this.phoneApiResponse = response;
         this.snackBar.open(this.phoneApiResponse.message, "Ok", {
@@ -140,6 +157,15 @@ export class ProfileComponent implements OnInit {
         panelClass: ['error']
       });
     } else {
+      if (this.imageUpload.type != 'image/jpeg' || this.imageUpload.type != 'image/jpg' || this.imageUpload.type != 'image/png') {
+        this.snackBar.open("please select images jpeg , png , jpg ", "Close", {
+          duration: 3 * 1000,
+          horizontalPosition: "end",
+          verticalPosition: "bottom",
+          panelClass: ['error']
+        });
+        return;
+      }
       let image = new FormData();
       image.append('image', this.imageUpload);
       (await this.userService.changeImageProfile(this.userId, image)).subscribe(response => {
@@ -172,7 +198,16 @@ export class ProfileComponent implements OnInit {
         verticalPosition: "bottom",
         panelClass: ['error']
       });
+      return;
     } else {
+      var password = this.profileForm.get('password')?.value;
+      var passwordPattern = /^([A-Z]{1,2}[a-z]{3,10})+([!@#$%&]{1,2}[0-9]{3,8})/
+      var passwordValid = passwordPattern.test(password);
+      if (!passwordValid) {
+        this.snackBar.open(`password must be UpperCase  LowerCase Complicated Letters numrics
+           from 8 to 12`, "Close");
+        return;
+      }
       (await this.userService.updatePasswordUser(passwordValue, this.userId)).subscribe((response => {
         this.passwordApiResponse = response;
         this.snackBar.open(this.passwordApiResponse.message, "Ok", {
@@ -194,9 +229,9 @@ export class ProfileComponent implements OnInit {
   }
 
   async deleteUser() {
-    this.dialog.open(UpdateOfferComponent,{
-      data:{
-        userId:this.userId
+    this.dialog.open(UpdateOfferComponent, {
+      data: {
+        userId: this.userId
       }
     });
   }
